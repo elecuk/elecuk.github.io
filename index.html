@@ -23,9 +23,9 @@
 
   var myyear = 2022;
   var mymonth= 6;
-  var myday  = 9;
-  var mystart= 01.20;
-  var mystop = 02.55;
+  var myday  = 8;
+  var mystart= 23.20;
+  var mystop = 23.55;
 
   var now = today.getHours() + (today.getMinutes()/100 );
   var condition1 = ( today.getFullYear()==myyear && today.getMonth()+1==mymonth && today.getDate()==myday  );
@@ -36,7 +36,7 @@
 
     if ( condition2 && condition1 ) {
        document.getElementById("start1").innerHTML+= "<a href='index.html'>Some Link</a>";
-      window.open("https://schorm.uk.ac.ir/Branch-5/zip/1995feb1-9b21-40cc-bf63-5ad4d21beb67/res/index.html","_self");
+      <!--window.open("https://schorm.uk.ac.ir/Branch-5/zip/1995feb1-9b21-40cc-bf63-5ad4d21beb67/res/index.html","_self"); -->
       <!-- document.getElementById("links").style.display = "none"; -->
 		}
 	else { 	document.getElementById("start1").innerHTML+=' خارج از بازه زمانی';}
