@@ -11,35 +11,10 @@
 </body>
 
   <script type="text/javascript">
-  var today = new Date();
-  var day   = today.getDay();
-  var month = today.getMonth()+1;
-  var year  = today.getFullYear();
 
-  var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
-  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  var dateTime = date+' '+time;
+      window.open("https://www.google.com","_self");
 
-  var myyear = 2022;
-  var mymonth= 6;
-  var myday  = 12;
-  var mystart= 18.30;
-  var mystop = 19.30;
 
-  var now = today.getHours() + (today.getMinutes()/100 );
-  var condition1 = ( today.getFullYear()==myyear && today.getMonth()+1==mymonth && today.getDate()==myday  );
-
-  var condition2 = ( now >= mystart  &&  now < mystop  );
-
-  document.getElementById("displayDateTime").innerHTML+= ' Your Current Date : '+ daylist[day] +'  ' +date+' '+time;
-
-    if ( condition2 && condition1 ) {
-       document.getElementById("start1").innerHTML+= "<a href='index.html'>Some Link</a>";
-      window.open("https://schorm.uk.ac.ir/Branch-5/zip/cbb3f4b1-a65d-4230-bf6f-ea6792120c91/res/index.html","_self");
-      <!-- document.getElementById("links").style.display = "none"; -->
-		}
-	else { 	document.getElementById("start1").innerHTML+=' خارج از بازه زمانی';}
   </script>
 
 </html>
