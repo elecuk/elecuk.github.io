@@ -1,20 +1,54 @@
 <html>
 <head>
-  <title>Exam</title>
-  <meta http-equiv="refresh" content="5" >
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Password Protected page</title>
+
 </head>
+
 <body>
 
-  <h2 id="displayDateTime"></h2>
   <h2 id="start1"></h2>
 
 </body>
 
-  <script type="text/javascript">
+<script type="text/javascript">
+var s ="";
+s=prompt("Enter your Student Number");
+var RFStudents = ( s=="rf" || s==99512002 || s==400512002 ||s==99512012 ||s==99512021 );
+var E2Students = ( s=="e2" ||s==85 || s==86 ||s==87 ||s==88 || s==89 );
+var E3Students = ( s=="e3" ||s==90 || s==91 ||s==92 ||s==93 || s==94 );
+var Exam       = ( s=="ex" ||s==95 || s==96 ||s==97 ||s==98 || s==999 );
 
+if (RFStudents)
+{
+       document.getElementById("start1").innerHTML = "<iframe src='RFProject4002.html' style=' height:100%; width:100%; ' ></iframe>";
+}
 
-      window.open("https://www.google.com","_self");
+else if (E2Students)
+{
+		window.open("https://www.google.com","_self");
+       document.getElementById("start1").innerHTML = "<iframe src='annoncements_E2.html' style=' height:100%; width:100%; ' ></iframe>";
+}
 
-  </script>
+else if (E3Students)
+{
+	   window.open("https://www.google.com","_self");
+       document.getElementById("start1").innerHTML = "<iframe src='annoncements_E3.html' style=' height:100%; width:100%; ' ></iframe>";
+}
+
+else if (Exam)
+{
+		window.open("https://www.google.com","_self");
+       document.getElementById("start1").innerHTML = "<iframe src='Exam.html' style=' height:100%; width:100%; ' ></iframe>";
+}
+
+else
+{
+alert("Sorry! your password is incorrect. please enter the password you used to see the presentations of this course");
+document.getElementById("start1").innerHTML+='Please Allow blocked content and refresh the page!';
+}
+
+</script>
+
 
 </html>
