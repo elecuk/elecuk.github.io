@@ -1,0 +1,244 @@
+<html>
+<head>
+  <title>MicroControllers</title>
+  <meta http-equiv="refresh" content="30" >
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/styleTest.css">
+</head>
+
+     <body style="background-color:#FFFDEF;">
+
+<body>
+  <h2 dir="ltr" style="font-family: 'byekan'; font-size: 12px; margin: 0px 50px 0px;" id="displayDateTime"></h2>
+  <h2 dir="rtl" style="font-family: 'byekan'; font-size: 30px; margin: 0px 50px 00px; color:blue;" id="welcome"></h2>
+  <h2 dir="rtl" style="font-family: 'byekan'; font-size: 15px; margin: 0px 70px 00px;" id="mycontent"></h2>
+
+</body>
+
+  <script type="text/javascript">
+  var today = new Date();
+  var day   = today.getDay();
+  var month = today.getMonth()+1;
+  var year  = today.getFullYear();
+
+  var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var timehm = today.getHours() + ":" + today.getMinutes() ;
+
+var now= today.getFullYear()*1000000 + (today.getMonth()+1)*10000 + today.getDate()*100 + today.getHours() + (today.getMinutes()/100 );
+<!--document.getElementById("displayDateTime").innerHTML+= ' Your Current Date : '+ now +  '<br>';-->
+document.getElementById("displayDateTime").innerHTML+= ' Date : '+ daylist[day] +' &nbsp &nbsp ' +date+'  &nbsp &nbsp  '+timehm;
+
+
+document.getElementById("welcome").innerHTML+=
+					'اطلاعیه ها و فعالیت های درس اصول میکروکنترلر'
+					+' <br> '
+					+'ترم پاییز ۱۴۰3-۱۴۰2'
+					+'<hr style="height:4px;border:none;color:#333;background-color:blue;">';
+
+
+Start=2023092709.20;
+End  =2024010123.59;
+	if ( now >= Start && now < End ) 
+						{
+						document.getElementById("mycontent").innerHTML+=
+						'9 &#x2190  '
+						+"<a href='div8u.asm' target='_blank' style='text-decoration: none';>  Division in AVR  </a>" 
+						+"<br><p style='color:#A40404; font-size=1px;'>"
+						+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+						+'تاریخ ارسال:'
+						+'&nbsp 14:00-1402/08/10'
+						+ '<hr>';
+						}
+
+
+Start=2023092709.20;
+End  =2024010123.59;
+	if ( now >= Start && now < End ) 
+						{
+						document.getElementById("mycontent").innerHTML+=
+						'8 &#x2190  '
+						+"<a href='https://www.fischl.de/usbasp/' target='_blank' style='text-decoration: none';>  Programmer USBASP (DIY)  </a>" 
+						+"<br><p style='color:#A40404; font-size=1px;'>"
+						+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+						+'تاریخ ارسال:'
+						+'&nbsp 14:00-1402/08/10'
+						+ '<hr>';
+						}
+
+
+Startex1=2023110110.30;
+Endex1  =2023110111.00;
+	if ( now >= Startex1 && now < Endex1 ) {window.open("ey/index.html","_top");+'<hr>';}
+	else if ( now >= Endex1 )
+				{
+				document.getElementById("mycontent").innerHTML +=
+				'7 &#x2190  '
+				+'امتحان 2'
+				+'-(پایان امتحان )';}
+	if ( now >= Startex1) 
+				{document.getElementById("mycontent").innerHTML+=	
+				"<br><p style='color:#B40424; font-size=1px;'>"
+				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'زمان شروع:'
+				+'&nbsp 10:30-1402/08/10'
+				+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'زمان پایان:'
+				+'&nbsp 11:00-1402/08/10'
+				+'</p> <hr>';
+				}
+
+Startex1=2023102309.34;
+Endex1  =2023102310.00;
+	if ( now >= Startex1 && now < Endex1 ) {window.open("ucx1/index.html","_top");+'<hr>';}
+	else if ( now >= Endex1 )
+				{
+				document.getElementById("mycontent").innerHTML +=
+				'6 &#x2190  '
+				+'امتحان ۱'
+				+'-(پایان امتحان )';}
+	if ( now >= Startex1) 
+				{document.getElementById("mycontent").innerHTML+=	
+				"<br><p style='color:#B40424; font-size=1px;'>"
+				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'زمان شروع:'
+				+'&nbsp 09:30-1402/08/01'
+				+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'زمان پایان:'
+				+'&nbsp 10:00-1402/08/01'
+				+'</p> <hr>';
+				}
+
+Start=2023101110.00;
+End  =2023102523.59;
+	if ( now >= Start && now < End ) 
+						{
+						document.getElementById("mycontent").innerHTML +=
+						'5 &#x2190  '
+						+"<a href='uc/ucs2p7/index.html' style='text-decoration: none';> آشنایی با برخی دستورات AVR </a>";
+						}
+	else if ( now >= End )  {document.getElementById("mycontent").innerHTML +=
+						'5 &#x2190  '
+						+'آشنایی با برخی دستورات AVR'
+						+'-(پایان مهلت)';}
+	if ( now >= Start) {document.getElementById("mycontent").innerHTML+=	
+						"<br><p style='color:#A40404; font-size=1px;'>"
+						+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+						+'تاریخ ارسال:'
+						+'&nbsp 10:00-1402/07/19'
+						+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+						+'مهلت مشاهده:'
+						+'&nbsp 23:59-1402/08/03'
+						+ '</p> <hr>';}
+
+Start=2023101018.00;
+End  =2023102523.59;
+	if ( now >= Start && now < End ) 
+						{
+						document.getElementById("mycontent").innerHTML +=
+						'4 &#x2190  '
+						+"<a href='uc/AVR_Studio/index.html' style='text-decoration: none';> آشنایی با نرم افزار AVRSTUDIO </a>";
+						}
+	else if ( now >= End )  {document.getElementById("mycontent").innerHTML +=
+						'4 &#x2190  '
+						+'آشنایی با نرم افزار AVRSTUDIO'
+						+'-(پایان مهلت)';}
+	if ( now >= Start) {document.getElementById("mycontent").innerHTML+=	
+						"<br><p style='color:#A40404; font-size=1px;'>"
+						+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+						+'تاریخ ارسال:'
+						+'&nbsp 18:00-1402/07/18'
+						+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+						+'مهلت مشاهده:'
+						+'&nbsp 23:59-1402/08/03'
+						+ '</p> <hr>';}
+
+
+Start=2023092709.20;
+End  =2023093023.59;
+	if ( now >= Start && now < End ) 
+						{
+						document.getElementById("mycontent").innerHTML+=
+						'** &#x2190  '
+						+'کلاس امروز با تاخیر ساعت 10 تشکیل می شود '
+						+"<br><p style='color:#A40404; font-size=1px;'>"
+						+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+						+'تاریخ ارسال:'
+						+'&nbsp 09:20-1402/07/05'
+						+ '<hr>';
+						}
+
+
+Start=2023092509.50;
+End  =2025062016.22;
+	if ( now >= Start && now < End ) 
+				{
+				document.getElementById("mycontent").innerHTML+=
+				'3 &#x2190  '
+				+'شرایط درس :'
+				+ '<br>'
+				+ 'در این درس میکروکنترلر AVR با زبان های اسمبلی و C  بررسی خواهد شد. (با تاکید بر زبان اسمبلی و شناخت سخت افزار میکروکنترلر) '
+				+ '<br>'
+				+ 'این درس یک درس مهارتی است و کار عملی (گروه های دو نفره) اهمیت بالایی دارد'
+				+ '<br>'
+				+'تسلط کافی بر مدار منطقی و الکترونیک 1 مورد نیاز این درس است '
+				+ '<br>'
+				+'توصیه می شود در صورت پاس نشدن مدار منطقی و الکترونیک 1 این درس را برندارید '
+				+"<br><p style='color:#A40404; font-size=1px;'>"
+				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'تاریخ ارسال:'
+				+'&nbsp 09:30-1402/07/03'
+				+'<hr>';						
+				}
+
+
+
+Start=2023092509.45;
+End  =2024062016.22;
+	if ( now >= Start && now < End ) 
+				{
+				document.getElementById("mycontent").innerHTML+=
+				'2 &#x2190  '
+				+'شرایط کلاس :'
+				+ '<br>'
+				+ 'همه امتحانات این درس به صورت جزوه و کتاب باز هستند '
+				+ '<br>'
+				+' به جای امتحان میان ترم، امتحانات کلاسی بدون اطلاع زمان امتحان و به صورت آفلاین، آنلاین یا ترکیبی برگزار می شود'
+				+ '<br>'
+				+ 'بنابراین باید کاغذ، مداد، ماشین حساب، گوشی تلفن همراه با اتصال اینترنت و شارژ کافی همراه داشته باشید'
+				+ '<br>'
+				+ 'بارم بندی امتحانات در پایان ترم بر اساس تعداد امتحانات برگزار شده انجام می شود و امتحان پایان ترم به تنهایی برای پاس شدن کافی نیست'
+				+ '<br>'
+				+ 'این کلاس برای افرادی که انگیزه کافی‌ برای یادگیری ندارند و تنها به دنبال پاس شدن درس هستند مناسب نیست'
+	 			+ '<br>'
+				+ 'توصیه می شود برای یادگیرى بیشتر در کلاس، يادداشت بردارید '
+	 			+ '<br>'
+				+ 'توصیه می شود برای تمرکز بیشتر در کلاس و فکر کردن به مطالب، در حین تدریس از جزوه ترم های گذشته استفاده نکنید'
+				+"<br><p style='color:#A40404; font-size=1px;'>"
+				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'تاریخ ارسال:'
+				+'&nbsp 09:30-1402/07/03'
+				+'<hr>';						
+				}
+
+document.getElementById("mycontent").innerHTML+=
+				'1 &#x2190  '
+				+'با سلام و آرزوی شروع ترمی خوب برای همگی شما '
+	 			+ '<br>'
+				+'فعالیت‌های درس در این صفحه اطلاع رسانی می شود '
+	 			+ '<br>'
+				+' قبل از هر جلسه درس، اطلاعیه های این صفحه را مشاهده نمایید  '
+	 			+ '<br>'
+				+' در هنگام مشاهده این صفحه، درستی و تطابق تاریخ و زمان سیستم خود را با زمان درج شده در بالای این صفحه بررسی کنید '
+				+"<br><p style='color:#A40404; font-size=1px;'>"
+				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'تاریخ ارسال:'
+				+'&nbsp 00:00-1402/07/01'
+				+'<hr>';	
+
+
+
+  </script>
+
+</html>
