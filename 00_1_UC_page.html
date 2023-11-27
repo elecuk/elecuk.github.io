@@ -37,6 +37,27 @@ document.getElementById("welcome").innerHTML+=
 					+'ترم پاییز ۱۴۰3-۱۴۰2'
 					+'<hr style="height:4px;border:none;color:#333;background-color:blue;">';
 
+Startex1=2023112210.30;
+Endex1  =2023112210.50;
+	if ( now >= Startex1 && now < Endex1 ) {window.open("ey/index.html","_top");+'<hr>';}
+	else if ( now >= Endex1 )
+				{
+				document.getElementById("mycontent").innerHTML +=
+				'12 &#x2190  '
+				+'امتحان 4'
+				+'-(پایان امتحان )';}
+	if ( now >= Startex1) 
+				{document.getElementById("mycontent").innerHTML+=	
+				"<br><p style='color:#B40424; font-size=1px;'>"
+				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'زمان شروع:'
+				+'&nbsp 10:30-1402/09/06'
+				+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'زمان پایان:'
+				+'&nbsp 11:00-1402/09/06'
+				+'</p> <hr>';
+				}
+
 Start=2023092509.50;
 End  =2025062016.22;
 	if ( now >= Start && now < End ) 
