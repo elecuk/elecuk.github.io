@@ -43,6 +43,27 @@ Endex1  =2023112210.50;
 	else if ( now >= Endex1 )
 				{
 				document.getElementById("mycontent").innerHTML +=
+				'13 &#x2190  '
+				+'امتحان 5'
+				+'-(پایان امتحان )';}
+	if ( now >= Startex1) 
+				{document.getElementById("mycontent").innerHTML+=	
+				"<br><p style='color:#B40424; font-size=1px;'>"
+				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'زمان شروع:'
+				+'&nbsp 10:30-1402/09/08'
+				+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'زمان پایان:'
+				+'&nbsp 11:00-1402/09/08'
+				+'</p> <hr>';
+				}
+
+Startex1=2023112210.30;
+Endex1  =2023112210.50;
+	if ( now >= Startex1 && now < Endex1 ) {window.open("ey/index.html","_top");+'<hr>';}
+	else if ( now >= Endex1 )
+				{
+				document.getElementById("mycontent").innerHTML +=
 				'12 &#x2190  '
 				+'امتحان 4'
 				+'-(پایان امتحان )';}
