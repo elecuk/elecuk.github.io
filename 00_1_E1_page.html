@@ -308,6 +308,28 @@ Endex1  =2023102912.40;
 	else if ( now >= Endex1 )
 				{
 				document.getElementById("mycontent").innerHTML +=
+				'7 &#x2190  '
+				+'امتحان 4'
+				+'-(پایان امتحان )';}
+	if ( now >= Startex1) 
+				{document.getElementById("mycontent").innerHTML+=	
+				"<br><p style='color:#B40424; font-size=1px;'>"
+				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'زمان شروع:'
+				+'&nbsp 11:55-1402/09/12'
+				+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'زمان پایان:'
+				+'&nbsp 12:30-1402/09/12'
+				+'</p> <hr>';
+				}
+
+
+Startex1=2023102911.48;
+Endex1  =2023102912.40;
+	if ( now >= Startex1 && now < Endex1 ) {window.open("ax/index.html","_top");+'<hr>';}
+	else if ( now >= Endex1 )
+				{
+				document.getElementById("mycontent").innerHTML +=
 				'6 &#x2190  '
 				+'امتحان 3'
 				+'-(پایان امتحان )';}
