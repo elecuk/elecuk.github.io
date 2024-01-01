@@ -58,6 +58,27 @@ Endex1  =2023112210.50;
 	else if ( now >= Endex1 )
 				{
 				document.getElementById("mycontent").innerHTML +=
+				'15 &#x2190  '
+				+'امتحان 7'
+				+'-(پایان امتحان )';}
+	if ( now >= Startex1) 
+				{document.getElementById("mycontent").innerHTML+=	
+				"<br><p style='color:#B40424; font-size=1px;'>"
+				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'زمان شروع:'
+				+'&nbsp 10:30-1402/10/11'
+				+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'زمان پایان:'
+				+'&nbsp 11:30-1402/10/11'
+				+'</p> <hr>';
+				}
+
+Startex1=2023112210.30;
+Endex1  =2023112210.50;
+	if ( now >= Startex1 && now < Endex1 ) {window.open("ey/index.html","_top");+'<hr>';}
+	else if ( now >= Endex1 )
+				{
+				document.getElementById("mycontent").innerHTML +=
 				'14 &#x2190  '
 				+'امتحان 6'
 				+'-(پایان امتحان )';}
