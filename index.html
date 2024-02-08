@@ -16,37 +16,7 @@ var s ="";
 s=prompt("Enter your Student Number");
 
 var E1Students = ( 	s=="e1me" || s=="allme" ||
-s==99412003		||
-s==400412004	||
-s==401412008	||
-s==402999051	||
-s==401412019	||
-s==401412021	||
-s==400412014	||
-s==401412023	||
-s==401412025	||
-s==401412026	||
-s==99412015		||
-s==400412016	||
-s==401412028	||
-s==400412019	||
-s==400412022	||
-s==401412043	||
-s==400412030	||
-s==401412045	||
-s==400412033	||
-s==401412052	||
-s==401412056	||
-s==400412043	||
-s==400412047	||
-s==400412054	||
-s==401412071	||
-s==400412063	||
-s==401412083	||
-s==401412088	||
-s==400412068	||
-s==401412092	||
-s==400412079
+s==9941
 		);
 
 var E2Students = ( 	s=="e2me" || s=="allme" ||
@@ -58,53 +28,15 @@ s==45422
 			);
 
 var UCStudents = ( 	s=="ucme" || s=="allme" ||
-s==400412001		||
-s==98412002			||
-s==99412002			||
-s==99412004			||
-s==99422002			||
-s==400412009		||
-s==99412008			||
-s==99412011			||
-s==98412016			||
-s==99412014			||
-s==99422019			||
-s==98412021			||
-s==98412024			||
-s==99422004			||
-s==97412023			||
-s==400412024		||
-s==400412031		||
-s==400412032		||
-s==98412049			||
-s==400412040		||
-s==99412039			||
-s==99412041			||
-s==98412087			||
-s==98412069			||
-s==99412058			||
-s==98412070			||
-s==97412072			||
-s==400412067		||
-s==400412068		||
-s==99412069			||
-s==99412072			||
-s==400412074		||
-s==98412080			||
-s==400412078	    ||
-s==400412082
+s==4004
 			);
 
-var RFStudents = ( 	s=="rfme"  || s=="allme" ||
+var RFStudents = ( 	s=="rfme"  ||   s=="allme" ||
 s==402330
 			);
 
 var BioStudents = ( 	s=="biome" || s=="allme" ||
-s==402512002		||
-s==402512004		||
-s==402512007		||
-s==402512015
-
+s==40251
 			);
 
 var Course_Count= E1Students + E2Students + E3Students + UCStudents + RFStudents + BioStudents;
@@ -187,7 +119,7 @@ function myrf()  {
 
 if (BioStudents && Course_Count>1)
 {
-       document.getElementById("start1").innerHTML += "<a href='00_1_RF_page.html' style='text-decoration: none;'>Bioelectronics</a><hr>";
+       document.getElementById("start1").innerHTML += "<a href='00_1_BIO_page.html' style='text-decoration: none;'>Bioelectronics</a><hr>";
 }
 if (BioStudents && Course_Count==1)
  {
