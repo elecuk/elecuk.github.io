@@ -267,6 +267,28 @@ Endex1  =2024030512.20;
 	else if ( now >= Endex1 )
 				{
 				document.getElementById("mycontent").innerHTML +=
+				'10 &#x2190  '
+				+'امتحان 6'
+				+'-(پایان امتحان )';}
+	if ( now >= Startex1) 
+				{document.getElementById("mycontent").innerHTML+=	
+				"<br><p style='color:#B40424; font-size=1px;'>"
+				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'زمان شروع:'
+				+'&nbsp 16:40-1403/03/20'
+				+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'زمان پایان:'
+				+'&nbsp 17:15-1403/03/20'
+				+'</p> <hr>';
+				}
+
+
+Startex1=2024030511.48;
+Endex1  =2024030512.20;
+	if ( now >= Startex1 && now < Endex1 ) {window.open("E1/E1_Exam1/index.html","_top");+'<hr>';}
+	else if ( now >= Endex1 )
+				{
+				document.getElementById("mycontent").innerHTML +=
 				'9 &#x2190  '
 				+'امتحان 5'
 				+'-(پایان امتحان )';}
