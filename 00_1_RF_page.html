@@ -37,6 +37,25 @@ document.getElementById("welcome").innerHTML+=
 					+'ترم بهار ۱۴۰3-۱۴۰2'
 					+'<hr style="height:4px;border:none;color:#333;background-color:blue;">';
 
+Start3=2024061209.30;
+End3  =2024061923.59;
+	if ( now >= Start3 && now < End3 ) {document.getElementById("mycontent").innerHTML +=
+						'12 &#x2190  '
+						+"<a href='Cad/1/index.html' style='text-decoration: none';> شروع کار با نرم افزار </a>";}
+	else if ( now >= End3 )	{document.getElementById("mycontent").innerHTML +=
+						'3 &#x2190  '
+						+'شروع کار با نرم افزار'
+						+'-(پایان مهلت)';}
+	if ( now >= Start3) {document.getElementById("mycontent").innerHTML+=	
+						"<br><p style='color:#A40404; font-size=1px;'>"
+						+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+						+'تاریخ ارسال:'
+						+'&nbsp 09:30-1403/03/23'
+						+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+						+'مهلت مشاهده:'
+						+'&nbsp 23:59-1403/03/30'
+						+ '</p> <hr>';}
+
 
 Start=2024042107.30;
 End  =2024100123.59;
