@@ -1,0 +1,106 @@
+<html>
+<head>
+  <title>Electronics III</title>
+  <meta http-equiv="refresh" content="30" >
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/styleTest.css">
+</head>
+
+     <body style="background-color:#FFFDEF;">
+
+<body>
+  <h2 dir="ltr" style="font-family: 'byekan'; font-size: 12px; margin: 0px 50px 0px;" id="displayDateTime"></h2>
+  <h2 dir="rtl" style="font-family: 'byekan'; font-size: 30px; margin: 0px 50px 00px; color:blue;" id="welcome"></h2>
+  <h2 dir="rtl" style="font-family: 'byekan'; font-size: 15px; margin: 0px 70px 00px;" id="mycontent"></h2>
+
+</body>
+
+  <script type="text/javascript">
+  var today = new Date();
+  var day   = today.getDay();
+  var month = today.getMonth()+1;
+  var year  = today.getFullYear();
+
+  var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var timehm = today.getHours() + ":" + today.getMinutes() ;
+
+var now= today.getFullYear()*1000000 + (today.getMonth()+1)*10000 + today.getDate()*100 + today.getHours() + (today.getMinutes()/100 );
+<!--document.getElementById("displayDateTime").innerHTML+= ' Your Current Date : '+ now +  '<br>';-->
+document.getElementById("displayDateTime").innerHTML+= ' Date : '+ daylist[day] +' &nbsp &nbsp ' +date+'  &nbsp &nbsp  '+timehm;
+
+
+document.getElementById("welcome").innerHTML+=
+					'اطلاعیه ها و فعالیت های درس الکترونیک 3'
+					+' <br> '
+					+'ترم پاییز ۱۴۰۴-۱۴۰۳'
+					+'<hr style="height:4px;border:none;color:#333;background-color:blue;">';
+
+
+
+
+
+
+
+
+
+Start=2024091500.00;
+End  =2025020700.00;
+	if ( now >= Start && now < End ) 
+				{
+				document.getElementById("mycontent").innerHTML+=
+				'2 &#x2190  '
+				+'موضوع درس :'
+				+ '<br>'
+				+ 'در این درس مدارهای الکترونیکی پایه بررسی خواهد شد'
+				+ '<br>'
+				+ 'مدارهای این درس کاربردي هستند و کار عملی (به صورت گروه های دو نفره) اهمیت بالایی دارد'
+				+ '<br>'
+				+ 'تسلط کافی بر الکترونیک 1 و 2  و کنترل خطی مورد نیاز این درس است '
+				+ '<br>'
+				+ 'مرجع درس کتاب مدارهای میکروالکترونیک (Microelectronic Circuits) نوشته Sedra/Smith است'
+				+"<br><p style='color:#A40404; font-size=1px;'>"
+				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'تاریخ ارسال:'
+				+'&nbsp 12:00-1402/11/29'
+				+'<hr>';						
+				}
+
+
+
+document.getElementById("mycontent").innerHTML+=
+				'1 &#x2190  '
+				+'با سلام و آرزوی شروع ترمی خوب برای همگی شما '
+	 			+ '<br>'
+				+'فعالیت‌های درس در این صفحه اطلاع رسانی می شود '
+	 			+ '<br>'
+				+' قبل از هر جلسه درس، اطلاعیه های این صفحه را مشاهده نمایید  '
+	 			+ '<br>'
+				+'  اطلاعیه های جدیدتر در ابتدای لیست این صفحه اضافه می شوند  '
+	 			+ '<br>'
+				+'  در هنگام مشاهده این صفحه، درستی و تطابق تاریخ و زمان سیستم خود در بالای این صفحه را با تاریخ و زمان واقعی بررسی کنید '
+				+'  و عدم تطابق را برطرف کنید '
+				+"<br><p style='color:#A40404; font-size=1px;'>"
+				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'تاریخ ارسال:'
+				+'&nbsp 00:00-1403/06/22'
+				+'<hr>';	
+
+
+
+  </script>
+
+<p align="center">
+
+<!-- hitwebcounter Code START -->
+<a href="https://www.hitwebcounter.com" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=11263792&style=0003&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>             
+
+<br>
+
+<!-- hitwebcounter Code START -->
+<a href="https://www.hitwebcounter.com" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=11263811&style=0003&nbdigits=3&type=ip&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>  
+</p>
+</html>

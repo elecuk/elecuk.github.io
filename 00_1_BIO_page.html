@@ -1,0 +1,132 @@
+<html>
+<head>
+  <title>BIO</title>
+  <meta http-equiv="refresh" content="30" >
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/styleTest.css">
+</head>
+
+     <body style="background-color:#FFFDEF;">
+
+<body>
+  <h2 dir="ltr" style="font-family: 'byekan'; font-size: 12px; margin: 0px 50px 0px;" id="displayDateTime"></h2>
+  <h2 dir="rtl" style="font-family: 'byekan'; font-size: 30px; margin: 0px 50px 00px; color:blue;" id="welcome"></h2>
+  <h2 dir="rtl" style="font-family: 'byekan'; font-size: 15px; margin: 0px 70px 00px;" id="mycontent"></h2>
+
+</body>
+
+  <script type="text/javascript">
+  var today = new Date();
+  var day   = today.getDay();
+  var month = today.getMonth()+1;
+  var year  = today.getFullYear();
+
+  var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var timehm = today.getHours() + ":" + today.getMinutes() ;
+
+var now= today.getFullYear()*1000000 + (today.getMonth()+1)*10000 + today.getDate()*100 + today.getHours() + (today.getMinutes()/100 );
+<!--document.getElementById("displayDateTime").innerHTML+= ' Your Current Date : '+ now +  '<br>';-->
+document.getElementById("displayDateTime").innerHTML+= ' Date : '+ daylist[day] +' &nbsp &nbsp ' +date+'  &nbsp &nbsp  '+timehm;
+
+
+document.getElementById("welcome").innerHTML+=
+					'اطلاعیه ها و فعالیت های درس مدارهای زیست الکترونیک'
+					+' <br> '
+					+'ترم پاییز ۱۴۰۴-۱۴۰۳'
+					+'<hr style="height:4px;border:none;color:#333;background-color:blue;">';
+
+
+
+
+
+
+
+
+
+
+Start=2024042107.30;
+End  =2024070123.59;
+	if ( now >= Start && now < End ) 
+						{
+						document.getElementById("mycontent").innerHTML+=
+						'11 &#x2190  '
+						+'نرم افزارهای مورد نیاز برای انجام پروژه را از لینک های زیر دریافت کنید:'
+						+' <br> '
+						+'از شبکه اینترنت داخلی دانشگاه دانلود را انجام دهید'
+						+' <br> '	
+						+'برای جلوگیری از کاهش حجم اینترنت خود، از اینترنت log out کنید'
+						+' <br> ' 
+						+' <br> '
+						+'لینک های دانلود با اینترنت داخلی دانشگاه'
+						+' <br> '
+						+"<a href='https://download.uk.ac.ir/Download/%D9%88%DB%8C-%D8%A7%D9%85-%D9%88%D8%B1' target='_blank' style='text-decoration: none';>  Download Vmware (550MB)  </a>" 
+						+' <br> '	
+						+"<a href='https://download.uk.ac.ir/Download/%D8%B3%D9%86%D8%AA-%D8%A7%D9%88-%D8%A7%D8%B3' target='_blank' style='text-decoration: none';>  Download Cadence (6.8GB)  </a>" 
+						+' <br> '
+						+' <br> '
+						+'لینک های دانلود با اینترنت خارج دانشگاه'
+						+' <br> '
+						+"<a href='https://soft98.ir/os/virtual-machine/1232-vmware-workstation.html' target='_blank' style='text-decoration: none';>  Download Vmware (soft98.ir)  </a>" 
+						+' <br> '	
+						+"<a href='https://storage.uk.ac.ir/BA3JqQ4zRdA0RqAl' target='_blank' style='text-decoration: none';>  Download Cadence (6.8GB-storage)  </a>" 
+						+"<p style='color:#A40404; font-size=1px;'>"
+						+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+						+'تاریخ ارسال:'
+						+'&nbsp 16:00-1403/03/09'
+						+' <br> '
+						+ '<hr>';
+						}
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById("mycontent").innerHTML+=
+				'1 &#x2190  '
+				+'با سلام و آرزوی شروع ترمی خوب برای همگی شما '
+	 			+ '<br>'
+				+'فعالیت‌های درس در این صفحه اطلاع رسانی می شود '
+	 			+ '<br>'
+				+' قبل از هر جلسه درس، اطلاعیه های این صفحه را مشاهده نمایید  '
+	 			+ '<br>'
+				+'  اطلاعیه های جدیدتر در ابتدای لیست این صفحه اضافه می شوند  '
+	 			+ '<br>'
+				+'  در هنگام مشاهده این صفحه، درستی و تطابق تاریخ و زمان سیستم خود در بالای این صفحه را با تاریخ و زمان واقعی بررسی کنید '
+				+'  و عدم تطابق را برطرف کنید '
+				+"<br><p style='color:#A40404; font-size=1px;'>"
+				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'تاریخ ارسال:'
+				+'&nbsp 00:00-1403/06/22'
+				+'<hr>';	
+
+
+
+  </script>
+
+
+<p align="center">
+
+<!-- hitwebcounter Code START -->
+<a href="https://www.hitwebcounter.com" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=14297414&style=0003&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>    
+
+
+<br>
+
+<!-- hitwebcounter Code START -->
+<a href="https://www.hitwebcounter.com" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=14297447&style=0003&nbdigits=4&type=ip&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>     
+
+</p>
+
+</html>
