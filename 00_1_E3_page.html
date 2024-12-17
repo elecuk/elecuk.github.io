@@ -72,8 +72,31 @@ Start3=2024100109.30;
 End3  =2025062523.59;
 	if ( now >= Start3 && now < End3 ) {document.getElementById("mycontent").innerHTML +=
 						'** &#x2190  '
-						+"<a href='E3/e3exm4.png' style='text-decoration: none'> Exam4 grades </a>"
+						+"<a href='E3/e3exm56.png' style='text-decoration: none'> Exam5-6 grades </a>"
 						+ '</p> <hr>';}
+
+Startex1=2024091011.10;
+Endex1  =2024091011.20;
+	if ( now >= Startex1 && now < Endex1 ) {window.open("E1/E1_Exam1/index.html","_top");+'<hr>';}
+	else if ( now >= Endex1 )
+				{
+				document.getElementById("mycontent").innerHTML +=
+				'12 &#x2190  '
+				+'امتحان 5,6'
+				+'-(پایان امتحان )'
+				;}
+	if ( now >= Startex1) 
+				{document.getElementById("mycontent").innerHTML+=	
+				"<br><p style='color:#B40424; font-size=1px;'>"
+				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'شروع:'
+				+'&nbsp 11:00-1403/09/26'
+				+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'پایان:'
+				+'&nbsp 11:30-1403/09/26'
+				+ '<br>'
+				+'</p> <hr>';
+				}
 
 
 Startex1=2024091011.10;
