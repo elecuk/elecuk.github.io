@@ -136,20 +136,46 @@ End  =2026061710.00;
 
 
 
-Start=2026092509.45;
+Start=2024092509.45;
 End  =2026092016.22;
 	if ( now >= Start && now < End ) 
 				{
 				document.getElementById("mycontent").innerHTML+=
-				'12 &#x2190  '
-				+' امتحان  پایان ترم به صورت جزوه و کتاب باز و با مدت 2 ساعت برگزار می شود'
-
+				'15 &#x2190  '
+				+' امتحان پایان ترم به صورت جزوه و کتاب باز و به مدت 2 ساعت برگزار می شود'
+				+ '<br>'
+				+ ' زمان و مکان امتحان پایان ترم در سامانه گلستان قابل مشاهده  است  '
+				+ '<br>'
+				+ ' در صورت غیبت در امتحان پایان ترم و یا خروج از سالن امتحانات قبل از امضای لیست آزمون ، طبق مقررات دانشگاه باید نمره صفر وارد شود  '
  				+"<br><p style='color:#A40404; font-size=1px;'>"
 				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-				+'تاریخ ارسال:'
-				+'&nbsp 09:30-1403/03/22'
+				+'تاریخ پیام:'
+				+'&nbsp 15:30-1403/10/09'
 				+'<hr>';						
 				}
+
+
+Startex1=2024030511.48;
+Endex1  =2024030512.20;
+	if ( now >= Startex1 && now < Endex1 ) {window.open("E1/E1_Exam1/index.html","_top");+'<hr>';}
+	else if ( now >= Endex1 )
+				{
+				document.getElementById("mycontent").innerHTML +=
+				'14 &#x2190  '
+				+'امتحان 8'
+				+'-(پایان امتحان )';}
+	if ( now >= Startex1) 
+				{document.getElementById("mycontent").innerHTML+=	
+				"<br><p style='color:#B40424; font-size=1px;'>"
+				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'شروع:'
+				+'&nbsp 12:00-1403/10/09'
+				+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'پایان:'
+				+'&nbsp 12:45-1403/10/09'
+				+'</p> <hr>';
+				}
+
 
 Start3=2024100109.30;
 End3  =2025062523.59;
@@ -157,6 +183,7 @@ End3  =2025062523.59;
 						'** &#x2190  '
 						+"<a href='E1/e1exm7.png' style='text-decoration: none'> Exam7 grades </a>"
 						+ '</p> <hr>';}
+
 
 
 Startex1=2024030511.48;
