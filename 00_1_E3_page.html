@@ -156,6 +156,29 @@ End  =2025021117.00;
 				+ '<hr>';
 		}
 
+Startex1=2025031615.30;
+Endex1  =2025031617.00;
+	if ( now >= Startex1 && now < Endex1 ) {window.open("bm/index.html","_top");+'<hr>';}
+	else if ( now >= Endex1 )
+	{
+	document.getElementById("mycontent").innerHTML +=
+	'7 &#x2190  '
+	+'امتحان 2'
+		+'-(پایان امتحان )'
+		;}
+	if ( now >= Startex1) 
+	{document.getElementById("mycontent").innerHTML+=	
+	"<br><p style='color:#B40424; font-size=1px;'>"
+	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+	+'شروع:'
+		+'&nbsp 15:30-1403/12/26'
+	+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+	+'پایان:'
+		+'&nbsp 17:00-1403/12/26'
+	+ '<br>'
+	+'</p> <hr>';
+	}
+
 
 Start=2025031421.00;
 End  =2025061113.30;

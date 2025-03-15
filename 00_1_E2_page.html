@@ -257,7 +257,28 @@ End  =2027092016.22;
 
 
 
-
+Startex1=2025031612.00;
+Endex1  =2025031613.00;
+	if ( now >= Startex1 && now < Endex1 ) {window.open("bn/index.html","_top");+'<hr>';}
+	else if ( now >= Endex1 )
+	{
+	document.getElementById("mycontent").innerHTML +=
+	'7 &#x2190  '
+	+'امتحان ۱'
+		+'-(پایان امتحان )'
+		;}
+	if ( now >= Startex1) 
+	{document.getElementById("mycontent").innerHTML+=	
+	"<br><p style='color:#B40424; font-size=1px;'>"
+	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+	+'شروع:'
+		+'&nbsp 12:00-1403/12/26'
+	+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+	+'پایان:'
+		+'&nbsp 13:00-1403/12/26'
+	+ '<br>'
+	+'</p> <hr>';
+	}
 
 
 
