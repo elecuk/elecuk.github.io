@@ -132,12 +132,32 @@ End  =2025021117.00;
 		}
 
 
-Start=2025042017.00;
-End  =2025043000.00;
+Start=2025050417.00;
+End  =2025051200.00;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	'** &#x2190  '
-	+"<a href='E3/Exm/e3exm3.png' style='text-decoration: none'> Exam3 grades </a>"
+	+"<a href='E3/Exm/e3exm4.png' style='text-decoration: none'> Exam4 grades </a>"
 	+ '</p> <hr>';}
+
+Startex1=2025031615.30;
+Endex1  =2025031617.00;
+	if ( now >= Startex1 && now < Endex1 ) {window.open("bm/index.html","_top");+'<hr>';}
+	else if ( now >= Endex1 )
+	{
+	document.getElementById("mycontent").innerHTML +=
+	'13 &#x2190  '
+	+'امتحان 4'
+		+'-(پایان امتحان )'
+		;}
+	if ( now >= Startex1) 
+	{document.getElementById("mycontent").innerHTML+=	
+	"<br><p style='color:#B40424; font-size=1px;'>"
+	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+		+'&nbsp 1404/02/14'
+	+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+		+'&nbsp 16:15-17:15'
+	+'</p> <hr>';
+	}
 
 Startex1=2025031615.30;
 Endex1  =2025031617.00;
