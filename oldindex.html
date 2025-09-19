@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>ELECUK</title>
+</head>
+
+<body>
+
+  <h2 align="center" style="font-size: 25px; text-decoration: none; line-height: 2.7;" id="start1"></h2>
+
+
+
+</body>
+
+<script type="text/javascript">
+var s ="";
+s=prompt("Enter your Student Number");
+
+var E1Students = ( 	s=="e1me" || s=="allme" ||
+s==2412083   ||
+s==2412084
+		);
+
+var E2Students = ( 	s=="e2me" || s=="allme" ||
+s==12001      ||
+s==12004      
+
+ 			);
+
+var E3Students = ( 	s=="e3me" || s=="allme" ||
+s==422001      ||
+s==412079
+			);
+
+var UCStudents = ( 	s=="ucme" || s=="allme" ||
+s==4004
+			);
+
+var RFStudents = ( 	s=="rfme"  ||   s=="allme" ||
+s==12009    ||
+s==512002
+			);
+
+var BioStudents = ( 	s=="biome" || s=="allme" ||
+s==51002020  ||
+s==25100224
+			);
+
+var Course_Count= E1Students + E2Students + E3Students + UCStudents + RFStudents + BioStudents;
+
+if (E1Students && Course_Count > 1)
+{
+       document.getElementById("start1").innerHTML +=
+             "<a onClick=mye1()>Electronics I</a><hr>";
+}
+if (E1Students && Course_Count==1)
+{
+       mye1();
+}
+
+function mye1()  {
+      document.getElementById("start1").innerHTML = "<iframe src='00_1_E1_page.html' style=' height:100%; width:100%; ' ></iframe>";
+  }
+
+
+
+
+
+if (E2Students && Course_Count > 1)
+{
+       document.getElementById("start1").innerHTML +=
+             "<a onClick=mye2()>Electronics II</a><hr>";
+}
+if (E2Students && Course_Count==1)
+{
+       mye2();
+}
+
+function mye2()  {
+      document.getElementById("start1").innerHTML = "<iframe src='00_1_E2_page.html' style=' height:100%; width:100%; ' ></iframe>";
+  }
+
+
+if (E3Students && Course_Count > 1)
+{
+       document.getElementById("start1").innerHTML +=
+             "<a onClick=mye3()>Electronics III</a><hr>";
+}
+if (E3Students && Course_Count==1)
+{
+       mye3();
+}
+
+function mye3()  {
+      document.getElementById("start1").innerHTML = "<iframe src='00_1_E3_page.html' style=' height:100%; width:100%; ' ></iframe>";
+  }
+
+
+
+if (UCStudents && Course_Count > 1)
+{
+       document.getElementById("start1").innerHTML +=
+       "<a onClick=myuc()>Microcontrollers</a><hr>";
+       }
+ if (UCStudents && Course_Count == 1)
+ {
+        myuc();
+}
+
+function myuc()  {
+       document.getElementById("start1").innerHTML = "<iframe src='00_1_UC_page.html' style=' height:100%; width:100%; ' ></iframe>";
+   }
+
+if (RFStudents && Course_Count>1)
+{
+       document.getElementById("start1").innerHTML += "<a href='00_1_RF_page.html' style='text-decoration: none;'>RFIC</a><hr>";
+}
+if (RFStudents && Course_Count==1)
+ {
+        myrf();
+}
+function myrf()  {
+       document.getElementById("start1").innerHTML = "<iframe src='00_1_RF_page.html' style=' height:100%; width:100%; ' ></iframe>";
+   }
+
+
+if (BioStudents && Course_Count>1)
+{
+       document.getElementById("start1").innerHTML += "<a href='00_1_BIO_page.html' style='text-decoration: none;'>Bioelectronics</a><hr>";
+}
+if (BioStudents && Course_Count==1)
+ {
+        mybio();
+}
+function mybio()  {
+       document.getElementById("start1").innerHTML = "<iframe src='00_1_BIO_page.html' style=' height:100%; width:100%; ' ></iframe>";
+   }
+
+
+if (Course_Count==0)
+{
+alert("Sorry! Not correct or allowed! Please make sure to enter your student number correctly, or contact admin!");
+// document.getElementById("start1").innerHTML+=
+// "<iframe src='scorm/Feedback/feedback.html' style=' height:100%; width:100%; ' ></iframe>";
+
+}
+
+
+
+</script>
+
+
+</html>
