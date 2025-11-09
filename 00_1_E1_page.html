@@ -290,12 +290,36 @@ End  =2026061710.00;
 
 
 
-Start=2025102517.00;
-End  =2025103100.00;
+Start=2025110912.00;
+End  =2025111623.59;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	'** &#x2190  '
-	+"<a href='E1/Exm/e1exm1.png' style='text-decoration: none'> Exam1 grades </a>"
+	+"<a href='E1/Exm/e1exm2.png' style='text-decoration: none'> Exam2+Average grades </a>"
 	+ '</p> <hr>';}
+
+
+
+
+Startex1=2025100612.00;
+Endex1  =2025100613.00;
+	if ( now >= Startex1 && now < Endex1 ) {window.open("bn/index.html","_top");+'<hr>';}
+	else if ( now >= Endex1 )
+	{
+	document.getElementById("mycontent").innerHTML +=
+	'8 &#x2190  '
+	+'امتحان 2'
+		+'-(پایان امتحان )'
+		;}
+	if ( now >= Startex1) 
+	{document.getElementById("mycontent").innerHTML+=	
+	"<br><p style='color:#B40424; font-size=1px;'>"
+	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+		+'&nbsp 1404/08/18'
+	+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+		+'&nbsp 10:30-11:20'
+	+ '<br>'
+	+'</p> <hr>';
+	}
 
 
 Startex1=2025100612.00;
@@ -314,7 +338,7 @@ Endex1  =2025100613.00;
 	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
 		+'&nbsp 1404/07/22'
 	+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+'&nbsp 09:00-10:00'
+		+'&nbsp 09:30-10:00'
 	+ '<br>'
 	+'</p> <hr>';
 	}
