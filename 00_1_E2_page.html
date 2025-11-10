@@ -328,12 +328,34 @@ End  =2027061113.30;
 
 
 
-Start=2025100617.00;
-End  =2025101400.00;
+Start=2025111017.00;
+End  =2025111800.00;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	'** &#x2190  '
-	+"<a href='E2/Exm/e2exm1.png' style='text-decoration: none'> Exam1 grades </a>"
+	+"<a href='E2/Exm/e2exm4.png' style='text-decoration: none'> Exam4 grades </a>"
 	+ '</p> <hr>';}
+
+
+Startex1=2025100612.00;
+Endex1  =2025100613.00;
+	if ( now >= Startex1 && now < Endex1 ) {window.open("bn/index.html","_top");+'<hr>';}
+	else if ( now >= Endex1 )
+	{
+	document.getElementById("mycontent").innerHTML +=
+	'10 &#x2190  '
+	+'امتحان 4'
+		+'-(پایان امتحان )'
+		;}
+	if ( now >= Startex1) 
+	{document.getElementById("mycontent").innerHTML+=	
+	"<br><p style='color:#B40424; font-size=1px;'>"
+	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+		+'&nbsp 1404/08/19'
+	+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+		+'&nbsp 12:30-13:30'
+	+ '<br>'
+	+'</p> <hr>';
+	}
 
 
 Startex1=2025100612.00;
