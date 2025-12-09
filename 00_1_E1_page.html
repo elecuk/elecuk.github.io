@@ -294,12 +294,36 @@ End  =2025112511.00;
 
 
 
-Start=2025120712.00;
-End  =2025121423.59;
+Start=2025120912.00;
+End  =2025121623.59;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	'** &#x2190  '
-	+"<a href='E1/Exm/e1exm3.png' style='text-decoration: none'> Exam3+Average grades </a>"
+	+"<a href='E1/Exm/e1exm4.png' style='text-decoration: none'> Exam4+Average grades </a>"
 	+ '</p> <hr>';}
+
+
+Startex1=2025100612.00;
+Endex1  =2025100613.00;
+	if ( now >= Startex1 && now < Endex1 ) {window.open("bn/index.html","_top");+'<hr>';}
+	else if ( now >= Endex1 )
+	{
+	document.getElementById("mycontent").innerHTML +=
+	'13 &#x2190  '
+	+'امتحان 4'
+		+'-(پایان امتحان )'
+		;}
+	if ( now >= Startex1) 
+	{document.getElementById("mycontent").innerHTML+=	
+	"<br><p style='color:#B40424; font-size=1px;'>"
+	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+		+'&nbsp 1404/09/18'
+	+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+		+'&nbsp 09:30-10:00'
+	+ '<br>'
+	+'</p> <hr>';
+	}
+
+
 
 Startex1=2025100612.00;
 Endex1  =2025100613.00;
