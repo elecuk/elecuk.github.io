@@ -296,6 +296,30 @@ End  =2027061113.30;
 		+'<hr>';
 		}
 
+
+
+Start=2025121212.00;
+End  =2026061710.00;
+	if ( now >= Start && now < End ) 
+		{
+		document.getElementById("mycontent").innerHTML +=
+		'13 &#x2190  '
+		+"<a href='Orcad1-E2-CurrentMirror/index.html' style='text-decoration: none';>  شبیه سازی آینه جریان   </a>";
+						}
+	else if ( now >= End )  {document.getElementById("mycontent").innerHTML +=
+		'13 &#x2190  '
+		+'  شبیه سازی نرم افزاری'
+				+'-(پایان مهلت)';}
+	if ( now >= Start) {document.getElementById("mycontent").innerHTML+=	
+		"<br><p style='color:#A40404; font-size=1px;'>"
+		+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+		+'تاریخ پیام:'
+				+'&nbsp 1404/09/22'
+		+ '</p> <hr>';
+}
+
+
+
 Start=2025121212.00;
 End  =2026061710.00;
 	if ( now >= Start && now < End ) 
