@@ -249,12 +249,34 @@ End  =2025112511.00;
 			}
 
 
-Start=2025121412.00;
-End  =2025122123.59;
+Start=2025122312.00;
+End  =2025123023.59;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	'** &#x2190  '
-	+"<a href='E1/Exm/e1exm5.png' style='text-decoration: none' target='_blank'> Exam5+Average grades </a>"
+	+"<a href='E1/Exm/e1exm6.png' style='text-decoration: none' target='_blank'> Exam6+Average grades </a>"
 	+ '</p> <hr>';}
+
+
+Startex1=2025100612.00;
+Endex1  =2025100613.00;
+	if ( now >= Startex1 && now < Endex1 ) {window.open("bn/index.html","_top");+'<hr>';}
+	else if ( now >= Endex1 )
+	{
+	document.getElementById("mycontent").innerHTML +=
+	'16 &#x2190  '
+	+'امتحان 6'
+		+'-(پایان امتحان )'
+		;}
+	if ( now >= Startex1) 
+	{document.getElementById("mycontent").innerHTML+=	
+	"<br><p style='color:#B40424; font-size=1px;'>"
+	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+		+'&nbsp 1404/10/02'
+	+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+		+'&nbsp 10:30-11:00'
+	+ '<br>'
+	+'</p> <hr>';
+	}
 
 
 
