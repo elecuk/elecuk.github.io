@@ -1,0 +1,188 @@
+.syntax unified
+.cpu cortex-m3
+.fpu softvfp
+.thumb
+
+.include "stm32f103xx.h"
+
+.equ  Yekan,    (0x20000000)
+.equ  Dahgan,   (0x20000004)
+.equ  Sadgan,   (0x20000008)
+.equ  Hezargan, (0x2000000C)
+
+.section .text
+.global main
+main:
+
+Init_PortA_7_segment:
+	LDR  R3, =RCC_APB2ENR
+	LDR  R2, [R3]
+	ORR  R2, #(RCC_APB2ENR_IOPAEN)
+	STR  R2, [R3]
+
+	LDR  R3, =GPIOA_CRL
+	LDR  R2, =0x11111111	//output
+	STR  R2, [R3]
+
+	LDR  R3, =GPIOA_CRH
+	LDR  R2, [R3]
+	LDR  R1, =0x00001111	//output
+	ORR  R2, R1
+	STR  R2, [R3]
+
+	LDR  R3, =GPIOA_ODR
+	LDR  R2, [R3]
+	ORR  R2, #(Pin11|Pin10|Pin9|Pin8)	//ALL = off
+	STR  R2, [R3]
+
+Init_Value:
+	MOV  R11, #0
+	BL   Find_Save_Digits
+
+Init_Timer2:
+	LDR  R3, =RCC_APB1ENR
+	LDR  R2, [R3]
+	ORR  R2, #RCC_APB1ENR_TIM2EN
+	STR  R2, [R3]		//Enable Tim2
+
+	LDR  R3, =TIM2_PSC
+	MOV  R2, #(1000-1)	//less than 65535
+	STR  R2, [R3]
+
+	LDR  R3, =TIM2_ARR
+	MOV  R2, #(8000-1)	//less than 65535
+	STR  R2, [R3]
+
+Enable_Timer2_Int:
+	LDR  R3, =TIM2_DIER
+	LDR  R2, [R3]
+	ORR  R2, #TIM_DIER_UIE
+	STR  R2, [R3]		//Enable Interrupt
+
+	LDR  R3, =NVIC
+	MOV  R2, #(1 << TIM2_IRQn) //28
+	STR  R2, [R3]		//Activate TIM2_IRQ
+
+Start_Timer2:
+	LDR  R3, =TIM2_CR1
+	LDR  R2, [R3]
+	ORR  R2, #TIM_CR1_CEN
+	STR  R2, [R3]		//Start timer2
+
+Loop:
+
+	BL Multiplex_4_Digits
+
+	B Loop
+
+.section .text
+.global TIM2_IRQHandler
+.type  TIM2_IRQHandler, %function
+TIM2_IRQHandler:
+PUSH {LR}
+
+	LDR  R3, =TIM2_SR
+	LDR  R2, [R3]
+	BIC  R2, #TIM_SR_UIF	//Clear Update Flag
+	STR  R2, [R3]
+
+	ADD  R11, #1
+	BL   Find_Save_Digits
+
+POP  {LR}
+BX   LR
+
+Multiplex_4_Digits:
+PUSH {LR}
+
+	LDR  R3, =Yekan
+	LDR  R4, [R3]
+	BL   Lookup_7_Seg_Digits
+	BIC  R2, #Pin11
+//	ORR  R2, #Pin7	//point
+	STR  R2, [R3]
+
+	LDR  R3, =Dahgan
+	LDR  R4, [R3]
+	BL   Lookup_7_Seg_Digits
+	BIC  R2, #Pin10
+	STR  R2, [R3]
+
+	LDR  R3, =Sadgan
+	LDR  R4, [R3]
+	BL   Lookup_7_Seg_Digits
+	BIC  R2, #Pin9
+	STR  R2, [R3]
+
+	LDR  R3, =Hezargan
+	LDR  R4, [R3]
+	BL   Lookup_7_Seg_Digits
+	BIC  R2, #Pin8
+	STR  R2, [R3]
+
+POP  {LR}
+BX   LR
+
+Find_Save_Digits:
+PUSH {LR}
+
+	MOV R6, R11
+	MOV R5, #10
+
+	BL   Divide_Find_Remainder
+	LDR  R3, =Yekan
+	STR  R4, [R3]
+
+	BL   Divide_Find_Remainder
+	LDR  R3, =Dahgan
+	STR  R4, [R3]
+
+	BL   Divide_Find_Remainder
+	LDR  R3, =Sadgan
+	STR  R4, [R3]
+
+	BL   Divide_Find_Remainder
+	LDR  R3, =Hezargan
+	STR  R4, [R3]
+
+POP  {LR}
+BX   LR
+
+Divide_Find_Remainder:
+PUSH {LR}
+
+	MOV  R7, R6
+	UDIV R6, R5
+	MUL  R4, R6, R5
+	SUB  R4, R7, R4
+
+POP  {LR}
+BX   LR
+
+Lookup_7_Seg_Digits:
+PUSH {LR}
+
+	LDR  R2, =Table_7_seg
+	ADD  R2, R4
+	LDRB R4, [R2]
+
+	LDR  R3, =GPIOA_ODR
+	LDR  R2, [R3]
+	ORR  R2, #0x00000F00
+	BIC  R2, #0x000000FF
+	ORR  R2, R4
+
+POP  {LR}
+BX   LR
+
+Table_7_seg:
+	.byte 0x3F // 0
+	.byte 0x06 // 1
+	.byte 0x5B // 2
+	.byte 0x4F // 3
+	.byte 0x66 // 4
+	.byte 0x6D // 5
+	.byte 0x7D // 6
+	.byte 0x07 // 7
+	.byte 0x7F // 8
+	.byte 0x6F // 9

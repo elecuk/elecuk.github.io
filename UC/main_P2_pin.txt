@@ -1,0 +1,49 @@
+.syntax unified
+.cpu cortex-m3
+.fpu softvfp
+.thumb
+
+.include "stm32f103xx.h"
+
+.section .text
+.global main
+main:
+	LDR  R3, =RCC_APB2ENR
+	LDR  R2, [R3]
+	ORR  R2, #(RCC_APB2ENR_IOPBEN | RCC_APB2ENR_IOPCEN)
+	STR  R2, [R3]       //Enable PORTB PORTC
+
+	LDR  R3, =GPIOB_CRH
+	LDR  R2, [R3]
+	BIC  R2, #(0b1111 << GPIO_CRH_MODE11_Pos)  	//Clear Mode PB11
+	ORR  R2, #(0b1000 << GPIO_CRH_MODE11_Pos)  	//PB11 input
+	STR  R2, [R3]
+
+	LDR  R3, =GPIOB_ODR
+	LDR  R2, [R3]
+	ORR  R2, #GPIO_ODR_ODR11   //PB11 pull-up
+	STR  R2, [R3]
+
+	LDR  R3, =GPIOC_CRH
+	LDR  R2, [R3]
+	BIC  R2, #(0b1111 << GPIO_CRH_MODE13_Pos)  	//Clear Mode PC13
+	ORR  R2, #(0b0001 << GPIO_CRH_MODE13_Pos) 	//PC13 output
+	STR  R2, [R3]
+
+
+Turn_Off_LED:
+	LDR  R5, =GPIOC_BSRR
+	LDR  R2, =GPIO_BSRR_BS13
+	STR  R2, [R5]
+
+Check:
+	LDR  R4, =GPIOB_IDR
+	LDR  R6, [R4]
+	ANDS R6, #GPIO_IDR_IDR11
+	BNE  Turn_Off_LED
+
+Turn_On_LED:
+	LDR  R5, =GPIOC_BSRR
+	LDR  R2, =GPIO_BSRR_BR13
+	STR  R2, [R5]
+	B    Check

@@ -1,0 +1,39 @@
+.syntax unified
+.cpu cortex-m3
+.fpu softvfp
+.thumb
+
+.include "stm32f103xx.h"
+
+.section .text
+.global main
+main:
+
+	LDR  R3, =RCC_APB2ENR
+	LDR  R2, =0b11000		//PBEN PCEN
+	STR  R2, [R3]
+
+
+	LDR  R3, =GPIOB_CRL
+	LDR  R2, =0x88888888	//PB Input
+	STR  R2, [R3]
+
+	LDR  R3, =GPIOB_ODR
+	LDR  R2, =0xFF			//PB Pullup
+	STR  R2, [R3]
+
+
+	LDR  R3, =GPIOC_CRH
+	LDR  R2, =0x11111111	//PC Output
+	STR  R2, [R3]
+
+loop:
+
+	LDR  R3, =GPIOB_IDR
+	LDR  R2, [R3]			//Read PB
+
+	LDR  R3, =GPIOC_ODR
+	LSL  R2,#8				//Shift
+	STR  R2, [R3]			//Write PC
+
+	B    loop

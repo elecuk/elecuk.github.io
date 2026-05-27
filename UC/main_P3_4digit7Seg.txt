@@ -1,0 +1,94 @@
+.syntax unified
+.cpu cortex-m3
+.fpu softvfp
+.thumb
+
+.include "stm32f103xx.h"
+
+.section .text
+.global main
+main:
+	LDR  R3, =RCC_APB2ENR
+	LDR  R2, =(RCC_APB2ENR_IOPAEN | RCC_APB2ENR_IOPBEN)
+	STR  R2, [R3]
+
+	LDR  R3, =GPIOA_CRL
+	LDR  R2, =0x11111111    //output
+	STR  R2, [R3]
+
+	LDR  R3, =GPIOA_CRH
+	LDR  R2, [R3]
+	LDR  R1, =0x00001111    //output
+	ORR  R2, R1
+	STR  R2, [R3]
+
+	LDR  R3, =GPIOA_ODR
+	LDR  R2, [R3]
+	ORR  R2, #(Pin11|Pin10|Pin9|Pin8) //ALL =off
+	STR  R2, [R3]
+
+	LDR  R3, =GPIOB_CRH
+	LDR  R2, =0x88888888   //Input
+	STR  R2, [R3]
+
+	LDR  R3, =GPIOB_ODR
+	LDR  R2, =0xFF00      //pull-up
+	STR  R2, [R3]
+
+Loop:
+	LDR  R3, =GPIOB_IDR
+	LDR  R2, [R3]
+	LSR  R2, #8
+
+	MOV  R6, R2
+	MOV  R5, #10
+
+	BL   Find_Digits
+	BIC  R2, #Pin8
+	STR  R2, [R3]
+
+	BL   Find_Digits
+	BIC  R2, #Pin9
+	STR  R2, [R3]
+
+	BL   Find_Digits
+	BIC  R2, #Pin10
+	STR  R2, [R3]
+
+
+	B    Loop
+
+
+Find_Digits:
+	PUSH {LR}
+
+	MOV  R7, R6
+	UDIV R6, R5
+	MUL  R4, R6, R5
+	SUB  R4, R7, R4
+
+	LDR  R2, =Table_7_seg
+	ADD  R2, R4
+	LDRB R4, [R2]
+
+	LDR  R3, =GPIOA_ODR
+	LDR  R2, [R3]
+	ORR  R2, #0x00000F00
+	BIC  R2, #0x000000FF
+	ORR  R2, R4
+
+	POP  {LR}
+	BX   LR
+
+
+Table_7_seg:
+	.byte 0x3F // 0
+	.byte 0x06 // 1
+	.byte 0x5B // 2
+	.byte 0x4F // 3
+	.byte 0x66 // 4
+	.byte 0x6D // 5
+	.byte 0x7D // 6
+	.byte 0x07 // 7
+	.byte 0x7F // 8
+	.byte 0x6F // 9
