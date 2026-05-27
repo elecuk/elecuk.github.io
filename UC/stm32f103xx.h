@@ -729,6 +729,8 @@
 .equ	NVIC_ICER1    ,    (NVIC_BASE  +  0x80) // NVIC->ICER[0] //128
 .equ	NVIC_ICER2    ,    (NVIC_BASE  +  0x84) // NVIC->ICER[1] //132
 
+.equ	NVIC    ,     NVIC_BASE
+
 /**
   ******************************************************************************
   * @file    stm32f103xb.h
