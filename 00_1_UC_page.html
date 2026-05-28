@@ -210,7 +210,7 @@ Start=2026022109.30;
 End  =2027071123.59;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	'10 &#x2190  '
-	+ ' در فایل های پروژه خود، فایل زیر را در پوشه  Inc  با فایل قبلی جایگزین کنید :  '
+	+ ' در فایل های پروژه خود، فایل زیر را در پوشه  Inc  به جای فایل قبلی جایگزین کنید :  '
 		+ '<br>'
 	+"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href='UC/stm32f103xx.h' style='text-decoration: none' target='_blank'> stm32f103xx.h </a>"
 	+ '</p> <hr>';}
@@ -220,21 +220,22 @@ End  =2027071123.59;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	'9 &#x2190  '
 	+ ' فایل main برنامه های کلاس :  '
+	+'<br>'	
+	+'<br>'
+		+"<li><a href='UC/main_P5_Time_Measure.txt' style='text-decoration: none' target='_blank'> برنامه ثانیه شمار </a></li>"
 
-		+ '<br><br>'
-	+"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href='UC/main_P5_Time_Measure.txt' style='text-decoration: none' target='_blank'> برنامه ثانیه شمار </a>"
 
-		+ '<br><br>'
-	+"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href='UC/main_P4_Blink_PC13_1Second.txt' style='text-decoration: none' target='_blank'> برنامه   Blink LED every one second </a>"
+	+'<br>'
+	+"<li><a href='UC/main_P4_Blink_PC13_1Second.txt' style='text-decoration: none' target='_blank'> برنامه   Blink LED every one second </a></li>"
 
-		+ '<br><br>'
-	+"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href='UC/main_P3_4digit7Seg.txt' style='text-decoration: none' target='_blank'> برنامه نمایش روی seven segment چهار رقمی </a>"
+	+'<br>'
+	+"<li><a href='UC/main_P3_4digit7Seg.txt' style='text-decoration: none' target='_blank'> برنامه نمایش روی seven segment چهار رقمی </a></li>"
 
-		+ '<br><br>'
-	+"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href='UC/main_P2_pin.txt' style='text-decoration: none' target='_blank'> برنامه دوم -خواندن و نوشتن پایه ها </a>"
+	+'<br>'
+	+"<li><a href='UC/main_P2_pin.txt' style='text-decoration: none' target='_blank'> برنامه دوم -خواندن و نوشتن پایه ها </a></li>"
 
-		+ '<br><br>'
-	+"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href='UC/main_P1_port.txt' style='text-decoration: none' target='_blank'> برنامه اول -خواندن و نوشتن در پورت ها </a>"
+	+'<br>'
+	+"<li><a href='UC/main_P1_port.txt' style='text-decoration: none' target='_blank'> برنامه اول -خواندن و نوشتن در پورت ها </a></li>"
 
 	+ '</p> <hr>';}
 
@@ -244,26 +245,27 @@ End  =2027071123.59;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 		'8 &#x2190  '
 		+ ' دانلود نرم افزارهای مورد نیاز:  '
-				+ '<br>'
-		+"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href='https://sisoog.com/%d8%af%d8%a7%d9%86%d9%84%d9%88%d8%af-%d9%86%d8%b1%d9%85-%d8%a7%d9%81%d8%b2%d8%a7%d8%b1-stm32cubeide/' style='text-decoration: none' target='_blank'>  STM32CUBEIDE  </a>"
-		+ '<br>'
-		+"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href='https://sisoog.com/download-st-link/' style='text-decoration: none' target='_blank'>  ST-LINK Utility  </a>"
-		+ '<br>'
-		+ ' قطعات مورد نیاز:  '
-				+ '<br>'
-		+ 'Blue Pill board (chip: STM32F103C8T6 or similar GD.. HK.. copies) '
-		+ '<br>'
-		+ 'ST-LINK-V2 programmer or Bootloader programmed board'
-		+ '<br>'
-		+ 'Four Digit Seven Segment'
-		+ '<br>'
-		+ '...'
-		+ '<br>'
-				+"<a href='UC/Bootloader_Program_Bluepill_via_USB_port.rar' target='_blank'> پروگرام کردن میکروکنترلر با USB </a>"
-		+ '<br>'
-		+ 'برای اطلاع از قیمت قطعات الکترونیکی به این آدرس مراجعه کنید: '
-				+"<a href='https://elecohm.com' style='text-decoration: none' target='_blank'> elecohm.com </a>"
-		+ '</p> <hr>';}
+	+'<br>'
+	+'<br>'
+	+"<li><a href='https://sisoog.com/%d8%af%d8%a7%d9%86%d9%84%d9%88%d8%af-%d9%86%d8%b1%d9%85-%d8%a7%d9%81%d8%b2%d8%a7%d8%b1-stm32cubeide/' style='text-decoration: none' target='_blank'>  دانلود نرم‌افزار STM32CubeIDE  </a></li>"
+	+'<br>'
+	+"<li><a href='https://sisoog.com/download-st-link/' style='text-decoration: none' target='_blank'>  ST-LINK Utility رابط نرم افزاری پروگرام کردن میکروکنترلرهای STM32 </a></li>"
+	+'<br>'
+	+ ' قطعات مورد نیاز:  '
+	+'<br>'
+	+ 'Blue Pill board (chip: STM32F103C8T6 or similar GD.. HK.. copies) '
+	+ '<br>'
+	+ 'ST-LINK-V2 programmer or Bootloader programmed board'
+	+ '<br>'
+	+ 'Four Digit Seven Segment'
+	+ '<br>'
+	+ '...'
+	+ '<br>'
+	+"<a href='UC/Bootloader_Program_Bluepill_via_USB_port.rar' target='_blank'> روش جایگزین: پروگرام کردن میکروکنترلر با USB     </a>"
+	+ '<br>'
+	+ 'برای اطلاع از قیمت قطعات الکترونیکی روی این آدرس کلیک کنید: '
+		+"<a href='https://elecohm.com' style='text-decoration: none' target='_blank'> elecohm.com </a>"
+	+ '</p> <hr>';}
 
 
 Start=2026022109.30;
@@ -370,15 +372,15 @@ document.getElementById("mycontent").innerHTML+=
 	 			+ '<br>'
 		+ 'ایمیل دانشگاه در زمان های قطع اینترنت جهانی در دسترس خواهد بود '
 	 			+ '<br>'
-		+ 'برای ثبت نام ایمیل دانشجویی دانشگاه به این آدرس مراجعه کنید:'
+		+ 'برای ثبت نام ایمیل دانشجویی دانشگاه روی این آدرس کلیک کنید:'
 				+"<a href='https://email.uk.ac.ir' style='text-decoration: none' target='_blank'> email.uk.ac.ir </a>"
 	 			+ '<br>'
-		+ 'برای ورود به ایمیل دانشجویی دانشگاه به این آدرس مراجعه کنید: '
+		+ 'برای ورود به ایمیل دانشجویی دانشگاه روی این آدرس کلیک کنید: '
 				+"<a href='https://mail.uk.ac.ir' style='text-decoration: none' target='_blank'> mail.uk.ac.ir </a>"
 	 			+ '<br>'
 		+ 'با نصب نرم افزار و تنظیم ایمیل می توانید بدون نیاز به چک کردن مداوم ایمیل از بررسی خودکار و اعلان های آن آگاه شوید  '
 	 			+ '<br>'
-		+ ' برای آشنایی با نصب نرم افزار و تنظیمات ایمیل دانشگاه به این آدرس مراجعه کنید: '
+		+ ' برای آشنایی با نصب نرم افزار و تنظیمات ایمیل دانشگاه روی این آدرس کلیک کنید: '
 		+"<a href='https://it.uk.ac.ir/add_to_apps' style='text-decoration: none' target='_blank'>it.uk.ac.ir/add_to_apps</a>"
 		+"<br><p style='color:#A40404; font-size=1px;'>"
 		+ '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'

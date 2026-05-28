@@ -71,9 +71,9 @@ Start_Timer2:
 
 Loop:
 
-	BL Multiplex_4_Digits
+	BL   Multiplex_4_Digits
 
-	B Loop
+	B    Loop
 
 .section .text
 .global TIM2_IRQHandler
@@ -126,8 +126,8 @@ BX   LR
 Find_Save_Digits:
 PUSH {LR}
 
-	MOV R6, R11
-	MOV R5, #10
+	MOV  R6, R11
+	MOV  R5, #10
 
 	BL   Divide_Find_Remainder
 	LDR  R3, =Yekan

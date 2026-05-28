@@ -15,7 +15,7 @@ main:
 
 
 	LDR  R3, =GPIOB_CRL
-	LDR  R2, =0x88888888	//PB Input
+	LDR  R2, =0x88888888		//PB Input
 	STR  R2, [R3]
 
 	LDR  R3, =GPIOB_ODR
@@ -24,7 +24,7 @@ main:
 
 
 	LDR  R3, =GPIOC_CRH
-	LDR  R2, =0x11111111	//PC Output
+	LDR  R2, =0x11111111		//PC Output
 	STR  R2, [R3]
 
 loop:
@@ -33,7 +33,7 @@ loop:
 	LDR  R2, [R3]			//Read PB
 
 	LDR  R3, =GPIOC_ODR
-	LSL  R2,#8				//Shift
+	LSL  R2, #8			//Shift
 	STR  R2, [R3]			//Write PC
 
 	B    loop
