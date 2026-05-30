@@ -58,7 +58,7 @@ Loop:
 .global TIM2_IRQHandler
 .type TIM2_IRQHandler, %function
 TIM2_IRQHandler:
-	PUSH {LR}
+PUSH {LR}
 
 	LDR  R3, =TIM2_SR
 	LDR  R2, [R3]
@@ -70,5 +70,5 @@ TIM2_IRQHandler:
 	EOR  R2, #Pin13
 	STR  R2, [R3] //Toggle PC13
 
-	POP  {LR}
-	BX   LR
+POP  {LR}
+BX   LR

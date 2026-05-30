@@ -1,0 +1,95 @@
+.syntax unified
+.cpu cortex-m3
+.fpu softvfp
+.thumb
+.include "stm32f103xx.h"
+
+.section .text
+.global main
+main:
+Init_PortC13:
+	LDR  R3, =RCC_APB2ENR
+	LDR  R2, [R3]
+	ORR  R2, #RCC_APB2ENR_IOPCEN
+	STR  R2, [R3]  //Enable PortC
+
+	LDR  R3, =GPIOC_CRH
+	LDR  R2, [R3]
+	BIC  R2, #(0xF << GPIO_CRH_MODE13_Pos) //Clear Mode PC13
+	ORR  R2, #(0x1 << GPIO_CRH_MODE13_Pos) //PC13 output
+	STR  R2, [R3]
+
+Init_PortB_INT0_INT1:
+	LDR  R3, =RCC_APB2ENR
+	LDR  R2, [R3]
+	ORR  R2, #(RCC_APB2ENR_IOPBEN)
+	ORR  R2, #(RCC_APB2ENR_AFIOEN)
+	STR  R2, [R3]
+
+	LDR  R3, =GPIOB_CRL
+	LDR  R2, =0x00000088 //PB0,1 as input
+	STR  R2, [R3]
+
+	LDR  R3, =GPIOB_ODR
+	LDR  R2, =0b00000011 //PB0,1 pullup
+	STR  R2, [R3]
+
+	LDR  R3, =AFIO_EXTICR1
+	LDR  R2, [R3]
+	ORR  R2, #(AFIO_EXTICR1_EXTI0_PB|AFIO_EXTICR1_EXTI1_PB) //0x11
+	STR  R2, [R3]
+
+	LDR  R3, =EXTI_FTSR
+	LDR  R2, [R3]
+	ORR  R2, #(EXTI_FTSR_TR0|EXTI_FTSR_TR1)
+	STR  R2, [R3] //Falling Trigger
+
+	LDR  R3, =EXTI_IMR
+	LDR  R2, [R3]
+	ORR  R2, #(EXTI_IMR_MR0|EXTI_IMR_MR1)
+	STR  R2, [R3]
+
+	LDR  R3, =NVIC_ISER1
+	MOV  R2, #((1 << EXTI0_IRQn)|(1 << EXTI1_IRQn))
+	STR  R2, [R3]
+
+Loop:
+	B    Loop   //Do nothing (Empty loop)
+
+.section .text
+.global EXTI0_IRQHandler
+.type EXTI0_IRQHandler, %function
+EXTI0_IRQHandler:
+PUSH {LR}
+
+	LDR  R3, =EXTI_PR
+	LDR  R2, [R3]
+	ORR  R2, #EXTI_PR_PR0 //Clear Flag
+	STR  R2, [R3]
+
+	LDR  R3, =GPIOC_ODR
+	LDR  R2, [R3]
+	BIC  R2, #Pin13
+	STR  R2, [R3]    //LED PC13 ON
+
+POP {LR}
+BX LR
+
+.section .text
+.global EXTI1_IRQHandler
+.type EXTI1_IRQHandler, %function
+EXTI1_IRQHandler:
+PUSH {LR}
+
+	LDR  R3, =EXTI_PR
+	LDR  R2, [R3]
+	ORR  R2, #EXTI_PR_PR1  //Clear Flag
+	STR  R2, [R3]
+
+	LDR  R3, =GPIOC_ODR
+	LDR  R2, [R3]
+	ORR  R2, #Pin13
+	STR  R2, [R3]	  //LED PC13 OFF
+
+POP {LR}
+BX LR
