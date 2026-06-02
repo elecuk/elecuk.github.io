@@ -1,0 +1,459 @@
+<html>
+<head>
+  <title>MicroControllers</title>
+  <meta http-equiv="refresh" content="120" >
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/styleTest.css">
+</head>
+
+     <body style="background-color:#FFFDEF;">
+
+<body>
+  <h2 dir="ltr" style="font-family: 'byekan'; font-size: 12px; margin: 0px 50px 0px;" id="displayDateTime"></h2>
+  <h2 dir="rtl" style="font-family: 'byekan'; font-size: 30px; margin: 0px 50px 00px; color:blue;" id="welcome"></h2>
+  <h2 dir="rtl" style="font-family: 'byekan'; font-size: 15px; line-height: 1.6; margin: 0px 70px 00px;" id="mycontent"></h2>
+
+</body>
+
+  <script type="text/javascript">
+  var today = new Date();
+  var day   = today.getDay();
+  var month = today.getMonth()+1;
+  var year  = today.getFullYear();
+
+  var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var timehm = today.getHours() + ":" + today.getMinutes() ;
+
+var now= today.getFullYear()*1000000 + (today.getMonth()+1)*10000 + today.getDate()*100 + today.getHours() + (today.getMinutes()/100 );
+<!--document.getElementById("displayDateTime").innerHTML+= ' Your Current Date : '+ now +  '<br>';-->
+document.getElementById("displayDateTime").innerHTML+= ' Date : '+ daylist[day] +' &nbsp &nbsp ' +date+'  &nbsp &nbsp  '+timehm;
+
+
+document.getElementById("welcome").innerHTML+=
+		'اطلاعیه ها و فعالیت های درس اصول میکروکنترلر'
+				+' <br> '
+		+'ترم بهار 1405-1404'
+				+'<hr style="height:4px;border:none;color:#333;background-color:blue;">';
+
+
+
+
+Start=2023092509.50;
+End  =2025062016.22;
+	if ( now >= Start && now < End ) 
+				{
+				document.getElementById("mycontent").innerHTML+=
+				'11 &#x2190  '
+				+'پروژه درس    '
+				+' :'
+				+ '<br>'
+				+ 'انجام پروژه درس به صورت گروه دو نفره انجام شود    '
+				+ '<br>'
+				+ 'موضوع پروژه آزاد است و باید مرتبط و متناسب با محتوای درس باشد   '
+				+ '<br>'
+				+ ' پس از تحویل پروژه و درستی عملکرد مدار، گزارش توسط سرگروه ارسال شود '
+				+ '<br>'
+				+ ' فرمت ارسال گزارش پروژه '
+				+ '<br>'
+				+ 'Subject '
+				+ '(نمونه عنوان ایمیل)'
+				+ '<br>'
+				+'احمدی+ اکبری+'
+				+'PRGUC4021_P1/2/3'
+				+ '<br>'
+				+ 'بدون رعایت این عنوان، پروژه شما در انتهای ترم قابل جستجو و مشاهده نخواهد بود  '
+				+ '<br>'
+				+ 'متن ایمیل:  '
+				+ '<br>'
+				+ 'نام و نام خانوادگی اعضای گروه دو نفره '
+				+ '<br>'
+				+ 'شرح مختصر عملکرد پروژه '
+				+ '<br>'
+				+ 'Attachment '
+				+ '(پیوست)  '
+				+ '<br>'
+				+ 'گزارش مشروح شامل توضیحات، روابط، محاسبات و تصویر مدار به صورت فایل PDF'
+				+ '<br>'
+				+ 'نام فایل PDF'
+				+ '<br>'
+				+ 'project1/2/3.asm or pdf'
+				+ '<br>'
+				+ 'حجم فایل پیوست کمتر از 3MB باشد '
+				+ '<br>'
+				+ 'ایمیلی برای تایید دریافت پروژه برای شما ارسال نمی شود   '
+				+ '<br>'
+				+ 'نمره پروژه برای اعضای گروه یکسان نخواهد بود '
+				+ '<br>'
+				+ ' آخرین مهلت تحویل پروژه آخرین جلسه تشکیل کلاس است و در زمان امتحانات و پس از آن امکان تحویل پروژه نخواهد بود    '
+				+ '<br>'
+				+ ' اگر در انتهای ترم نمره کتبی فردی کمتر از 10 باشد نمره پروژه ها محاسبه نمی شود و پاس شدن درس با انجام پروژه ممکن نیست'
+				+ '<br>'
+				+ '  انجام پروژه نباید برای فرد گران و پر هزینه، مضر یا خطرناک باشد (مثلا خطر برق گرفتگی، تشعشع، سوختگی، آسیب به چشم و ...)   '
+				+ '<br>'
+				+ 'رعایت نکات ایمنی برای خود فرد (مانند حفاظت ولتاژ بالا، عینک محافظ چشم) و استفاده صحیح از قطعات و لوازم الزامی است. عدم رعایت نکات ایمنی  و سوزاندن و آسیب به خود و لوازم، نمره منفی خواهد داشت   '
+				+"<br><p style='color:#A40404; font-size=1px;'>"
+				+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+				+'تاریخ ارسال:'
+				+'&nbsp 11:30-1402/09/01'
+				+'<hr>';						
+				}
+
+
+
+
+Start=2028092709.20;
+End  =2029110123.59;
+	if ( now >= Start && now < End ) 
+						{
+						document.getElementById("mycontent").innerHTML+=
+						'9 &#x2190  '
+						+"<a href='div8u.asm' target='_blank' style='text-decoration: none';>  Division in AVR  </a>" 
+						+"<br><p style='color:#A40404; font-size=1px;'>"
+						+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+						+'تاریخ ارسال:'
+						+'&nbsp 14:00-1402/08/10'
+						+ '<hr>';
+						}
+
+
+Start=2028092709.20;
+End  =2029110123.59;
+	if ( now >= Start && now < End ) 
+	{
+	document.getElementById("mycontent").innerHTML+=
+	'8 &#x2190  '
+	+"<a href='https://www.fischl.de/usbasp/' target='_blank' style='text-decoration: none';>  Programmer USBASP (DIY)  </a>" 
+	+"<br><p style='color:#A40404; font-size=1px;'>"
+	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+	+'تاریخ ارسال:'
+		+'&nbsp 14:00-1402/08/10'
+	+ '<hr>';
+	}
+
+
+
+
+
+
+Start=2028092709.20;
+End  =2029110123.59;
+	if ( now >= Start && now < End ) 
+						{
+						document.getElementById("mycontent").innerHTML +=
+						'5 &#x2190  '
+						+"<a href='uc/ucs2p7/index.html' style='text-decoration: none';> آشنایی با برخی دستورات AVR </a>";
+						}
+	else if ( now >= End )  {document.getElementById("mycontent").innerHTML +=
+						'5 &#x2190  '
+						+'آشنایی با برخی دستورات AVR'
+						+'-(پایان مهلت)';}
+	if ( now >= Start) {document.getElementById("mycontent").innerHTML+=	
+						"<br><p style='color:#A40404; font-size=1px;'>"
+						+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+						+'تاریخ ارسال:'
+						+'&nbsp 10:00-1402/07/19'
+						+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+						+'مهلت مشاهده:'
+						+'&nbsp 23:59-1402/08/03'
+						+ '</p> <hr>';}
+
+Start=2028092709.20;
+End  =2029110123.59;
+	if ( now >= Start && now < End ) 
+						{
+						document.getElementById("mycontent").innerHTML +=
+						'4 &#x2190  '
+						+"<a href='uc/AVR_Studio/index.html' style='text-decoration: none';> آشنایی با نرم افزار AVRSTUDIO </a>";
+						}
+	else if ( now >= End )  {document.getElementById("mycontent").innerHTML +=
+						'4 &#x2190  '
+						+'آشنایی با نرم افزار AVRSTUDIO'
+						+'-(پایان مهلت)';}
+	if ( now >= Start) {document.getElementById("mycontent").innerHTML+=	
+						"<br><p style='color:#A40404; font-size=1px;'>"
+						+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+						+'تاریخ ارسال:'
+						+'&nbsp 18:00-1402/07/18'
+						+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+						+'مهلت مشاهده:'
+						+'&nbsp 23:59-1402/08/03'
+						+ '</p> <hr>';}
+
+
+Start=2027120509.30;
+End  =2028062523.59;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+	'7 &#x2190  '
+	+ ' دانلود پروژه خالی :  '
+		+ '<br>'
+	+"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href='UC/1.zip' style='text-decoration: none' target='_blank'> ASM_Project </a>"
+	+ '<br>'
+	+"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href='UC/2.zip' style='text-decoration: none' target='_blank'> C_Project  </a>"
+	+ '</p> <hr>';}
+
+
+Start=2026022109.30;
+End  =2026022315.30;
+	if ( now >= Start && now < End ) 
+			{
+			document.getElementById("mycontent").innerHTML+=
+			'** &#x2190  '
+			+'اولین جلسه کلاس مجازی در صورت عملکرد مناسب سامانه، دوشنبه 04 اسفند برگزار می شود '
+						+ '<hr>';
+			}
+
+Start=2026022109.30;
+End  =2026022315.30;
+	if ( now >= Start && now < End ) 
+	{
+	document.getElementById("mycontent").innerHTML+=
+	'** &#x2190  '
+	+ ' در فایل های پروژه خود، این فایل  را در پوشه  Inc  به جای فایل قبلی جایگزین کنید :  '
+	+"&nbsp &nbsp &nbsp &nbsp <a href='UC/stm32f103xx.h' style='text-decoration: none' target='_blank'> stm32f103xx.h </a>"
+	+'<br>'
+		+ '<hr>';
+	}
+
+
+
+Start=2026022109.30;
+End  =2027071123.59;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+	'9 &#x2190  '
+	+' فایل main برنامه های کلاس : '
+	+'<br>'
+
+	+'<br>'
+	+"<li>   برنامه ششم -  Start Stop وقفه خارجی:  "
+		+" &nbsp  &nbsp  &nbsp <a href='UC/C' target='_blank' style='color:red;'></a>"
+	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P6_Start_Stop_ASM.txt' target='_blank'>ASM Code</a>"
+	+"</li>"
+
+	+'<br>'
+	+"<li>   برنامه پنجم -  ثانیه شمار چهار رقمی:  "
+		+" &nbsp  &nbsp &nbsp  &nbsp&nbsp  &nbsp  &nbsp <a href='UC/C' target='_blank' style='color:red;'></a>"
+	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P5_Time_Measure_ASM.txt' target='_blank'>ASM Code</a>"
+	+"</li>"
+
+
+
+	+'<br>'
+	+"<li>برنامه چهارم -  Blink PC13 LED یک ثانیه:"
+		+" &nbsp  &nbsp  &nbsp <a href='UC/main_P4_Blink_PC13_1Second_C.txt' target='_blank' style='color:red;'>C Code</a>"
+	+" &nbsp  &nbsp&nbsp  &nbsp  &nbsp <a href='UC/main_P4_Blink_PC13_1Second_ASM.txt'target='_blank'>ASM Code</a>"
+	+"</li>"
+
+
+	+'<br>'
+	+"<li> برنامه سوم - نمایش روی seven segment چهار رقمی: "
+		+"  <a href='UC/C' target='_blank' style='color:red;'></a>"
+	+"<a href='UC/main_P3_4digit7Seg_ASM.txt' target='_blank'>ASM Code</a>"
+	+"</li>"
+
+
+	+'<br>'
+	+"<li> برنامه دوم -خواندن و نوشتن پایه ها: "
+		+" &nbsp  &nbsp  &nbsp &nbsp  &nbsp&nbsp  &nbsp <a href='UC/c' target='_blank' style='color:red;'></a>"
+	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P2_pin_ASM.txt' target='_blank'>ASM Code</a>"
+	+"</li>"
+
+
+	+'<br>'
+	+"<li> برنامه اول -خواندن و نوشتن در پورت ها:"
+		+" &nbsp  &nbsp  &nbsp &nbsp  &nbsp &nbsp <a href='UC/main_P1_port_C.txt' target='_blank' style='color:red;'>C Code</a>"
+	+" &nbsp  &nbsp  &nbsp  &nbsp &nbsp <a href='UC/main_P1_port_ASM.txt' target='_blank'>ASM Code</a>"
+	+"</li>"
+
+	+'<br>'
+	+ ' **  فایل های ایجاد پروژه در نرم افزار :  '
+	+" &nbsp  &nbsp  &nbsp <a href='UC/C_01_empty.zip' target='_blank' style='color:red;'>C Project files</a>"
+	+" &nbsp  &nbsp  &nbsp <a href='UC/ASM_01_empty.zip' target='_blank'>Assembly Project files</a>"
+	+'<br>'
+	
+	+ ' پس از extract  کردن فایل Zip، پوشه ایجاد شده را با نام مناسب Rename کنید'
+	+' و درمسیر workspace نرم افزار Stm32cubeide قرار داده'
+	+' و سپس import کنید و از مسیر Src در فایل main برنامه خود را بنویسید. '
+	+'  پس از build در پوشه Debug  فایل hex ایجاد می شود  '
+	+ '</p> <hr>';}
+
+
+Start=2026022109.30;
+End  =2027071123.59;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+		'8 &#x2190  '
+		+ ' دانلود نرم افزارهای مورد نیاز:  '
+	+'<br>'
+	+'<br>'
+	+"<li><a href='https://sisoog.com/%d8%af%d8%a7%d9%86%d9%84%d9%88%d8%af-%d9%86%d8%b1%d9%85-%d8%a7%d9%81%d8%b2%d8%a7%d8%b1-stm32cubeide/' style='text-decoration: none' target='_blank'>  دانلود نرم‌افزار کامپایلر STM32CubeIDE  </a></li>"
+	+'<br>'
+	+"<li><a href='https://sisoog.com/download-st-link/' style='text-decoration: none' target='_blank'> رابط نرم افزاری پروگرام کردن میکروکنترلر با  ST-LINK </a></li>"
+	+'<br>'
+	+"<a href='UC/Bootloader_Program_Bluepill_via_USB_port.rar' target='_blank'> روش جایگزین: پروگرام کردن میکروکنترلر با USB (حجم 24MB  )  </a>"
+	+'<br><br>'
+	+ ' قطعات مورد نیاز:  '
+	+'<br>'
+	+ 'Blue Pill board (chip: STM32F103C8T6 or similar GD.. HK.. copies) '
+	+ '<br>'
+	+ 'ST-LINK-V2 programmer or Bootloader programmed board'
+	+ '<br>'
+	+ 'Four Digit Seven Segment'
+	+ '<br>'
+	+ '...'
+	+ '<br>'
+	+ 'برای اطلاع از قیمت قطعات الکترونیکی روی این آدرس کلیک کنید: '
+		+"<a href='https://elecohm.com' style='text-decoration: none' target='_blank'> elecohm.com </a>"
+	+ '</p> <hr>';}
+
+
+Start=2026022109.30;
+End  =2027071123.59;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+		'7 &#x2190  '
+		+"<a href='https://www.youtube.com/playlist?list=PLRJhV4hUhIymmp5CCeIFPyxbknsdcXCc8' style='text-decoration: none' target='_blank'> مجموعه ویدیو مفید برای آموزش میکروکنترلر </a>"
+		+ '</p> <hr>';}
+
+
+
+Start=2026022109.30;
+End  =2027071123.59;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+		'6 &#x2190  '
+		+"<a href='https://sisoog.com/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-stm32/' style='text-decoration: none' target='_blank'> سایت مفید برای آموزش میکروکنترلر </a>"
+		+ '</p> <hr>';}
+
+
+
+Start=2026022100.00;
+End  =2026071000.00;
+	if ( now >= Start && now < End ) 
+		{
+		document.getElementById("mycontent").innerHTML+=
+		'5 &#x2190  '
+		+'نکات کلاس های مجازی :'
+				+ '<br>'
+		+ 'در زمان ارائه مطالب از طریق Adobe Connect بررسی و خواندن بخش chat دشوار است، لطفا از این بخش تا جای ممکن استفاده نکنید'
+				+ '<br>'
+		+ 'در عوض امکان استفاده از میکروفن برای همه فعال می شود '
+	 			+ '<br>'
+		+'  هر زمان نیاز به بیان موردی دارید، نیازی به Raise Hand نیست '
+	 			+ '<br>'
+		+' میکروفن خود را فعال کنید پنج ثانیه صبر کنید تا سامانه ارتباط میکروفن شما را تشخیص دهد '
+	 			+ '<br>'
+		+ 'سپس مطالب خود را بگویید، پس از پایان صحبت میکروفن خود را غیرفعال کنید  '
+	 			+ '<br>'
+		+ 'در زمانی که نیاز به ادامه صحبت از طریق میکروفن ندارید مطمئن شوید غیرفعال باشد تا صداهای اضافی در کلاس پخش نشود '
+	 			+ '<br>'
+		+ 'در پایان هر اسلاید اگر نیاز به محتوای آن دارید می توانید از صفحه نمایش خود Screenshot بگیرید '
+				+"<br><p style='color:#A40404; font-size=1px;'>"
+		+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+		+'تاریخ پیام:'
+				+'&nbsp 1404/12/06'
+		+'<hr>';						
+		}
+
+
+Start=2026022109.30;
+End  =2027071123.59;
+	if ( now >= Start && now < End ) 
+		{
+		document.getElementById("mycontent").innerHTML+=
+		'4 &#x2190  '
+		+ 'مرجع درس:'
+				+"<li style='color:blue'>Embedded Systems with ARM Cortex-M Microcontrollers in Assembly and C (Yifeng Zhu)</li>"
+		+"<li style='color:darkblue'>STM32 Arm Programming for Embedded Systems Using C Language with STM32 Nucleo (Muhammad Ali Mazidi)</li>"
+
+		+"<li style='color:blue'>ARM Assembly Language Programming & Architecture (Muhammad Ali Mazidi)</li>"
+		+"<p style='color:#A40404; font-size=1px;'>"
+		+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+		+'تاریخ پیام:'
+				+'&nbsp 1404/12/02'
+		+'<hr>';						
+		}
+
+
+
+Start=2026022109.30;
+End  =2027071123.59;
+	if ( now >= Start && now < End ) 
+		{
+		document.getElementById("mycontent").innerHTML+=
+		'3 &#x2190  '
+		+'موضوع درس :'
+				+ '<br>'
+		+ 'در این درس میکروکنترلرهای STM32(Cortex-M) با زبان های اسمبلی و C  بررسی خواهد شد. (با تاکید بر شناخت سخت افزار میکروکنترلر) '
+				+ '<br>'
+		+ 'این درس یک درس مهارتی است و کار عملی اهمیت بالایی دارد'
+				+ '<br>'
+		+'تسلط کافی بر مدار منطقی و الکترونیک 1 مورد نیاز این درس است '
+				+ '<br>'
+		+' فرض بر این است که فراگیر این درس تسلط بر برنامه نویسی ندارد  '
+				+ '<br><br>'
+		+' این درس با تاکید بر موارد زیر تدریس می شود: '
+				+"<li style='color:blue'>درک اصول عملکرد پردازنده ها و میکروکامپیوترها</li>"
+		+"<li style='color:#3CB371'>درک عمیق تر سخت افزار داخلی میکروکنترلرها</li>"
+		+"<li style='color:blue'>شناخت و کنترل دقیق تر منابع داخلی میکروکنترلر</li>"
+		+"<li style='color:#3CB371'> درک بهتر زبان C و برنامه نویسی سطح بالا  </li>"
+		+"<li style='color:blue'> توانایی انجام پروژه های کاربردی و اتصال برخی سنسورها </li>"
+		+"<p style='color:#A40404; font-size=1px;'>"
+		+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+		+ 'تاریخ پیام:'
+				+'&nbsp 1404/12/02'
+		+'<hr>';						
+		}
+
+document.getElementById("mycontent").innerHTML+=
+		'2 &#x2190  '
+		+ 'برای ارتباط از پیام رسان ها استفاده نمی شود و راه ارتباطی غیرحضوری ایمیل است '
+	 			+ '<br>'
+		+ 'از سرویس های ایمیل Gmail ، Yahoo و یا ایمیل دانشگاه می توانید استفاده کنید  '
+	 			+ '<br>'
+		+ 'ایمیل دانشگاه در زمان های قطع اینترنت جهانی در دسترس خواهد بود '
+	 			+ '<br>'
+		+ 'برای ثبت نام ایمیل دانشجویی دانشگاه روی این آدرس کلیک کنید:'
+				+"<a href='https://email.uk.ac.ir' style='text-decoration: none' target='_blank'> email.uk.ac.ir </a>"
+	 			+ '<br>'
+		+ 'برای ورود به ایمیل دانشجویی دانشگاه روی این آدرس کلیک کنید: '
+				+"<a href='https://mail.uk.ac.ir' style='text-decoration: none' target='_blank'> mail.uk.ac.ir </a>"
+	 			+ '<br>'
+		+ 'با نصب نرم افزار و تنظیم ایمیل می توانید بدون نیاز به چک کردن مداوم ایمیل از بررسی خودکار و اعلان های آن آگاه شوید  '
+	 			+ '<br>'
+		+ ' برای آشنایی با نصب نرم افزار و تنظیمات ایمیل دانشگاه روی این آدرس کلیک کنید: '
+		+"<a href='https://it.uk.ac.ir/add_to_apps' style='text-decoration: none' target='_blank'>it.uk.ac.ir/add_to_apps</a>"
+		+"<br><p style='color:#A40404; font-size=1px;'>"
+		+ '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+		+ 'تاریخ پیام:'
+				+'&nbsp 1404/12/02'
+		+ '<hr>';
+
+
+
+document.getElementById("mycontent").innerHTML+=
+		'1 &#x2190  '
+		+ 'با سلام و آرزوی شروع ترمی خوب برای همگی شما '
+	 			+ '<br>'
+		+ 'فعالیت‌های درس در این صفحه اطلاع رسانی می شود '
+	 			+ '<br>'
+		+ 'قبل از هر جلسه درس، اطلاعیه های این صفحه را مشاهده نمایید  '
+	 			+ '<br>'
+		+ 'اطلاعیه های جدیدتر در ابتدای لیست این صفحه اضافه می شوند  '
+	 			+ '<br>'
+		+ 'در هنگام مشاهده این صفحه، درستی و تطابق تاریخ و زمان سیستم خود در بالای این صفحه را با تاریخ و زمان واقعی بررسی کنید '
+				+'  و عدم تطابق را برطرف کنید '
+				+"<br><p style='color:#A40404; font-size=1px;'>"
+		+ '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+		+ 'تاریخ پیام:'
+				+'&nbsp 1404/12/01'
+		+ '<hr>';		
+
+
+
+
+  </script>
+<p align="center">
+<!-- hitwebcounter Code START -->
+<a href="" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=21478204&style=0007&nbdigits=5&type=page&initCount=0" title="Free Tools" Alt="Free Tools"   border="0" /></a>                
+</p>
+</html>
