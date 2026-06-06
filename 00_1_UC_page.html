@@ -221,7 +221,7 @@ End  =2026022315.30;
 Start=2026022109.30;
 End  =2027071123.59;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
-	'9 &#x2190  '
+	'10 &#x2190  '
 	+' محتوای فایل main برنامه های کلاس : '
 	+'<br>'
 
@@ -270,16 +270,25 @@ End  =2027071123.59;
 		+" &nbsp  &nbsp  &nbsp <a href='UC/main_P1_port_C.txt' target='_blank' style='color:red;'>C Code</a>"
 	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P1_port_ASM.txt' target='_blank'>ASM Code</a>"
 	+"</li>"
+	+ '</p> <hr>';}
 
-	+'<br>'
-	+ ' **  فایل های ایجاد پروژه در نرم افزار :  '
-	+" &nbsp  &nbsp  &nbsp &nbsp  &nbsp  &nbsp"
+
+Start=2026022109.30;
+End  =2027071123.59;
+	if ( now >= Start && now < End ) 
+	{
+	document.getElementById("mycontent").innerHTML+=
+	'9 &#x2190  '
+	+ ' فایل های ایجاد پروژه    :  '
+	+" &nbsp  &nbsp  &nbsp &nbsp  &nbsp  &nbsp &nbsp &nbsp  &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp  &nbsp"
 		+" &nbsp  &nbsp  &nbsp <a href='UC/C_01_empty.zip' target='_blank' style='color:red;'>C Project files</a>"
 	+" &nbsp  &nbsp  &nbsp <a href='UC/ASM_01_empty.zip' target='_blank'>Assembly Project files</a>"
 	+'<br>'
+	+ '   فایل ها مخصوص نرم افزار STM32CubeIDE و برای برد Blue Pill است   '
+	+'<br>'
 	
-	+ ' پس از extract  کردن فایل Zip، پوشه ایجاد شده را با نام مناسب Rename کنید'
-	+' و درمسیر workspace نرم افزار Stm32cubeide قرار داده'
+	+ ' پس از extract  کردن فایل zip، پوشه ایجاد شده را با نام مناسب Rename کنید'
+	+' و درمسیر workspace نرم افزار STM32CubeIDE قرار داده'
 	+' و سپس import کنید و از مسیر Src در فایل main برنامه خود را بنویسید. '
 	+'  پس از build در پوشه Debug  فایل hex ایجاد می شود  '
 	+ '</p> <hr>';}
