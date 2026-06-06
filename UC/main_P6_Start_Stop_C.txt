@@ -1,0 +1,38 @@
+#include "stm32f1xx.h"
+
+int main(void)
+{
+
+	RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;  // Enable clock for GPIOC
+	GPIOC->CRH   &= ~(0b1111 << GPIO_CRH_MODE13_Pos); //clear MODE
+	GPIOC->CRH   |=  (0b0001 << GPIO_CRH_MODE13_Pos); // PC13 output
+	GPIOC->ODR   |=  GPIO_ODR_ODR13;				  //LED OFF
+
+	RCC->APB2ENR |= RCC_APB2ENR_IOPBEN;  // Enable clock for GPIOB
+	RCC->APB2ENR |= RCC_APB2ENR_AFIOEN;  // Enable AFIO clock
+	GPIOB->CRL    = 0x00000088; 					// PB0,1 input
+	GPIOB->ODR    = GPIO_ODR_ODR0|GPIO_ODR_ODR1;  // pull-up PB0,1
+
+	AFIO->EXTICR[0] |= AFIO_EXTICR1_EXTI0_PB|AFIO_EXTICR1_EXTI1_PB; //PB0,1
+	EXTI->FTSR 		|= (EXTI_FTSR_TR0|EXTI_FTSR_TR1);   // Trigger both Falling edge
+	EXTI->IMR  		|= (EXTI_IMR_MR0|EXTI_IMR_MR1);     // Enable EXTI0,1
+	NVIC_EnableIRQ(EXTI0_IRQn);   // Enable EXTI0 IRQ
+	NVIC_EnableIRQ(EXTI1_IRQn);   // Enable EXTI1 IRQ
+
+	while (1)
+	{
+		//Empty loop
+	}
+}
+
+void EXTI0_IRQHandler(void)
+{
+	EXTI->PR   |= EXTI_PR_PR0;  //Clear Flag INT0 (w1)
+	GPIOC->ODR &= ~GPIO_ODR_ODR13;    //LED ON
+}
+
+void EXTI1_IRQHandler(void)
+{
+	EXTI->PR   |= EXTI_PR_PR1;  //Clear Flag INT1 (w1)
+	GPIOC->ODR |= GPIO_ODR_ODR13;  //LED OFF
+}
