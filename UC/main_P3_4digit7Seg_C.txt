@@ -1,0 +1,47 @@
+#include "stm32f1xx.h"
+
+volatile uint32_t Yekan, Dahgan, Sadgan; //Global Variables
+static const uint8_t Table_7_segment[10];
+
+int main(void) {
+
+	RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;  // Enable clock for GPIOA
+	GPIOA->CRL    = 0x11111111; // Configure PA0-PA7 as output
+	GPIOA->CRH   |= 0x00001111; // Configure PA8-PA11 as output
+	GPIOA->ODR   |= 0xF000; 	//All segments off
+
+	RCC->APB2ENR |= RCC_APB2ENR_IOPBEN;  // Enable clock for GPIOB
+	GPIOB->CRH    = 0x88888888;   //Input
+	GPIOB->ODR    = 0xFF00;      //Pull up
+
+	while (1)
+	{
+		volatile uint32_t number = (GPIOB->IDR >> 8); //Local Variable
+
+		Yekan  = number % 10;
+		number = number / 10;
+		GPIOA->ODR = (((GPIOA->ODR | 0xF00 ) & ~0xFF) | Table_7_segment[Yekan])  & ~(GPIO_ODR_ODR11);
+
+		Dahgan = number % 10;
+		number = number / 10;
+		GPIOA->ODR = (((GPIOA->ODR | 0xF00 ) & ~0xFF) | Table_7_segment[Dahgan]) & ~(GPIO_ODR_ODR10);
+
+		Sadgan = number % 10;
+		number = number / 10;
+		GPIOA->ODR = (((GPIOA->ODR | 0xF00 ) & ~0xFF) | Table_7_segment[Sadgan]) & ~(GPIO_ODR_ODR9);
+	 }
+}
+
+static const uint8_t Table_7_segment[10] =
+{
+0x3F, // 0
+0x06, // 1
+0x5B, // 2
+0x4F, // 3
+0x66, // 4
+0x6D, // 5
+0x7D, // 6
+0x07, // 7
+0x7F, // 8
+0x6F, // 9
+};
