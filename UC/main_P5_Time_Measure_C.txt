@@ -20,10 +20,10 @@ int main(void)
 
 	while (1)
 	{
-		GPIOA->ODR = (((GPIOA->ODR | 0xF00 ) & ~0xFF) | Table_7_segment[Yekan])  & ~(GPIO_ODR_ODR11);
-		GPIOA->ODR|= (1<<7);
-		GPIOA->ODR = (((GPIOA->ODR | 0xF80 ) & ~0xFF) | Table_7_segment[Dahgan]) & ~(GPIO_ODR_ODR10);
-		GPIOA->ODR = (((GPIOA->ODR | 0xF00 ) & ~0xFF) | Table_7_segment[Sadgan]) & ~(GPIO_ODR_ODR9);
+		GPIOA->ODR = (((GPIOA->ODR | 0xF00 ) & ~0xFF) | Table_7_segment[Yekan])    & ~(GPIO_ODR_ODR11);
+		GPIOA->ODR|= GPIO_ODR_ODR7;
+		GPIOA->ODR = (((GPIOA->ODR | 0xF00 ) & ~0xFF) | Table_7_segment[Dahgan])   & ~(GPIO_ODR_ODR10);
+		GPIOA->ODR = (((GPIOA->ODR | 0xF00 ) & ~0xFF) | Table_7_segment[Sadgan])   & ~(GPIO_ODR_ODR9);
 		GPIOA->ODR = (((GPIOA->ODR | 0xF00 ) & ~0xFF) | Table_7_segment[Hezargan]) & ~(GPIO_ODR_ODR8);
 	 }
 }
@@ -33,7 +33,7 @@ void TIM2_IRQHandler()
     TIM2 ->SR  &= ~TIM_SR_UIF;      //Clear Flag
     counter++;
 
-    volatile uint32_t number = counter;
+    	volatile uint32_t number = counter;
 
 	Yekan  = number % 10;
 	number = number / 10;
@@ -45,16 +45,16 @@ void TIM2_IRQHandler()
 
 }
 
-static const uint8_t Table_7_segment[10] =
+static const uint8_t Table_7_segment[10]=
 {
-0x3F, // 0
-0x06, // 1
-0x5B, // 2
-0x4F, // 3
-0x66, // 4
-0x6D, // 5
-0x7D, // 6
-0x07, // 7
-0x7F, // 8
-0x6F, // 9
+	0x3F, // 0
+	0x06, // 1
+	0x5B, // 2
+	0x4F, // 3
+	0x66, // 4
+	0x6D, // 5
+	0x7D, // 6
+	0x07, // 7
+	0x7F, // 8
+	0x6F, // 9
 };
