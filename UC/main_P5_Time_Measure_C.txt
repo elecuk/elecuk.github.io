@@ -35,13 +35,13 @@ void TIM2_IRQHandler()
 
     	volatile uint32_t number = counter;
 
-	Yekan  = number % 10;
-	number = number / 10;
-	Dahgan = number % 10;
-	number = number / 10;
-	Sadgan = number % 10;
-	number = number / 10;
-	Hezargan=number % 10;
+	Yekan    = number % 10;
+	number   = number / 10;
+	Dahgan   = number % 10;
+	number   = number / 10;
+	Sadgan   = number % 10;
+	number   = number / 10;
+	Hezargan = number % 10;
 
 }
 
