@@ -30,8 +30,8 @@ int main(void)
 
 void TIM2_IRQHandler()
 {
-    TIM2 ->SR  &= ~TIM_SR_UIF;      //Clear Flag
-    counter++;
+ 	TIM2 ->SR  &= ~TIM_SR_UIF;      //Clear Flag
+ 	counter++;
 
     	volatile uint32_t number = counter;
 
@@ -42,7 +42,6 @@ void TIM2_IRQHandler()
 	Sadgan   = number % 10;
 	number   = number / 10;
 	Hezargan = number % 10;
-
 }
 
 static const uint8_t Table_7_segment[10]=

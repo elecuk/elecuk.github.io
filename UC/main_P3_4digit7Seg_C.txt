@@ -3,8 +3,8 @@
 volatile uint32_t Yekan, Dahgan, Sadgan; //Global Variables
 static const uint8_t Table_7_segment[10];
 
-int main(void) {
-
+int main(void)
+{
 	RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;  // Enable clock for GPIOA
 	GPIOA->CRL    = 0x11111111; // Configure PA0-PA7 as output
 	GPIOA->CRH   |= 0x00001111; // Configure PA8-PA11 as output
