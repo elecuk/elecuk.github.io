@@ -1032,13 +1032,12 @@
 
 
 //brief Alternate Function I/O
-.equ	AFIO_EVCR,	0
-.equ	AFIO_MAPR,	4
+.equ	AFIO_EVCRn,	0
+.equ	AFIO_MAPRn,	4
 //.equ EXTICR[4]		 8  12  16  20
 //RESERVED0			     24
-.equ	AFIO_MAPR2,	28
+.equ	AFIO_MAPR2n,	28
 //AFIO_TypeDef
-
 
 
 //brief Inter Integrated Circuit Interface
