@@ -1,0 +1,64 @@
+.syntax unified
+.cpu cortex-m3
+.fpu softvfp
+.thumb
+
+.include "stm32f103xx.h"
+
+.section .text
+.global main
+main:
+
+	LDR  R3, =RCC_APB2ENR
+	LDR  R2, [R3]
+	ORR  R2, #RCC_APB2ENR_IOPBEN
+	ORR  R2, #RCC_APB2ENR_AFIOEN
+	STR  R2, [R3]
+
+	LDR  R3, =GPIOB_CRH
+	LDR  R2, [R3]
+	BIC  R2, #(0b1111 << GPIO_CRH_MODE11_Pos) //Clear Mode PB11
+	ORR  R2, #(0b1001 << GPIO_CRH_MODE11_Pos) //PC11 output PWM
+	STR  R2, [R3]
+
+	LDR  R3, =AFIO_MAPR
+	LDR  R2, [R3]
+	ORR  R2, #(0b11 << AFIO_MAPR_TIM2_REMAP_Pos) //CH4=PB11
+	STR  R2, [R3]
+
+	/*Configure timer2*/
+	LDR  R3, =RCC_APB1ENR
+	LDR  R2, [R3]
+	ORR  R2, #RCC_APB1ENR_TIM2EN
+	STR  R2, [R3]
+
+	LDR  R3, =TIM2_PSC
+	LDR  R2, =1-1
+	STR  R2, [R3]
+
+	LDR  R3, =TIM2_ARR
+	LDR  R2, =100-1
+	STR  R2, [R3]
+
+	LDR  R3, =TIM2_CCR4
+	LDR  R2, =30
+	STR  R2, [R3]
+
+	LDR  R3, =TIM2_CCMR2
+	LDR  R2, [R3]
+	ORR  R2, #(0b011 << TIM_CCMR2_OC4M_Pos)   //110=PWM_mode_1  011=PulseGeneration
+	STR  R2, [R3]
+
+	LDR  R3, =TIM2_CCER
+	LDR  R2, [R3]
+	ORR  R2, #TIM_CCER_CC4E
+	STR  R2, [R3]
+
+	LDR  R3, =TIM2_CR1
+	LDR  R2, [R3]
+	ORR  R2, #TIM_CR1_CEN
+	STR  R2, [R3]
+
+Loop:
+//Empty loop
+	B Loop

@@ -1,0 +1,37 @@
+#include "stm32f1xx.h"
+
+int main(void)
+{
+//======== External Crystal 8MHz ========================
+	RCC->CR |= RCC_CR_HSEON;
+	while (!(RCC->CR & RCC_CR_HSERDY)); //wait until HSE is ready
+
+	RCC->CFGR |= RCC_CFGR_SW_HSE;
+	while ( (RCC->CFGR & RCC_CFGR_SWS) != RCC_CFGR_SWS_HSE); //wait until HSE is used
+//=======================================================
+
+	RCC->APB2ENR |=  RCC_APB2ENR_IOPBEN;
+	GPIOB->CRH   &= ~(0b1111 << GPIO_CRH_MODE11_Pos);	//Clear Mode PB11
+	GPIOB->CRH   |=  (0b1001 << GPIO_CRH_MODE11_Pos);	//PC11 output PWM
+
+	RCC->APB2ENR |=  RCC_APB2ENR_AFIOEN;
+	AFIO->MAPR   |=  (0b11 << AFIO_MAPR_TIM2_REMAP_Pos); //CH4=PB11
+
+	/*Configure timer2*/
+	RCC->APB1ENR |=  RCC_APB1ENR_TIM2EN;
+	TIM2->PSC     =  1-1;
+	TIM2->ARR     =  100-1;
+	TIM2->CCR4    =  30;
+	TIM2->CCMR2  |=  (0b011 << TIM_CCMR2_OC4M_Pos);   //011=PulseGen
+	TIM2->CCER   |=  TIM_CCER_CC4E;
+	TIM2->CR1    |=  TIM_CR1_CEN;
+
+	while(1)
+	{
+	}
+}
+
+
+
+
+
