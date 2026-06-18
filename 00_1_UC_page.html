@@ -223,10 +223,17 @@ End  =2027071123.59;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	'10 &#x2190  '
 	+' محتوای فایل main برنامه های کلاس : '
-	+'<br>'
+		+'<br>'
 
 	+'<br>'
-	+"<li>   برنامه هفتم -  Pulse Gen سخت افزاری:  "
+	+"<li>   برنامه هشتم - ولتمتر و دماسنج دیجیتال:  "
+		+" &nbsp  &nbsp  &nbsp &nbsp &nbsp  &nbsp"
+	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P6_Start_Stop_C.txt' target='_blank' style='color:red;'></a>"
+	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P6_Start_Stop_ASM.txt' target='_blank'></a>"
+	+"</li>"
+
+	+'<br>'
+	+"<li>   برنامه هفتم -  تولید پالس سخت افزاری:  "
 	+" &nbsp  &nbsp  &nbsp"
 	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P7_Pulse_Gen_C.txt' target='_blank' style='color:red;'></a>"
 	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P7_Pulse_Gen_ASM.txt' target='_blank'></a>"
@@ -293,7 +300,7 @@ End  =2027071123.59;
 		+" &nbsp  &nbsp  &nbsp <a href='UC/C_01_empty.zip' target='_blank' style='color:red;'>C Project files</a>"
 	+" &nbsp  &nbsp  &nbsp <a href='UC/ASM_01_empty.zip' target='_blank'>Assembly Project files</a>"
 	+'<br>'
-	+ '   فایل ها مخصوص نرم افزار STM32CubeIDE و برای برد Blue Pill است   '
+	+ '   فایل ها برای نرم افزار STM32CubeIDE و مخصوص برد Blue Pill است   '
 	+'<br>'
 	
 	+' پس از extract  کردن فایل zip، پوشه ایجاد شده را با نام مناسب Rename کنید'
@@ -301,6 +308,65 @@ End  =2027071123.59;
 	+' و سپس import کنید و از مسیر Src در فایل main برنامه خود را بنویسید. '
 	+'  پس از build در پوشه Debug  فایل hex ایجاد می شود  '
 	+ '</p> <hr>';}
+
+
+document.getElementById("mycontent").innerHTML+=
+	'** &#x2190  '
+	+ 'فرمت ارسال پروژه '
+	 	+ '<br>'
+	+ 'subject :'
+		+ '<br>'
+	+ ' Micro_P1_Ali_Ahmadi '
+	 	+ '<br>'
+	+ 'body :'
+		+ '<br>'
+	+ 'نام و نام خانوادگی '
+		+ '<br>'
+	+ 'شماره دانشجویی '
+		+ '<br>'
+	+ 'توضیح خلاصه کار انجام شده '
+		+ '<br>'
+	+ 'Attachment: '
+		+ '<br>'
+	+ 'شامل دو فایل zip نشده '
+		+ '<br>'
+	+ 'main_ p1_yourname.txt '
+		+ '<br>'
+	+ 'p1_yourname.mp4 '
+		+ '<br>'
+	+ 'ویدیو زیر ۶۰ ثانیه با توضیح کوتاه در حین انجام تست و با حجم زیر ۲۰ مگابایت اماده شود '
+		+"<br><p style='color:#A40404; font-size=1px;'>"
+	+ '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+	+ 'تاریخ پیام:'
+		+'&nbsp 1405/00/00'
+	+ '<hr>';
+
+
+
+document.getElementById("mycontent").innerHTML+=
+	'** &#x2190  '
+	+ 'فرمت ارسال ایمیل '
+	 	+ '<br>'
+	+ 'subject :'
+		+ '<br>'
+	+ ' عنوان مناسب در چند کلمه  مثلا پرسش در مورد تایمر میکرو'
+	 	+ '<br>'
+	+ 'body :'
+		+ '<br>'
+	+ 'نام درس '
+		+ '<br>'
+	+ 'نام و نام خانوادگی '
+		+ '<br>'
+	+ 'شماره دانشجویی '
+		+ '<br>'
+	+ 'بیان سوال یا مطلب مورد نظر '
+		+"<br><p style='color:#A40404; font-size=1px;'>"
+	+ '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+	+ 'تاریخ پیام:'
+		+'&nbsp 1405/00/00'
+	+ '<hr>';
+
+
 
 Start=2026022109.30;
 End  =2027071123.59;
@@ -363,15 +429,15 @@ End  =2026071000.00;
 		'5 &#x2190  '
 		+'نکات کلاس های مجازی :'
 				+ '<br>'
-		+ 'در زمان ارائه مطالب از طریق Adobe Connect بررسی و خواندن بخش chat دشوار است، لطفا از این بخش تا جای ممکن استفاده نکنید'
+		+ 'در کلاس های مجازی از طریق Adobe Connect بررسی و خواندن بخش chat در هنگام تدریس مطالب دشوار است' 
 				+ '<br>'
-		+ 'در عوض امکان استفاده از میکروفن برای همه فعال می شود '
-	 			+ '<br>'
+		+ ' لطفا از این بخش تا جای ممکن استفاده نکنید، در عوض امکان استفاده از میکروفن برای همه فعال می شود'
+				+ '<br>'
 		+'  هر زمان نیاز به بیان موردی دارید، نیازی به Raise Hand نیست '
 	 			+ '<br>'
 		+' میکروفن خود را فعال کنید پنج ثانیه صبر کنید تا سامانه ارتباط میکروفن شما را تشخیص دهد '
 	 			+ '<br>'
-		+ 'سپس مطالب خود را بگویید، پس از پایان صحبت میکروفن خود را غیرفعال کنید  '
+		+ 'سپس مطالب خود را آرام و به صورت شمرده بگویید، پس از پایان صحبت میکروفن خود را غیرفعال کنید  '
 	 			+ '<br>'
 		+ 'در زمانی که نیاز به ادامه صحبت از طریق میکروفن ندارید مطمئن شوید غیرفعال باشد تا صداهای اضافی در کلاس پخش نشود '
 	 			+ '<br>'
@@ -432,6 +498,8 @@ End  =2027071123.59;
 				+'&nbsp 1404/12/02'
 		+'<hr>';						
 		}
+
+
 
 document.getElementById("mycontent").innerHTML+=
 		'2 &#x2190  '

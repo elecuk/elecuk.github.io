@@ -12,7 +12,7 @@ int main(void)
 
 	RCC->APB2ENR |=  RCC_APB2ENR_IOPBEN;
 	GPIOB->CRH   &= ~(0b1111 << GPIO_CRH_MODE11_Pos);	//Clear Mode PB11
-	GPIOB->CRH   |=  (0b1001 << GPIO_CRH_MODE11_Pos);	//PC11 output PWM
+	GPIOB->CRH   |=  (0b1001 << GPIO_CRH_MODE11_Pos);	//PB11 output PWM
 
 	RCC->APB2ENR |=  RCC_APB2ENR_AFIOEN;
 	AFIO->MAPR   |=  (0b11 << AFIO_MAPR_TIM2_REMAP_Pos); //CH4=PB11
@@ -22,7 +22,7 @@ int main(void)
 	TIM2->PSC     =  1-1;
 	TIM2->ARR     =  100-1;
 	TIM2->CCR4    =  30;
-	TIM2->CCMR2  |=  (0b011 << TIM_CCMR2_OC4M_Pos);   //011=PulseGen
+	TIM2->CCMR2  |=  (0b011 << TIM_CCMR2_OC4M_Pos);  //110=PWM_mode_1  011=PulseGeneration
 	TIM2->CCER   |=  TIM_CCER_CC4E;
 	TIM2->CR1    |=  TIM_CR1_CEN;
 
@@ -30,8 +30,3 @@ int main(void)
 	{
 	}
 }
-
-
-
-
-
