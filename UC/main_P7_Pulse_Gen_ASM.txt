@@ -60,5 +60,5 @@ main:
 	STR  R2, [R3]
 
 Loop:
-//Empty loop
+	//Empty loop
 	B Loop
