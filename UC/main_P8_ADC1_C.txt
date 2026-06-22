@@ -23,7 +23,7 @@ int main(void)
 	GPIOA->CRH   |=  0x00001111; // Configure PA8-PA11 as output
 	GPIOA->ODR   |=  0xF000; 	//All segments off
 
-	RCC->APB2ENR |=  RCC_APB2ENR_IOPCEN;			//Enable PortC
+	RCC->APB2ENR |=  RCC_APB2ENR_IOPCEN;		//Enable PortC
 	GPIOC->CRH   &= ~(0xF << GPIO_CRH_MODE13_Pos);	//Clear Mode PC13
 	GPIOC->CRH   |=  (0x1 << GPIO_CRH_MODE13_Pos);	//PC13 output
 
@@ -32,29 +32,29 @@ int main(void)
 	GPIOB->CRL   |=  (0x8 << GPIO_CRL_MODE1_Pos);
 	GPIOB->ODR   |=  GPIO_ODR_ODR1;   //pull up
 
-	RCC->APB2ENR |=   RCC_APB2ENR_IOPBEN;
+	RCC->APB2ENR |=  RCC_APB2ENR_IOPBEN;
 	GPIOB->CRL   &= ~(0b1111 << GPIO_CRL_MODE0_Pos);//Analog input PB0
 
-	RCC->APB2ENR |= RCC_APB2ENR_ADC1EN;
-	ADC1->CR2 |= ADC_CR2_ADON;
-	ADC1->SQR3  |= (8 << ADC_SQR3_SQ1_Pos);//PB1 input for ADC1
-	ADC1->SMPR2 |= (0b111 << ADC_SMPR2_SMP8_Pos);
-	ADC1->CR2   |= ADC_CR2_EXTTRIG;
-	ADC1->CR2   |= (0b111 << ADC_CR2_EXTSEL_Pos); //ADC_CR2_SWSTART
+	RCC->APB2ENR |=  RCC_APB2ENR_ADC1EN;
+	ADC1->CR2    |=  ADC_CR2_ADON;
+	ADC1->SQR3   |=  (8 << ADC_SQR3_SQ1_Pos);//PB1 input for ADC1
+	ADC1->SMPR2  |=  (0b111 << ADC_SMPR2_SMP8_Pos);
+	ADC1->CR2    |=  ADC_CR2_EXTTRIG;
+	ADC1->CR2    |=  (0b111 << ADC_CR2_EXTSEL_Pos); //ADC_CR2_SWSTART
 
-	ADC1->CR2 |= ADC_CR2_CAL;
+	ADC1->CR2    |=  ADC_CR2_CAL;
 	while (ADC1->CR2 & ADC_CR2_CAL);//wait for calibration end
 
-	ADC1->CR1 |= ADC_CR1_EOCIE;
+	ADC1->CR1    |=  ADC_CR1_EOCIE;
 	NVIC_EnableIRQ(ADC1_2_IRQn);
 
-	RCC->APB1ENR |=RCC_APB1ENR_TIM2EN ;// Timer2 Enable
-	TIM2->ARR = 8000-1 ;
-	TIM2->PSC = 1000-1;
-	TIM2->CCR2 = 500;
-	TIM2->DIER |= TIM_DIER_CC2IE;
+	RCC->APB1ENR |=  RCC_APB1ENR_TIM2EN ;// Timer2 Enable
+	TIM2->ARR     = 8000-1 ;
+	TIM2->PSC     = 1000-1;
+	TIM2->CCR2    = 500;
+	TIM2->DIER   |= TIM_DIER_CC2IE;
 	NVIC_EnableIRQ(TIM2_IRQn);
-	TIM2->CR1 |= TIM_CR1_CEN;
+	TIM2->CR1    |= TIM_CR1_CEN;
 
 	while(1)
 	{
@@ -69,27 +69,26 @@ int main(void)
 void ADC1_2_IRQHandler(void)
 {
 	ADC1->SR &= ~ADC_SR_EOC;
-	volatile uint16_t ADC_Value;
-	ADC_Value = ADC1->DR;
+	volatile uint16_t ADC_Value = ADC1->DR;
 
 	volatile uint32_t voltage= (ADC_Value * 3300) / 4096;
 
 	volatile uint16_t number;
-	if ( ( GPIOB->IDR & GPIO_IDR_IDR1) )
-	number= voltage;
-	else number= ADC_Value;
+	if ( (GPIOB->IDR & GPIO_IDR_IDR1))
+	number      = voltage;
+	else number = ADC_Value;
 
-	digit[0]=number%10;
-	number=number/10;
+	digit[0] = number%10;
+	number   = number/10;
 
-	digit[1]=number%10;
-	number=number/10;
+	digit[1] = number%10;
+	number   = number/10;
 
-	digit[2]=number%10;
-	number=number/10;
+	digit[2] = number%10;
+	number   = number/10;
 
-	digit[3]=number%10;
-	number=number/10;
+	digit[3] = number%10;
+	number   = number/10;
 }
 
 void TIM2_IRQHandler(void)
