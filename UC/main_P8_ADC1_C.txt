@@ -76,11 +76,11 @@ void TIM2_IRQHandler(void)
 void ADC1_2_IRQHandler(void)
 {
 	ADC1->SR    &= ~ADC_SR_EOC;		//Clear flag
-	volatile uint16_t ADC_Value = ADC1->DR; //Read ADC Data
 
-	volatile uint32_t voltage = (ADC_Value * 3300) / 4096;
+	volatile uint16_t ADC_Value =  ADC1->DR;  //Read ADC Data
+	volatile uint32_t voltage   =  (ADC_Value * 3300) / 4096;
 
-	volatile uint16_t number;
+	volatile uint32_t number;
 	if ( (GPIOB->IDR & GPIO_IDR_IDR1))
 		number = voltage;
 	else	
