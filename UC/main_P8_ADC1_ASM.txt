@@ -141,7 +141,7 @@ loop:
 .global TIM2_IRQHandler
 .type  TIM2_IRQHandler, %function
 TIM2_IRQHandler:
-	PUSH {LR}
+PUSH {LR}
 
 	LDR  R3, =TIM2_SR
 	LDR  R2, [R3]
@@ -166,7 +166,7 @@ BX   LR
 .global ADC1_2_IRQHandler
 .type  ADC1_2_IRQHandler, %function
 ADC1_2_IRQHandler:
-	PUSH {LR}
+PUSH {LR}
 
 	LDR  R3, =ADC1_SR
 	LDR  R2, [R3]
