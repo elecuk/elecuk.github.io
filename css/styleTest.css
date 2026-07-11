@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'byekan';
-    src: url('../fonts/BYekan.eot');
-    src: url('../fonts/BYekan.woff') format('woff');
-    url('../fonts/BYekan.ttf') format('truetype');
+    src: url('../fonts/Parastoo/Parastoo.eot');
+    src: url('../fonts/Parastoo/Parastoo.woff') format('woff');
+    url('../fonts/Parastoo/Parastoo.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
