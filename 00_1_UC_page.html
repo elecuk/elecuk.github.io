@@ -26,7 +26,7 @@
   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
   var timehm = today.getHours() + ":" + today.getMinutes() ;
 
-var now= today.getFullYear()*1000000 + (today.getMonth()+1)*10000 + today.getDate()*100 + today.getHours() + (today.getMinutes()/100 );
+var now= today.getFullYear()*10000 + (today.getMonth()+1)*100 + today.getDate()*1 + today.getHours()/100 + (today.getMinutes()/10000 );
 <!--document.getElementById("displayDateTime").innerHTML+= ' Your Current Date : '+ now +  '<br>';-->
 document.getElementById("displayDateTime").innerHTML+= ' Date : '+ daylist[day] +' &nbsp &nbsp ' +date+'  &nbsp &nbsp  '+timehm;
 
@@ -220,8 +220,8 @@ End  =2026063019.30;
 	+'<hr>';						
 	}
 
-Start=2026063018.30;
-End  =2026063019.30;
+Start=20260630.1830;
+End  =20260630.1930;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
@@ -237,8 +237,8 @@ End  =2026063019.30;
 	+'<hr>';						
 	}
 
-Start=2026022109.30;
-End  =2026072823.59;
+Start=20260221.0930;
+End  =20260728.2359;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
@@ -251,23 +251,25 @@ End  =2026072823.59;
 		+ '<hr>';
 	}
 
-Start=2026022109.30;
-End  =2026072823.59;
+Start=20260221.0930;
+End  =20260728.2359;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
 	"<p style='background-color:powderblue;'> 14 &#x2190 پروژه پایانی </p>"
 	+'  پروژه پایانی با موضوع آزاد، بسته به کیفیت، جذابیت و کاربردی بودن آن تا پنج نمره خواهد داشت    '
-		+'<br>'
+	+'<br>'
 	+'  در ترم های مجازی پروژه انفرادی است و باید طبق فرمت اعلام شده ارسال شود    '
-		+'<br>'
+	+'<br>'
 	+'  پروژه های مشابه و یکسان نمره ندارد    '
-	+ '<br>'
+	+'<br>'
 	+ '  بدون رعایت فرمت ارسال پروژه نمره ای برای آن محاسبه نمی شود '
-		+'<br>'
+	+'<br>'
+	+"<span style='color:red;'>"
 	+' مهلت ارسال:    '
 		+ '&nbsp 1405/05/01'
-		+ '<hr>';
+	+"</span>"
+	+ '<hr>';
 	}
 
 
@@ -277,20 +279,20 @@ document.getElementById("mycontent").innerHTML+=
 	"<p style='background-color:powderblue;'> 13 &#x2190  نمونه فرمت ارسال ایمیل پروژه نهایی (P5) </p>"
 	+ 'Subject :'
 	+ '<br>'
-	+ ' Micro_P5_Ali_Ahmadi '
+	+ " <span style='color:red;'>Micro_P5</span>_Ali_Ahmadi "
 	+ '<br>'
 	+ '<br>'
 	+ 'متن  :'
 	+ '<br>'
 	+ 'نام و نام خانوادگی '
-		+ '<br>'
+	+'<br>'
 	+ 'شماره دانشجویی '
-		+ '<br>'
+	+'<br>'
 	+ 'توضیح خلاصه کار انجام شده '
-	+ '<br>'
+	+'<br>'
 	+ '<br>'
 	+ 'Attachment (پیوست) :'
-	+ '<br>'
+	+'<br>'
 	+ 'شامل سه فایل جداگانه ( zip نشده): '
 		+ '<br>'
 	+ 'main_P5_Ali_Ahmadi.txt '
@@ -301,20 +303,19 @@ document.getElementById("mycontent").innerHTML+=
 	+ '<br>'
 	+ '<br>'
 	+ 'محتوای فایل main در فایل txt  ارسال شود '
-	+ '<br>'
+	+'<br>'
 	+ 'گزارش کار شامل شماتیک و توضیح مدار و توضیح کد در فایل pdf اماده شود '
-	+ '<br>'
+	+'<br>'
 	+ 'ویدیو با توضیح عملکرد در حین انجام تست و با حجم زیر ۲۰ مگابایت آماده شود '
-	+ '<br>'
-	+ '<br>'
+	+'<br>'
 	+ '<br>'
 	+ '<hr>';
 
 
 
 
-Start=2026022109.30;
-End  =2026072823.59;
+Start=20260221.0930;
+End  =20260728.2359;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	"<p style='background-color:powderblue;'> 12 &#x2190  محتوای فایل main برنامه های کلاس : </p>"
 	+"<li> برنامه هشتم - ولت متر و دماسنج دیجیتال:  "
@@ -383,8 +384,8 @@ End  =2026072823.59;
 	+ '</p> <hr>';}
 
 
-Start=2026022109.30;
-End  =2026072823.59;
+Start=20260221.0930;
+End  =20260728.2359;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
@@ -410,22 +411,22 @@ document.getElementById("mycontent").innerHTML+=
 	"<p style='background-color:powderblue;'> 10 &#x2190  نمونه فرمت ارسال ایمیل پروژه شماره ۱ (P1) </p>"
 	+ 'Subject :'
 	+ '<br>'
-	+ ' Micro_P1_Ali_Ahmadi '
+	+ " <span style='color:red;'>Micro_P1</span>_Ali_Ahmadi "
 	+ '<br>'
 	+ '<br>'
 	+ 'متن  :'
 	+ '<br>'
 	+ 'نام و نام خانوادگی '
-		+ '<br>'
+	+ '<br>'
 	+ 'شماره دانشجویی '
-		+ '<br>'
+	+ '<br>'
 	+ 'توضیح خلاصه کار انجام شده '
 	+ '<br>'
 	+ '<br>'
 	+ 'Attachment (پیوست) :'
 	+ '<br>'
 	+ 'شامل دو فایل zip نشده: '
-		+ '<br>'
+	+ '<br>'
 	+ 'main_P1_Ali_Ahmadi.txt '
 	+ '<br>'
 	+ 'P1_Ali_Ahmadi.mp4 '
@@ -471,19 +472,19 @@ document.getElementById("mycontent").innerHTML+=
 	+ '  پیام های دریافتی در پوشه  Inbox و پیام های ارسالی در پوشه Sent قرار می گیرد '
 	+ '<br>'
 	+ 'برای پاسخ دادن به ایمیل دریافتی گزینه Reply را انتخاب و متن پاسخ را در ابتدای بخش متن وارد و ارسال کنید '
-	 			+ '<br>'
-+ '<br>'
-		+ 'با نصب نرم افزار و تنظیم ایمیل می توانید بدون نیاز به چک کردن مداوم ایمیل از بررسی خودکار و اعلان های آن آگاه شوید  '
-	 			+ '<br>'
-		+ ' برای آشنایی با نصب نرم افزار و تنظیمات ایمیل دانشگاهی روی این آدرس کلیک کنید: '
+	+ '<br>'
+	+ '<br>'
+	+ 'با نصب نرم افزار و تنظیم ایمیل می توانید بدون نیاز به چک کردن مداوم ایمیل از بررسی خودکار و اعلان های آن آگاه شوید  '
+	+ '<br>'
+	+ ' برای آشنایی با نصب نرم افزار و تنظیمات ایمیل دانشگاهی روی این آدرس کلیک کنید: '
 		+"<a href='https://it.uk.ac.ir/add_to_apps' style='text-decoration: none' target='_blank'>it.uk.ac.ir/add_to_apps</a>"
-+ '<br>'
-+ '<br>'
+	+ '<br>'
+	+ '<br>'
 	+ '<hr>';
 
 
-Start=2026022109.30;
-End  =2026072823.59;
+Start=20260221.0930;
+End  =20260728.2359;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	"<p style='background-color:powderblue;'> 8 &#x2190 دانلود نرم افزارهای مورد نیاز : </p>"
 	+"<li><a href='https://sisoog.com/%d8%af%d8%a7%d9%86%d9%84%d9%88%d8%af-%d9%86%d8%b1%d9%85-%d8%a7%d9%81%d8%b2%d8%a7%d8%b1-stm32cubeide/' style='text-decoration: none' target='_blank'>  دانلود نرم‌افزار کامپایلر STM32CubeIDE  </a></li>"
@@ -494,7 +495,7 @@ End  =2026072823.59;
 	+"<a href='UC/Program Bluepill via USB port.zip' target='_blank'>  (حجم 24MB )  </a>"
 	+'<br><br>'
 	+ ' قطعات مورد نیاز:  '
-	+'<br>'
+	+ '<br>'
 	+ 'Blue Pill board (chip: STM32F103C8T6 or similar GD.. HK.. copies) '
 	+ '<br>'
 	+ 'ST-LINK-V2 programmer or Bootloader programmed board'
@@ -514,16 +515,16 @@ End  =2026072823.59;
 	+ '</p> <hr>';}
 
 
-Start=2026022109.30;
-End  =2026072823.59;
+Start=20260221.0930;
+End  =20260728.2359;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	'7 &#x2190  '
 	+"استفاده از هوش مصنوعی در یادگیری دروس مفید است البته اگر باعث تعطیلی هوش طبیعی نشود "
 		+ '</p> <hr>';}
 
 
-Start=2028022109.30;
-End  =2029071123.59;
+Start=20280221.0930;
+End  =20290711.2359;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	'7 &#x2190  '
 	+"در آزمون های آنلاین بهتر است از تلفن همراه برای انجام آزمون استفاده کنید "
@@ -534,8 +535,8 @@ End  =2029071123.59;
 
 
 
-Start=2026022109.30;
-End  =2026072823.59;
+Start=20260221.0930;
+End  =20260728.2359;
 	if ( now >= Start && now < End ) 
 		{
 		document.getElementById("mycontent").innerHTML+=
@@ -561,8 +562,8 @@ End  =2026072823.59;
 		}
 
 
-Start=2026022109.30;
-End  =2026072823.59;
+Start=20260221.0930;
+End  =20260728.2359;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	"<p style='background-color:powderblue;'> 5 &#x2190    </p>"
 	+"<a href='https://sisoog.com/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-stm32/' style='text-decoration: none' target='_blank'> سایت مفید برای آموزش میکروکنترلر </a>"
@@ -573,27 +574,26 @@ End  =2026072823.59;
 	+ '</p> <hr>';}
 
 
-Start=2026022109.30;
-End  =2026072823.59;
+Start=20260221.0930;
+End  =20260728.2359;
 	if ( now >= Start && now < End ) 
-		{
-		document.getElementById("mycontent").innerHTML+=
-		"<p style='background-color:powderblue;'> 4 &#x2190 مرجع درس : </p>"
-				+"<li style='color:blue'>Embedded Systems with ARM Cortex-M Microcontrollers in Assembly and C (Yifeng Zhu)</li>"
-		+"<li style='color:darkblue'>STM32 Arm Programming for Embedded Systems Using C Language with STM32 Nucleo (Muhammad Ali Mazidi)</li>"
-
-		+"<li style='color:blue'>ARM Assembly Language Programming & Architecture (Muhammad Ali Mazidi)</li>"
-		+"<p style='color:#A40404; font-size=1px;'>"
-		+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+'تاریخ پیام:'
-				+'&nbsp 1404/12/02'
-		+'<hr>';						
-		}
-
+	{
+	document.getElementById("mycontent").innerHTML+=
+	"<p style='background-color:powderblue;'> 4 &#x2190 مرجع درس : </p>"
+	+"<li style='color:blue'>Embedded Systems with ARM Cortex-M Microcontrollers in Assembly and C (Yifeng Zhu)</li>"
+	+"<li style='color:darkblue'>STM32 Arm Programming for Embedded Systems Using C Language with STM32 Nucleo (Muhammad Ali Mazidi)</li>"
+	+"<li style='color:blue'>ARM Assembly Language Programming & Architecture (Muhammad Ali Mazidi)</li>"
+	+"<p style='color:#A40404; font-size=1px;'>"
+	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+	+'تاریخ پیام:'
+		+'&nbsp 1404/12/02'
+	+'<hr>';						
+	}
 
 
-Start=2026022109.30;
-End  =2026072823.59;
+
+Start=20260221.0930;
+End  =20260728.2359;
 	if ( now >= Start && now < End ) 
 		{
 		document.getElementById("mycontent").innerHTML+=
@@ -615,13 +615,13 @@ End  =2026072823.59;
 		+"<p style='color:#A40404; font-size=1px;'>"
 		+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
 		+ 'تاریخ پیام:'
-				+'&nbsp 1404/12/02'
+				+ ' &nbsp 1404/12/02'
 		+'<hr>';						
 		}
 
 
-Start=2026022109.30;
-End  =2026072823.59;
+Start=20260221.0930;
+End  =20260728.2359;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
@@ -653,27 +653,27 @@ End  =2026072823.59;
 	}
 
 
-Start=2026022109.30;
-End  =2026072823.59;
+Start=20260221.0930;
+End  =20260728.2359;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
-		"<p style='background-color:powderblue;'> 1 &#x2190  شروع ترم  </p>"
-		+ 'با سلام و آرزوی شروع ترمی خوب برای همگی شما '
-	 			+ '<br>'
-		+ 'فعالیت‌های درس در این صفحه اطلاع رسانی می شود '
-	 			+ '<br>'
-		+ 'قبل از هر جلسه درس، اطلاعیه های این صفحه را مشاهده نمایید  '
-	 			+ '<br>'
-		+ 'اطلاعیه های جدیدتر در ابتدای لیست این صفحه اضافه می شوند  '
-	 			+ '<br>'
-		+ 'در هنگام مشاهده این صفحه، درستی و تطابق تاریخ و زمان سیستم خود در بالای این صفحه را با تاریخ و زمان واقعی بررسی کنید '
-				+'  و عدم تطابق را برطرف کنید '
-				+"<br><p style='color:#A40404; font-size=1px;'>"
-		+ '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+ 'تاریخ پیام:'
-				+'&nbsp 1404/12/01'
-		+ '<hr>';
+	"<p style='background-color:powderblue;'> 1 &#x2190  شروع ترم  </p>"
+	+ 'با سلام و آرزوی شروع ترمی خوب برای همگی شما '
+	+ '<br>'
+	+ 'فعالیت‌های درس در این صفحه اطلاع رسانی می شود '
+	+ '<br>'
+	+ 'قبل از هر جلسه درس، اطلاعیه های این صفحه را مشاهده نمایید  '
+	+ '<br>'
+	+ 'اطلاعیه های جدیدتر در ابتدای لیست این صفحه اضافه می شوند  '
+	+ '<br>'
+	+ 'در هنگام مشاهده این صفحه، درستی و تطابق تاریخ و زمان سیستم خود در بالای این صفحه را با تاریخ و زمان واقعی بررسی کنید '
+		+'  و عدم تطابق را برطرف کنید '
+		+"<br><p style='color:#A40404; font-size=1px;'>"
+	+ '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+	+ 'تاریخ پیام:'
+		+'&nbsp 1404/12/01'
+	+ '<hr>';
 	}		
 
 
