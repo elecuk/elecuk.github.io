@@ -33,7 +33,7 @@ document.getElementById("displayDateTime").innerHTML+= ' Date : '+ daylist[day] 
 
 document.getElementById("welcome").innerHTML+=
 		'اطلاعیه ها و فعالیت های درس اصول میکروکنترلر'
-				+' <br> '
+				+'<br>'
 		+'ترم بهار 1405-1404'
 				+'<hr style="height:4px;border:none;color:#333;background-color:blue;">';
 
@@ -253,18 +253,28 @@ End  =20260728.2359;
 
 Start=20260221.0930;
 End  =20260728.2359;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+	"<p style='background-color:powderblue;'> 15 &#x2190   آزمون های ترمی برگزار شده   </p>"
+	+"<li> آزمون 1  &nbsp &nbsp  &#x2190     &nbsp  1405/03/16 </li>"
+	+"<li> آزمون 2  &nbsp &nbsp  &#x2190     &nbsp  1405/03/18 </li>"
+	+"<li> آزمون 3  &nbsp &nbsp  &#x2190     &nbsp  1405/03/23 </li>"
+	+"<li> آزمون 4  &nbsp &nbsp  &#x2190     &nbsp  1405/03/25 </li>"
+	+"<li> آزمون 5  &nbsp &nbsp  &#x2190     &nbsp  1405/03/30 </li>"
+
+	+ '</p> <hr>';}
+
+Start=20260221.0930;
+End  =20260728.2359;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
 	"<p style='background-color:powderblue;'> 14 &#x2190 پروژه پایانی </p>"
 	+'  پروژه پایانی با موضوع آزاد، بسته به کیفیت، جذابیت و کاربردی بودن آن تا پنج نمره خواهد داشت    '
-	+'<br>'
+	+ '<br>'
 	+'  در ترم های مجازی پروژه انفرادی است و باید طبق فرمت اعلام شده ارسال شود    '
-	+'<br>'
+	+ '<br>'
 	+'  پروژه های مشابه و یکسان نمره ندارد    '
-	+'<br>'
-	+ '  بدون رعایت فرمت ارسال پروژه نمره ای برای آن محاسبه نمی شود '
-	+'<br>'
+	+ '<br>'
 	+"<span style='color:red;'>"
 	+' مهلت ارسال:    '
 		+ '&nbsp 1405/05/01'
@@ -303,12 +313,16 @@ document.getElementById("mycontent").innerHTML+=
 	+ '<br>'
 	+ '<br>'
 	+ 'محتوای فایل main در فایل txt  ارسال شود '
-	+'<br>'
+		+ '<br>'
 	+ 'گزارش کار شامل شماتیک و توضیح مدار و توضیح کد در فایل pdf اماده شود '
-	+'<br>'
+		+ '<br>'
 	+ 'ویدیو با توضیح عملکرد در حین انجام تست و با حجم زیر ۲۰ مگابایت آماده شود '
-	+'<br>'
+		+ '<br>'
+	+"<span style='color:red;'>"
+	+ '  بدون رعایت فرمت ارسال پروژه نمره ای برای آن محاسبه نمی شود '
+	+"</span>"
 	+ '<br>'
+		+ '<br>'
 	+ '<hr>';
 
 

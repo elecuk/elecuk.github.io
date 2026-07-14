@@ -26,7 +26,7 @@
   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
   var timehm = today.getHours() + ":" + today.getMinutes() ;
 
-var now= today.getFullYear()*1000000 + (today.getMonth()+1)*10000 + today.getDate()*100 + today.getHours() + (today.getMinutes()/100 );
+var now= today.getFullYear()*10000 + (today.getMonth()+1)*100 + today.getDate()*1 + today.getHours()/100 + (today.getMinutes()/10000 );
 <!--document.getElementById("displayDateTime").innerHTML+= ' Your Current Date : '+ now +  '<br>';-->
 document.getElementById("displayDateTime").innerHTML+= ' Date : '+ daylist[day] +' &nbsp &nbsp ' +date+'  &nbsp &nbsp  '+timehm;
 
@@ -239,8 +239,8 @@ End  =2028061710.00;
 				+'&nbsp 10:00-1402/07/01'
 		+ '</p> <hr>';}
 
-Start=2026022109.30;
-End  =2026072800.00;
+Start=20260221.0930;
+End  =20260729.0000;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
@@ -251,9 +251,24 @@ End  =2026072800.00;
 		+ '<hr>';
 	}
 
+
+
+Start=20260221.0930;
+End  =20260729.0000;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+	"<p style='background-color:powderblue;'> 13 &#x2190   آزمون های ترمی برگزار شده </p>"
+	+"<li> آزمون 1  &nbsp &nbsp  &#x2190     &nbsp  1405/03/17 </li>"
+	+"<li> آزمون 2  &nbsp &nbsp  &#x2190     &nbsp  1405/03/19 </li>"
+	+"<li> آزمون 3  &nbsp &nbsp  &#x2190     &nbsp  1405/03/24 </li>"
+	+"<li> آزمون 4  &nbsp &nbsp  &#x2190     &nbsp  1405/03/26 </li>"
+
+	+ '</p> <hr>';}
+
+
+
 document.getElementById("mycontent").innerHTML+=
-	'12 &#x2190  '
-			+ 'انجام پروژه عملی اختیاری است '
+	"<p style='background-color:powderblue;'> 12 &#x2190 پروژه عملی </p>"
+	+ 'انجام پروژه عملی اختیاری است '
 		+'<br>'
 +'  در ترم های مجازی پروژه انفرادی است و باید طبق فرمت اعلام شده ارسال شود    '
 		+'<br>'
@@ -329,8 +344,8 @@ document.getElementById("mycontent").innerHTML+=
  
 
 
-Start=2026022100.00;
-End  =2026072800.00;
+Start=20260221.0930;
+End  =20260729.0000;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML +=
@@ -351,16 +366,16 @@ End  =2026072800.00;
 
 
 
-Start=2026022100.00;
-End  =2026072800.00;
+Start=20260221.0930;
+End  =20260729.0000;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 		'9 &#x2190  '
 		+"<a href='E1/TestBJT.mp4' style='text-decoration: none' target='_blank'> تشخیص پایه های ترانزیستور با مولتی متر </a>"
 		+ '</p> <hr>';}
 
 
-Start=2026022100.00;
-End  =2026072800.00;
+Start=20260221.0930;
+End  =20260729.0000;
 	if ( now >= Start && now < End ) 
 		{
 		document.getElementById("mycontent").innerHTML+=
@@ -389,8 +404,8 @@ End  =2026072800.00;
 
 
 
-Start=2026022100.00;
-End  =2026072800.00;
+Start=20260221.0930;
+End  =20260729.0000;
 	if ( now >= Start && now < End ) 
 		{
 		document.getElementById("mycontent").innerHTML+=
@@ -430,8 +445,8 @@ End  =2026072800.00;
 
 
 
-Start=2026022100.00;
-End  =2026072800.00;
+Start=20260221.0930;
+End  =20260729.0000;
 	if ( now >= Start && now < End ) 
 		{
 		document.getElementById("mycontent").innerHTML+=
@@ -468,8 +483,8 @@ End  =2026072800.00;
 
 
 
-Start=2026022100.00;
-End  =2026072800.00;
+Start=20260221.0930;
+End  =20260729.0000;
 	if ( now >= Start && now < End ) 
 		{
 		document.getElementById("mycontent").innerHTML+=
@@ -507,14 +522,12 @@ End  =2026072800.00;
 
 
 
-Start=2026022100.00;
-End  =2026072800.00;
+Start=20260221.0930;
+End  =20260729.0000;
 	if ( now >= Start && now < End ) 
 		{
 		document.getElementById("mycontent").innerHTML+=
-		'4 &#x2190  '
-		+ 'مرجع درس:'
-				+ '<br>'
+	"<p style='background-color:powderblue;'> 4 &#x2190 مرجع درس : </p>"
 		+"<li style='color:blue'> کتاب مدارهای میکروالکترونیک (Microelectronic Circuits) نویسنده Sedra and Smith  </li>"
 		+"<li style='color:blue'> کتاب مبانی میکروالکترونیک (Fundamentals of Microelectronics) نویسنده Behzad Razavi  </li>"
 		+"<p style='color:#A40404; font-size=1px;'>"
@@ -526,14 +539,12 @@ End  =2026072800.00;
 
 
 
-Start=2026022100.00;
-End  =2026072800.00;
+Start=20260221.0930;
+End  =20260729.0000;
 	if ( now >= Start && now < End ) 
 		{
 		document.getElementById("mycontent").innerHTML+=
-		'3 &#x2190  '
-		+'موضوع درس :'
-				+ '<br>'
+		"<p style='background-color:powderblue;'> 3 &#x2190 موضوع درس : </p>"
 		+ 'در این درس مدارهای الکترونیکی پایه بررسی خواهد شد'
 				+ '<br>'
 		+ 'مدارهای این درس کاربردي هستند و کار عملی (به صورت گروه های دو نفره) اهمیت بالایی دارد'
@@ -547,16 +558,20 @@ End  =2026072800.00;
 		}
 
 
-document.getElementById("mycontent").innerHTML+=
-		'2 &#x2190  '
+Start=20260221.0930;
+End  =20260728.2359;
+	if ( now >= Start && now < End ) 
+	{
+	document.getElementById("mycontent").innerHTML+=
+		"<p style='background-color:powderblue;'> 2 &#x2190 اطلاع رسانی : </p>"
 		+ 'برای اطلاع رسانی از پیام رسان ها استفاده نمی شود و راه ارتباطی غیرحضوری ایمیل است '
 	 			+ '<br>'
-		+ 'از سرویس های ایمیل Gmail ، Yahoo و یا ایمیل دانشگاه می توانید استفاده کنید  '
+		+ 'از سرویس های ایمیل Gmail ، Yahoo و یا ایمیل دانشجویی دانشگاه می توانید استفاده کنید  '
 	 			+ '<br>'
 		+ 'در زمان های قطع اینترنت جهانی اطلاع رسانی درس در صفحه درس در سامانه ایلرن انجام می شود :'
 				+"<a href='https://elearn.uk.ac.ir' style='text-decoration: none' target='_blank'> elearn.uk.ac.ir </a>"
 	 			+ '<br>'
-		+ 'ایمیل دانشگاه در زمان های قطع اینترنت جهانی در دسترس خواهد بود '
+		+ 'ایمیل دانشگاهی در زمان های قطع اینترنت جهانی در دسترس خواهد بود '
 	 			+ '<br>'
 		+ 'برای ثبت نام ایمیل دانشجویی دانشگاه روی این آدرس کلیک کنید:'
 				+"<a href='https://email.uk.ac.ir' style='text-decoration: none' target='_blank'> email.uk.ac.ir </a>"
@@ -566,32 +581,38 @@ document.getElementById("mycontent").innerHTML+=
 	 			+ '<br>'
 		+ 'با نصب نرم افزار و تنظیم ایمیل می توانید بدون نیاز به چک کردن مداوم ایمیل از بررسی خودکار و اعلان های آن آگاه شوید  '
 	 			+ '<br>'
-		+ ' برای آشنایی با نصب نرم افزار و تنظیمات ایمیل دانشگاه روی این آدرس کلیک کنید: '
+		+ ' برای آشنایی با نصب نرم افزار و تنظیمات ایمیل دانشگاهی روی این آدرس کلیک کنید: '
 		+"<a href='https://it.uk.ac.ir/add_to_apps' style='text-decoration: none' target='_blank'>it.uk.ac.ir/add_to_apps</a>"
 		+"<br><p style='color:#A40404; font-size=1px;'>"
 		+ '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
 		+ 'تاریخ پیام:'
 				+'&nbsp 1404/12/02'
 		+ '<hr>';
+	}
 
 
-document.getElementById("mycontent").innerHTML+=
-		'1 &#x2190  '
-		+ 'با سلام و آرزوی شروع ترمی خوب برای همگی شما '
-	 			+ '<br>'
-		+ 'فعالیت‌های درس در این صفحه اطلاع رسانی می شود '
-	 			+ '<br>'
-		+ 'قبل از هر جلسه درس، اطلاعیه های این صفحه را مشاهده نمایید  '
-	 			+ '<br>'
-		+ 'اطلاعیه های جدیدتر در ابتدای لیست این صفحه اضافه می شوند  '
-	 			+ '<br>'
-		+ 'در هنگام مشاهده این صفحه، درستی و تطابق تاریخ و زمان سیستم خود در بالای این صفحه را با تاریخ و زمان واقعی بررسی کنید '
-				+'  و عدم تطابق را برطرف کنید '
-				+"<br><p style='color:#A40404; font-size=1px;'>"
-		+ '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+ 'تاریخ پیام:'
-				+'&nbsp 1404/12/01'
-		+ '<hr>';		
+Start=20260221.0930;
+End  =20260728.2359;
+	if ( now >= Start && now < End ) 
+	{
+	document.getElementById("mycontent").innerHTML+=
+	"<p style='background-color:powderblue;'> 1 &#x2190  شروع ترم  </p>"
+	+ 'با سلام و آرزوی شروع ترمی خوب برای همگی شما '
+	+ '<br>'
+	+ 'فعالیت‌های درس در این صفحه اطلاع رسانی می شود '
+	+ '<br>'
+	+ 'قبل از هر جلسه درس، اطلاعیه های این صفحه را مشاهده نمایید  '
+	+ '<br>'
+	+ 'اطلاعیه های جدیدتر در ابتدای لیست این صفحه اضافه می شوند  '
+	+ '<br>'
+	+ 'در هنگام مشاهده این صفحه، درستی و تطابق تاریخ و زمان سیستم خود در بالای این صفحه را با تاریخ و زمان واقعی بررسی کنید '
+		+'  و عدم تطابق را برطرف کنید '
+		+"<br><p style='color:#A40404; font-size=1px;'>"
+	+ '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+	+ 'تاریخ پیام:'
+		+'&nbsp 1404/12/01'
+	+ '<hr>';
+	}			
 
 
 
