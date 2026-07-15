@@ -247,7 +247,7 @@ End  =20260728.2359;
 	+"</p>"
 	+'  تا زمان ثبت نمرات، اطلاعیه های جدید این صفحه را روزانه یک بار بررسی کنید  '
 	+'<br>'
-	+' در صورت نیاز به بیان هر مشکلی، آن را از طریق ایمیل (با رعایت فرمت اطلاعیه 9) اطلاع دهید. همه ایمیل ها بررسی می شوند  '
+	+' در صورت نیاز به بیان هر مشکلی، آن را از طریق ایمیل (با رعایت فرمت اطلاعیه 5) اطلاع دهید. همه ایمیل ها بررسی می شوند  '
 		+ '<hr>';
 	}
 
@@ -261,7 +261,8 @@ End  =20260728.2359;
 	+"<li> آزمون 4  &nbsp &nbsp  &#x2190     &nbsp  1405/03/25 </li>"
 	+"<li> آزمون 5  &nbsp &nbsp  &#x2190     &nbsp  1405/03/30 </li>"
 
-	+ '</p> <hr>';}
+	+ '</p> <hr>';
+	}
 
 Start=20260221.0930;
 End  =20260728.2359;
@@ -325,13 +326,43 @@ document.getElementById("mycontent").innerHTML+=
 	+ '<br>'
 	+ '<hr>';
 
-
+document.getElementById("mycontent").innerHTML+=
+	"<p style='background-color:powderblue;'> 12 &#x2190  نمونه فرمت ارسال ایمیل پروژه شماره ۱ (P1) </p>"
+	+ 'Subject :'
+	+ '<br>'
+	+ " <span style='color:red;'>Micro_P1</span>_Ali_Ahmadi "
+	+ '<br>'
+	+ '<br>'
+	+ 'متن  :'
+	+ '<br>'
+	+ 'نام و نام خانوادگی '
+	+ '<br>'
+	+ 'شماره دانشجویی '
+	+ '<br>'
+	+ 'توضیح خلاصه کار انجام شده '
+	+ '<br>'
+	+ '<br>'
+	+ 'Attachment (پیوست) :'
+	+ '<br>'
+	+ 'شامل دو فایل zip نشده: '
+	+ '<br>'
+	+ 'main_P1_Ali_Ahmadi.txt '
+	+ '<br>'
+	+ 'P1_Ali_Ahmadi.mp4 '
+	+ '<br>'
+	+ '<br>'
+	+ 'ویدیو زیر ۶۰ ثانیه با توضیح در حین انجام تست و با حجم زیر ۲۰ مگابایت آماده شود '
+	+ '<br>'
+	+ ' ده درصد از نمره هر پروژه بابت رعایت فرمت ارسال پروژه محاسبه می شود '
+	+ '<br>'
+	+ '<br>'
+	+ '<hr>';
 
 
 Start=20260221.0930;
 End  =20260728.2359;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
-	"<p style='background-color:powderblue;'> 12 &#x2190  محتوای فایل main برنامه های کلاس : </p>"
+	"<p style='background-color:powderblue;'> 11 &#x2190  محتوای فایل main برنامه های کلاس : </p>"
 	+"<li> برنامه هشتم - ولت متر و دماسنج دیجیتال:  "
 	+" &nbsp  &nbsp  &nbsp "
 	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P8_ADC1_C.txt' target='_blank' style='color:red;'>C Code</a>"
@@ -402,7 +433,7 @@ End  =20260728.2359;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
-	"<p style='background-color:powderblue;'> 11 &#x2190   ایجاد پروژه در نرم افزار STM32CubeIDE :  </p>"
+	"<p style='background-color:powderblue;'> 10 &#x2190   ایجاد پروژه در نرم افزار STM32CubeIDE :  </p>"
 	+ 'فایل های ایجاد پروژه : '
 	+" &nbsp  &nbsp  &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp  &nbsp"
 	+" &nbsp  &nbsp  &nbsp <a href='UC/C_01_empty.zip' target='_blank' style='color:red;'>C Project files</a>"
@@ -420,42 +451,106 @@ End  =20260728.2359;
 	+'</p> <hr>';}
 
 
-document.getElementById("mycontent").innerHTML+=
-	"<p style='background-color:powderblue;'> 10 &#x2190  نمونه فرمت ارسال ایمیل پروژه شماره ۱ (P1) </p>"
-	+ 'Subject :'
+
+Start=20260221.0930;
+End  =20260728.2359;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+	"<p style='background-color:powderblue;'> 9 &#x2190 دانلود نرم افزارهای مورد نیاز : </p>"
+	+"<li><a href='https://sisoog.com/%d8%af%d8%a7%d9%86%d9%84%d9%88%d8%af-%d9%86%d8%b1%d9%85-%d8%a7%d9%81%d8%b2%d8%a7%d8%b1-stm32cubeide/' style='text-decoration: none' target='_blank'>  دانلود نرم‌افزار کامپایلر STM32CubeIDE  </a></li>"
+	+'<br>'
+	+"<li><a href='https://sisoog.com/download-st-link/' style='text-decoration: none' target='_blank'>   رابط نرم افزاری پروگرام کردن میکروکنترلر با پروگرامر  ST-LINK </a></li>"
+	+'<br>'
+	+" روش جایگزین: پروگرام کردن مستقیم میکروکنترلر با USB "
+	+"<a href='UC/Program Bluepill via USB port.zip' target='_blank'>  (دانلود 24MB )  </a>"
+	+'<br><br>'
+	+ ' قطعات مورد نیاز:  '
 	+ '<br>'
-	+ " <span style='color:red;'>Micro_P1</span>_Ali_Ahmadi "
+	+ 'Blue Pill board (chip: STM32F103C8T6 or similar GD.. HK.. copies) '
 	+ '<br>'
+	+ 'ST-LINK-V2 programmer or Bootloader programmed board'
 	+ '<br>'
-	+ 'متن  :'
+	+ 'Seven Segment چهار رقمی'
 	+ '<br>'
-	+ 'نام و نام خانوادگی '
+	+ 'push button'
 	+ '<br>'
-	+ 'شماره دانشجویی '
+	+ 'pin header نری یا مادگی'
 	+ '<br>'
-	+ 'توضیح خلاصه کار انجام شده '
+	+ '...'
 	+ '<br>'
+	+ 'لازم است پین هدرها با استفاده از هویه و سیم لحیم روی برد نصب شوند  '
 	+ '<br>'
-	+ 'Attachment (پیوست) :'
+	+ 'برای اطلاع از قیمت قطعات الکترونیکی روی این آدرس کلیک کنید: '
+	+"<a href='https://elecohm.com' style='text-decoration: none' target='_blank'> elecohm.com </a>"
+	+ '</p> <hr>';}
+
+
+Start=20260221.0930;
+End  =20260728.2359;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+	"<p style='background-color:powderblue;'> 8 &#x2190    </p>"
+	+"<li><a href='https://sisoog.com/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-stm32/' style='text-decoration: none' target='_blank'> سایت مفید برای آموزش میکروکنترلر </a></li>"
+
+	+"<li><a href='https://www.youtube.com/playlist?list=PLRJhV4hUhIymmp5CCeIFPyxbknsdcXCc8' style='text-decoration: none' target='_blank'> مجموعه ویدیو مفید برای آموزش میکروکنترلر </a></li>"
+
+	+"<li><a href='https://soft98.ir/software/engineering/3535-%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF-proteus.html' style='text-decoration: none' target='_blank'> نرم افزار Proteus برای شبیه سازی میکروکنترلر </a></li>"
+
+	+ '</p> <hr>';}
+
+
+Start=20260221.0930;
+End  =20260728.2359;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+	"<p style='background-color:powderblue;'> 7 &#x2190  AI  </p>"
+	+"استفاده از هوش مصنوعی در یادگیری دروس مفید است البته اگر باعث تعطیلی هوش طبیعی نشود "
+	+ '</p> <hr>';}
+
+
+Start=20280221.0930;
+End  =20290711.2359;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+	'6 &#x2190  '
+	+"در آزمون های آنلاین بهتر است از تلفن همراه برای انجام آزمون استفاده کنید "
 	+ '<br>'
-	+ 'شامل دو فایل zip نشده: '
-	+ '<br>'
-	+ 'main_P1_Ali_Ahmadi.txt '
-	+ '<br>'
-	+ 'P1_Ali_Ahmadi.mp4 '
-	+ '<br>'
-	+ '<br>'
-	+ 'ویدیو زیر ۶۰ ثانیه با توضیح در حین انجام تست و با حجم زیر ۲۰ مگابایت آماده شود '
-	+ '<br>'
-	+ ' ده درصد از نمره هر پروژه بابت رعایت فرمت ارسال پروژه محاسبه می شود '
-	+ '<br>'
-	+ '<br>'
-	+ '<hr>';
+	+"در مرورگر تلفن همراه حالت  Desktop Site  را غیر فعال کنید "
+	+ '</p> <hr>';
+}
 
 
 
-document.getElementById("mycontent").innerHTML+=
-	"<p style='background-color:powderblue;'> 9 &#x2190  نحوه ارسال ایمیل </p>"
+
+Start=20260221.0930;
+End  =20260728.2359;
+	if ( now >= Start && now < End ) 
+	{
+	document.getElementById("mycontent").innerHTML+=
+	"<p style='background-color:powderblue;'> 6 &#x2190 نکات کلاس های مجازی : </p>"
+	+ 'در کلاس های مجازی از طریق Adobe Connect بررسی و خواندن بخش chat در هنگام تدریس مطالب دشوار است' 
+	+ '<br>'
+	+ ' لطفا از این بخش تا جای ممکن استفاده نکنید، در عوض امکان استفاده از میکروفن برای همه فعال می شود'
+	+ '<br>'
+	+'  هر زمان نیاز به بیان موردی دارید، نیازی به Raise Hand نیست '
+	+ '<br>'
+	+' میکروفن خود را فعال کنید پنج ثانیه صبر کنید تا سامانه ارتباط میکروفن شما را تشخیص دهد '
+	+ '<br>'
+	+ 'سپس مطالب خود را آرام و به صورت شمرده بگویید، پس از پایان صحبت میکروفن خود را غیرفعال کنید  '
+	+ '<br>'
+	+ 'در زمانی که نیاز به ادامه صحبت از طریق میکروفن ندارید مطمئن شوید غیرفعال باشد تا صداهای اضافی در کلاس پخش نشود '
+	+ '<br>'
+	+ 'در پایان هر اسلاید اگر نیاز به محتوای آن دارید می توانید از صفحه نمایش خود Screenshot بگیرید '
+	+"<br><p style='color:#A40404; font-size=1px;'>"
+	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+	+'تاریخ پیام:'
+	+'&nbsp 1404/12/06'
+	+'<hr>';						
+	}
+
+
+
+Start=20260221.0930;
+End  =20260728.2359;
+	if ( now >= Start && now < End ) {
+document.getElementById("mycontent").innerHTML +=
+	"<p style='background-color:powderblue;'> 5 &#x2190  نحوه ارسال ایمیل </p>"
 	+ 'To :'
 	+ '<br>'
 	+ 'آدرس ایمیل گیرنده'
@@ -496,98 +591,7 @@ document.getElementById("mycontent").innerHTML+=
 	+ '<br>'
 	+ '<br>'
 	+ '<hr>';
-
-
-Start=20260221.0930;
-End  =20260728.2359;
-	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
-	"<p style='background-color:powderblue;'> 8 &#x2190 دانلود نرم افزارهای مورد نیاز : </p>"
-	+"<li><a href='https://sisoog.com/%d8%af%d8%a7%d9%86%d9%84%d9%88%d8%af-%d9%86%d8%b1%d9%85-%d8%a7%d9%81%d8%b2%d8%a7%d8%b1-stm32cubeide/' style='text-decoration: none' target='_blank'>  دانلود نرم‌افزار کامپایلر STM32CubeIDE  </a></li>"
-	+'<br>'
-	+"<li><a href='https://sisoog.com/download-st-link/' style='text-decoration: none' target='_blank'>   رابط نرم افزاری پروگرام کردن میکروکنترلر با پروگرامر  ST-LINK </a></li>"
-	+'<br>'
-	+" روش جایگزین: پروگرام کردن مستقیم میکروکنترلر با USB "
-	+"<a href='UC/Program Bluepill via USB port.zip' target='_blank'>  (دانلود 24MB )  </a>"
-	+'<br><br>'
-	+ ' قطعات مورد نیاز:  '
-	+ '<br>'
-	+ 'Blue Pill board (chip: STM32F103C8T6 or similar GD.. HK.. copies) '
-	+ '<br>'
-	+ 'ST-LINK-V2 programmer or Bootloader programmed board'
-	+ '<br>'
-	+ 'Seven Segment چهار رقمی'
-	+ '<br>'
-	+ 'push button'
-	+ '<br>'
-	+ 'pin header نری یا مادگی'
-	+ '<br>'
-	+ '...'
-	+ '<br>'
-	+ 'لازم است پین هدرها با استفاده از هویه و سیم لحیم روی برد نصب شوند  '
-	+ '<br>'
-	+ 'برای اطلاع از قیمت قطعات الکترونیکی روی این آدرس کلیک کنید: '
-	+"<a href='https://elecohm.com' style='text-decoration: none' target='_blank'> elecohm.com </a>"
-	+ '</p> <hr>';}
-
-
-Start=20260221.0930;
-End  =20260728.2359;
-	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
-	"<p style='background-color:powderblue;'> 7 &#x2190  AI  </p>"
-	+"استفاده از هوش مصنوعی در یادگیری دروس مفید است البته اگر باعث تعطیلی هوش طبیعی نشود "
-	+ '</p> <hr>';}
-
-
-Start=20280221.0930;
-End  =20290711.2359;
-	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
-	'7 &#x2190  '
-	+"در آزمون های آنلاین بهتر است از تلفن همراه برای انجام آزمون استفاده کنید "
-	+ '<br>'
-	+"در مرورگر تلفن همراه حالت  Desktop Site  را غیر فعال کنید "
-	+ '</p> <hr>';}
-
-
-
-
-Start=20260221.0930;
-End  =20260728.2359;
-	if ( now >= Start && now < End ) 
-	{
-	document.getElementById("mycontent").innerHTML+=
-	"<p style='background-color:powderblue;'> 6 &#x2190 نکات کلاس های مجازی : </p>"
-	+ 'در کلاس های مجازی از طریق Adobe Connect بررسی و خواندن بخش chat در هنگام تدریس مطالب دشوار است' 
-	+ '<br>'
-	+ ' لطفا از این بخش تا جای ممکن استفاده نکنید، در عوض امکان استفاده از میکروفن برای همه فعال می شود'
-	+ '<br>'
-	+'  هر زمان نیاز به بیان موردی دارید، نیازی به Raise Hand نیست '
-	+ '<br>'
-	+' میکروفن خود را فعال کنید پنج ثانیه صبر کنید تا سامانه ارتباط میکروفن شما را تشخیص دهد '
-	+ '<br>'
-	+ 'سپس مطالب خود را آرام و به صورت شمرده بگویید، پس از پایان صحبت میکروفن خود را غیرفعال کنید  '
-	+ '<br>'
-	+ 'در زمانی که نیاز به ادامه صحبت از طریق میکروفن ندارید مطمئن شوید غیرفعال باشد تا صداهای اضافی در کلاس پخش نشود '
-	+ '<br>'
-	+ 'در پایان هر اسلاید اگر نیاز به محتوای آن دارید می توانید از صفحه نمایش خود Screenshot بگیرید '
-	+"<br><p style='color:#A40404; font-size=1px;'>"
-	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-	+'تاریخ پیام:'
-	+'&nbsp 1404/12/06'
-	+'<hr>';						
 	}
-
-
-Start=20260221.0930;
-End  =20260728.2359;
-	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
-	"<p style='background-color:powderblue;'> 5 &#x2190    </p>"
-	+"<li><a href='https://sisoog.com/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-stm32/' style='text-decoration: none' target='_blank'> سایت مفید برای آموزش میکروکنترلر </a></li>"
-
-	+"<li><a href='https://www.youtube.com/playlist?list=PLRJhV4hUhIymmp5CCeIFPyxbknsdcXCc8' style='text-decoration: none' target='_blank'> مجموعه ویدیو مفید برای آموزش میکروکنترلر </a></li>"
-
-	+"<li><a href='https://soft98.ir/software/engineering/3535-%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF-proteus.html' style='text-decoration: none' target='_blank'> نرم افزار Proteus برای شبیه سازی میکروکنترلر </a></li>"
-
-	+ '</p> <hr>';}
 
 
 Start=20260221.0930;
@@ -642,16 +646,20 @@ End  =20260728.2359;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
-		"<p style='background-color:powderblue;'> 2 &#x2190 اطلاع رسانی : </p>"
-		+ 'برای اطلاع رسانی از پیام رسان ها استفاده نمی شود و راه ارتباطی غیرحضوری ایمیل است '
+	"<p style='background-color:powderblue;'> 2 &#x2190 اطلاع رسانی  : </p>"
+	+ 'فعالیت‌های درس در این صفحه اطلاع رسانی می شود '
 		+ '<br>'
-		+ 'از سرویس های ایمیل Gmail ، Yahoo و یا ایمیل دانشجویی دانشگاه می توانید استفاده کنید  '
+	+ 'در زمان قطع اینترنت جهانی، اطلاع رسانی در صفحه درس در سامانه ایلرن انجام می شود :'
+		+"<a href='https://elearn.uk.ac.ir' style='text-decoration: none' target='_blank'> elearn.uk.ac.ir </a>"
+	+ '<br>'
+	+ '<br>'
+	+ 'برای اطلاع رسانی و ارتباط از پیام رسان ها استفاده نمی شود و راه ارتباطی غیرحضوری ایمیل است '
 		+ '<br>'
-		+ 'در زمان های قطع اینترنت جهانی اطلاع رسانی درس در صفحه درس در سامانه ایلرن انجام می شود :'
-				+"<a href='https://elearn.uk.ac.ir' style='text-decoration: none' target='_blank'> elearn.uk.ac.ir </a>"
+	+ 'از سرویس های ایمیل Gmail ، Yahoo و یا ایمیل دانشجویی دانشگاه می توانید استفاده کنید  '
+	+ '<br>'
+	+ 'ایمیل دانشگاهی در زمان های قطع اینترنت جهانی در دسترس خواهد بود '
 		+ '<br>'
-		+ 'ایمیل دانشگاهی در زمان های قطع اینترنت جهانی در دسترس خواهد بود '
-		+ '<br>'
+	+ '<br>'
 		+ 'برای ثبت نام ایمیل دانشجویی دانشگاه روی این آدرس کلیک کنید:'
 				+"<a href='https://email.uk.ac.ir' style='text-decoration: none' target='_blank'> email.uk.ac.ir </a>"
 		+ '<br>'

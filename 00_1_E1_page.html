@@ -247,7 +247,7 @@ End  =20260729.0000;
 	'** &#x2190  '
 	+'  تا زمان امتحان پایان ترم، اطلاعیه های این صفحه را روزانه یک بار مشاهده کنید  '
 	+'<br>'
-	+'  در صورت نیاز به بیان هر مشکلی، آن را از طریق ایمیل (با رعایت فرمت اطلاعیه 11) اطلاع دهید. همه ایمیل ها بررسی می شوند    '
+	+'  در صورت نیاز به بیان هر مشکلی، آن را از طریق ایمیل (با رعایت فرمت اطلاعیه 9) اطلاع دهید. همه ایمیل ها بررسی می شوند    '
 		+ '<hr>';
 	}
 
@@ -315,8 +315,41 @@ document.getElementById("mycontent").innerHTML+=
 
 
 
+
+ 
+
+
+Start=20260221.0930;
+End  =20260729.0000;
+	if ( now >= Start && now < End ) 
+	{
+	document.getElementById("mycontent").innerHTML +=
+	"<p style='background-color:powderblue;'> 11 &#x2190  </p>"
+	+"<a href='Orcad1-E12/index.html' style='text-decoration: none';> آشنایی با شبیه سازی تقویت کننده ترانزیستوری در نرم افزار ORCAD-PSPICE </a>";
+						}
+	else if ( now >= End )  {document.getElementById("mycontent").innerHTML +=
+	'10 &#x2190  '
+	+'آشنایی با شبیه سازی نرم افزاری'
+		+'-(پایان مهلت)';}
+	if ( now >= Start) {document.getElementById("mycontent").innerHTML+=	
+	"<br><p style='color:#A40404; font-size=1px;'>"
+	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+	+'تاریخ پیام:'
+		+'&nbsp 1405/03/26'
+	+ '</p> <hr>';
+}
+
+
+
+Start=20260221.0930;
+End  =20260729.0000;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+	"<p style='background-color:powderblue;'> 10 &#x2190  </p>"
+		+"<a href='E1/TestBJT.mp4' style='text-decoration: none' target='_blank'> تشخیص پایه های ترانزیستور با مولتی متر </a>"
+		+ '</p> <hr>';}
+
 document.getElementById("mycontent").innerHTML+=
-	"<p style='background-color:powderblue;'> 11 &#x2190 نحوه ارسال ایمیل : </p>"
+	"<p style='background-color:powderblue;'> 9 &#x2190 نحوه ارسال ایمیل : </p>"
 	+ 'To :'
 	+ '<br>'
     + 'آدرس ایمیل گیرنده'
@@ -349,37 +382,6 @@ document.getElementById("mycontent").innerHTML+=
 	+ '<br>'
 	+ 'برای پاسخ دادن به ایمیل دریافتی گزینه Reply را انتخاب و متن پاسخ را در ابتدای بخش متن وارد و ارسال کنید '
 	+ '<hr>';
- 
-
-
-Start=20260221.0930;
-End  =20260729.0000;
-	if ( now >= Start && now < End ) 
-	{
-	document.getElementById("mycontent").innerHTML +=
-	"<p style='background-color:powderblue;'> 10 &#x2190  </p>"
-	+"<a href='Orcad1-E12/index.html' style='text-decoration: none';> آشنایی با شبیه سازی تقویت کننده ترانزیستوری در نرم افزار ORCAD-PSPICE </a>";
-						}
-	else if ( now >= End )  {document.getElementById("mycontent").innerHTML +=
-	'10 &#x2190  '
-	+'آشنایی با شبیه سازی نرم افزاری'
-		+'-(پایان مهلت)';}
-	if ( now >= Start) {document.getElementById("mycontent").innerHTML+=	
-	"<br><p style='color:#A40404; font-size=1px;'>"
-	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-	+'تاریخ پیام:'
-		+'&nbsp 1405/03/26'
-	+ '</p> <hr>';
-}
-
-
-
-Start=20260221.0930;
-End  =20260729.0000;
-	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
-	"<p style='background-color:powderblue;'> 9 &#x2190  </p>"
-		+"<a href='E1/TestBJT.mp4' style='text-decoration: none' target='_blank'> تشخیص پایه های ترانزیستور با مولتی متر </a>"
-		+ '</p> <hr>';}
 
 
 Start=20260221.0930;
@@ -562,30 +564,34 @@ End  =20260728.2359;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
-		"<p style='background-color:powderblue;'> 2 &#x2190 اطلاع رسانی : </p>"
-		+ 'برای اطلاع رسانی از پیام رسان ها استفاده نمی شود و راه ارتباطی غیرحضوری ایمیل است '
-	 			+ '<br>'
-		+ 'از سرویس های ایمیل Gmail ، Yahoo و یا ایمیل دانشجویی دانشگاه می توانید استفاده کنید  '
-	 			+ '<br>'
-		+ 'در زمان های قطع اینترنت جهانی اطلاع رسانی درس در صفحه درس در سامانه ایلرن انجام می شود :'
-				+"<a href='https://elearn.uk.ac.ir' style='text-decoration: none' target='_blank'> elearn.uk.ac.ir </a>"
-	 			+ '<br>'
-		+ 'ایمیل دانشگاهی در زمان های قطع اینترنت جهانی در دسترس خواهد بود '
-	 			+ '<br>'
+	"<p style='background-color:powderblue;'> 2 &#x2190 اطلاع رسانی  : </p>"
+	+ 'فعالیت‌های درس در این صفحه اطلاع رسانی می شود '
+		+ '<br>'
+	+ 'در زمان قطع اینترنت جهانی، اطلاع رسانی در صفحه درس در سامانه ایلرن انجام می شود :'
+		+"<a href='https://elearn.uk.ac.ir' style='text-decoration: none' target='_blank'> elearn.uk.ac.ir </a>"
+	+ '<br>'
+	+ '<br>'
+	+ 'برای اطلاع رسانی و ارتباط از پیام رسان ها استفاده نمی شود و راه ارتباطی غیرحضوری ایمیل است '
+		+ '<br>'
+	+ 'از سرویس های ایمیل Gmail ، Yahoo و یا ایمیل دانشجویی دانشگاه می توانید استفاده کنید  '
+	+ '<br>'
+	+ 'ایمیل دانشگاهی در زمان های قطع اینترنت جهانی در دسترس خواهد بود '
+		+ '<br>'
+	+ '<br>'
 		+ 'برای ثبت نام ایمیل دانشجویی دانشگاه روی این آدرس کلیک کنید:'
 				+"<a href='https://email.uk.ac.ir' style='text-decoration: none' target='_blank'> email.uk.ac.ir </a>"
-	 			+ '<br>'
+		+ '<br>'
 		+ 'برای ورود به ایمیل دانشجویی دانشگاه روی این آدرس کلیک کنید: '
 				+"<a href='https://mail.uk.ac.ir' style='text-decoration: none' target='_blank'> mail.uk.ac.ir </a>"
-	 			+ '<br>'
+		+ '<br>'
 		+ 'با نصب نرم افزار و تنظیم ایمیل می توانید بدون نیاز به چک کردن مداوم ایمیل از بررسی خودکار و اعلان های آن آگاه شوید  '
-	 			+ '<br>'
+		+ '<br>'
 		+ ' برای آشنایی با نصب نرم افزار و تنظیمات ایمیل دانشگاهی روی این آدرس کلیک کنید: '
-		+"<a href='https://it.uk.ac.ir/add_to_apps' style='text-decoration: none' target='_blank'>it.uk.ac.ir/add_to_apps</a>"
+				+"<a href='https://it.uk.ac.ir/add_to_apps' style='text-decoration: none' target='_blank'>it.uk.ac.ir/add_to_apps</a>"
 		+"<br><p style='color:#A40404; font-size=1px;'>"
 		+ '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
 		+ 'تاریخ پیام:'
-				+'&nbsp 1404/12/02'
+		+'&nbsp 1404/12/02'
 		+ '<hr>';
 	}
 
@@ -600,16 +606,16 @@ End  =20260728.2359;
 	+ '<br>'
 	+ 'فعالیت‌های درس در این صفحه اطلاع رسانی می شود '
 	+ '<br>'
-	+ 'قبل از هر جلسه درس، اطلاعیه های این صفحه را مشاهده نمایید  '
+	+ 'قبل از هر جلسه درس، اطلاعیه های این صفحه را مشاهده نمایید '
 	+ '<br>'
 	+ 'اطلاعیه های جدیدتر در ابتدای لیست این صفحه اضافه می شوند  '
 	+ '<br>'
 	+ 'در هنگام مشاهده این صفحه، درستی و تطابق تاریخ و زمان سیستم خود در بالای این صفحه را با تاریخ و زمان واقعی بررسی کنید '
 		+'  و عدم تطابق را برطرف کنید '
-		+"<br><p style='color:#A40404; font-size=1px;'>"
+	+"<br><p style='color:#A40404; font-size=1px;'>"
 	+ '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-	+ 'تاریخ پیام:'
-		+'&nbsp 1404/12/01'
+	+'تاریخ پیام:'
+	+'&nbsp 1404/12/01'
 	+ '<hr>';
 	}			
 
