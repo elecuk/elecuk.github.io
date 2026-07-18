@@ -196,45 +196,19 @@ End  =2028062523.59;
 
 
 
-
-
-Start=2026063018.30;
-End  =2026063019.30;
+Start=20260720.1730;
+End  =20260720.2359;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
-	'** &#x2190 '
-+"&nbsp &nbsp &nbsp <a href='http://elecuk.github.io/ex' style='text-decoration: none' target='_blank'> بخش دوم  امتحان پایان ترم </a>"
+	"<p style='background-color:pink;'> ** &#x2190 تکمیل پرسش نامه </p>"
+	+' لطفا همه دانشجویان درس تا پایان روز جمعه 1405/04/26 این پرسش نامه که حدود 2 تا 5 دقیقه زمان می برد را تکمیل و ثبت کنید: '
+	+'<br>'
+	+'<br>'
++"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href='http://elecuk.github.io/UC4042survey' style='text-decoration: none' target='_blank'> ورود به پرسش نامه </a>"
+	+'<br>'
 	+'<br>'
 	+'<hr>';
-	}
-
-Start=2026063018.30;
-End  =2026063019.30;
-	if ( now >= Start && now < End ) 
-	{
-	document.getElementById("mycontent").innerHTML+=
-	'** &#x2190  '
-	+'پس از اتمام بخش اول امتحان در  LMSES، لینک بخش دوم  امتحان پایان ترم در این صفحه نیز اعلام می شود'
-	+'<br>'
-	+'<hr>';						
-	}
-
-Start=20260630.1830;
-End  =20260630.1930;
-	if ( now >= Start && now < End ) 
-	{
-	document.getElementById("mycontent").innerHTML+=
-	'** &#x2190  '
-	+'در زمان آزمون وارد سامانه LMSES شوید، بخش اول سوالات را پاسخ دهید و طبق توضیحات بخش دوم را در زمان خود شروع و کامل کنید'
-	+'<br>'
-	+'هر گونه مشکلی در امتحان را با ایمیل اطلاع دهید'
-	+'<br>'
-	+'در پاسخگویی به سوالات از برنامه های تدریس شده در کلاس استفاده کنید و از فرمت نوشتار سایر منابع استفاده نکنید. '	
-	+'<br>'
-	+'همانند کوئیزها در امتحان پایان ترم بخش هایی از برنامه ها که داده نشده و مورد پرسش نیست، درست فرض کنید.'
-	+'<br>'
-	+'<hr>';						
 	}
 
 Start=20260221.0930;
@@ -474,12 +448,18 @@ End  =20260728.2359;
 	+'<br>'
 	+"<li><a href='https://sisoog.com/download-st-link/' style='text-decoration: none' target='_blank'> رابط نرم افزاری پروگرام کردن میکروکنترلر با پروگرامر  ST-LINK </a></li>"
 	+'<br>'
-	+" روش جایگزین: پروگرام کردن مستقیم میکروکنترلر با USB "
+	+" روش جایگزین (Bootloader): پروگرام کردن مستقیم میکروکنترلر با Bootloader از طریق USB "
 	+"<a href='UC/Program Bluepill via USB port.zip' target='_blank'>  (دانلود 24MB )  </a>"
-	+'<br><br>'
-	+ ' قطعات مورد نیاز:  '
-	+ '<br>'
+	+'<br>'
+	+'<br>'
+
+	+"<p style='background-color:powderblue;'> 8 &#x2190  قطعات مورد نیاز:  </p>"
 	+ 'Blue Pill board (chip: STM32F103C8T6 or similar GD.. HK.. copies) '
+	+ '<br>'
+	+ 'pin header نری یا مادگی'
+	+ '<br>'
+	+ 'لازم است پین هدرها با استفاده از هویه و سیم لحیم روی برد Blue Pill نصب شوند  '
+	+ '<br>'
 	+ '<br>'
 	+ 'ST-LINK-V2 programmer or Bootloader programmed board'
 	+ '<br>'
@@ -487,11 +467,7 @@ End  =20260728.2359;
 	+ '<br>'
 	+ 'push button'
 	+ '<br>'
-	+ 'pin header نری یا مادگی'
-	+ '<br>'
 	+ '...'
-	+ '<br>'
-	+ 'لازم است پین هدرها با استفاده از هویه و سیم لحیم روی برد نصب شوند  '
 	+ '<br>'
 	+ ' حداکثر ولتاژ تغذیه میکروکنترلر :  '
 	+ '  3.6V  '
@@ -504,7 +480,7 @@ End  =20260728.2359;
 Start=20260221.0930;
 End  =20260728.2359;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
-	"<p style='background-color:powderblue;'> 8 &#x2190    </p>"
+	"<p style='background-color:powderblue;'> ** &#x2190    </p>"
 	+"<li><a href='https://sisoog.com/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-stm32/' style='text-decoration: none' target='_blank'> سایت مفید برای آموزش میکروکنترلر </a></li>"
 
 	+"<li><a href='https://www.youtube.com/playlist?list=PLRJhV4hUhIymmp5CCeIFPyxbknsdcXCc8' style='text-decoration: none' target='_blank'> مجموعه ویدیو مفید برای آموزش میکروکنترلر </a></li>"
@@ -518,7 +494,11 @@ Start=20260221.0930;
 End  =20260728.2359;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	"<p style='background-color:powderblue;'> 7 &#x2190  AI  </p>"
-	+"استفاده از هوش مصنوعی در یادگیری دروس مفید است البته اگر باعث تعطیلی هوش طبیعی نشود "
+	+"استفاده از هوش مصنوعی در یادگیری دروس مفید است، البته اگر باعث  "
+	+"<span style='color:blue;'>"
+	+" تعطیلی هوش طبیعی  "
+	+"</span>"
+	+"  نشود "
 	+ '</p> <hr>';}
 
 
@@ -575,11 +555,15 @@ document.getElementById("mycontent").innerHTML +=
 	+ '<br>'
 	+ 'Subject :'
 	+ '<br>'
-	+ ' عنوان مناسب در چند کلمه مثلا پرسش درباره وقفه تایمر میکرو'
+	+ ' عنوان مناسب در چند کلمه مانند '
+	+"<span style='color:blue;'>"
+	+ '  پرسش درباره وقفه تایمر میکرو'
+	+"</span>"
 	+ '<br>'
 	+ '<br>'
 	+ 'متن ایمیل:'
 	+ '<br>'
+	+"<span style='color:blue;'>"
 	+ 'نام درس '
 	+ '<br>'
 	+ 'نام و نام خانوادگی '
@@ -587,6 +571,7 @@ document.getElementById("mycontent").innerHTML +=
 	+ 'شماره دانشجویی '
 	+ '<br>'
 	+ 'بیان سوال یا مطلب مورد نظر '
+	+"</span>"
 	+ '<br>'
 	+ '<br>'
 	+ 'جهت ارسال ایمیل:'
