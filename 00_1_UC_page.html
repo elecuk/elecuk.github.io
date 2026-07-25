@@ -37,6 +37,8 @@ document.getElementById("welcome").innerHTML+=
 	+'ترم بهار 1405-1404'
 		+'<hr style="height:4px;border:none;color:#333;background-color:blue;">';
 
+Term_start=20260221.0930;
+Term_end  =20260728.2359;
 
 
 
@@ -193,6 +195,18 @@ End  =2028062523.59;
 	+"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href='UC/2.zip' style='text-decoration: none' target='_blank'> C_Project  </a>"
 	+ '</p> <hr>';}
 
+Start=20260723.1500;
+End  =20260725.2359;
+	if ( now >= Start && now < End ) 
+	{
+	document.getElementById("mycontent").innerHTML+=
+	"<p style='background-color:pink;'> ** &#x2190 اعلام نمرات </p>"
+	+'برای مشاهده نمرات به سامانه گلستان وارد شوید '
++"&nbsp &#x2190 &nbsp  <a href='http://eduold.uk.ac.ir' style='text-decoration: none' target='_blank'>  سامانه گلستان </a>"
+	+'<br>'
+	+'<br>'
+	+'<hr>';
+	}
 
 
 
@@ -201,7 +215,7 @@ End  =20260725.2359;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
-	"<p style='background-color:pink;'> ** &#x2190 تکمیل پرسش نامه (اجباری) </p>"
+	"<p style='background-color:powderblue;'> ** &#x2190 تکمیل پرسش نامه (اجباری) </p>"
 	+' لطفا همه دانشجویان درس تا پایان روز جمعه 1405/05/02 این پرسش نامه که حدود 2 تا 5 دقیقه زمان می برد را تکمیل و ثبت کنید: '
 	+'<br>'
 	+'<br>'
@@ -254,7 +268,7 @@ End  =20260728.2359;
 	{
 	document.getElementById("mycontent").innerHTML+=
 	"<p style='background-color:powderblue;'> 14 &#x2190 پروژه پایانی </p>"
-	+ " پروژه پایانی با موضوع آزاد، بسته به  <span style='background-color:pink;'> کیفیت، جذابیت و کاربردی بودن  آن </span>  تا <span style='background-color:lightgreen;'> پنج نمره  </span> خواهد داشت "
+	+ " پروژه پایانی با موضوع آزاد مرتبط و متناسب با محتوای درس، بسته به  <span style='background-color:pink;'> کیفیت، جذابیت و کاربردی بودن  آن </span>  تا <span style='background-color:lightgreen;'> پنج نمره  </span> خواهد داشت "
 	+'<br>'
 	+'  در ترم های مجازی پروژه انفرادی است و باید طبق فرمت اعلام شده ارسال شود    '
 	+'<br>'
@@ -271,10 +285,10 @@ End  =20260728.2359;
 
 
 document.getElementById("mycontent").innerHTML+=
-	"<p style='background-color:powderblue;'> 13 &#x2190  نمونه فرمت ارسال ایمیل پروژه نهایی (P5) </p>"
+	"<p style='background-color:powderblue;'> 13 &#x2190  نمونه فرمت ارسال ایمیل پروژه نهایی (<span style='color:red;'>P5</span>) </p>"
 	+ 'Subject :'
 	+ '<br>'
-	+ " <span style='color:red;'>Micro_P5</span>_Ali_Ahmadi "
+	+ " <span style='color:blue;'>Micro_</span><span style='color:red;'>P5</span>_Ali_Ahmadi "
 	+ '<br>'
 	+ '<br>'
 	+ 'متن  :'
@@ -291,11 +305,11 @@ document.getElementById("mycontent").innerHTML+=
 	+ 'شامل سه فایل جداگانه ( zip نشده): '
 	+ '<br>'
 	+"<span style='color:blue;'>"
-	+ 'main_P5_Ali_Ahmadi.txt '
+	+ "main_<span style='color:red;'>P5</span>_Ali_Ahmadi.txt "
 	+ '<br>'
-	+ 'P5_Ali_Ahmadi.pdf '
+	+ "<span style='color:red;'>P5</span>_Ali_Ahmadi.pdf "
 	+ '<br>'
-	+ 'P5_Ali_Ahmadi.mp4 '
+	+ "<span style='color:red;'>P5</span>_Ali_Ahmadi.mp4 "
 	+ "</span>"
 	+ '<br>'
 	+ '<br>'
@@ -306,17 +320,17 @@ document.getElementById("mycontent").innerHTML+=
 	+ 'ویدیو با توضیح عملکرد در حین انجام تست و با حجم زیر ۲۰ مگابایت آماده شود '
 	+ '<br>'
 	+"<span style='color:red;'>"
-	+ '  بدون رعایت فرمت ارسال پروژه نمره ای برای آن محاسبه نمی شود '
+	+ ' بدون رعایت فرمت ارسال پروژه، ایمیل شما در جستجو دیده نمی شود و نمره ای برای آن محاسبه نمی شود '
 	+ "</span>"
 	+ '<br>'
 	+ '<br>'
 	+ '<hr>';
 
 document.getElementById("mycontent").innerHTML+=
-	"<p style='background-color:powderblue;'> 12 &#x2190  نمونه فرمت ارسال ایمیل پروژه شماره ۱ (P1) </p>"
+	"<p style='background-color:powderblue;'> 12 &#x2190  نمونه فرمت ارسال ایمیل پروژه شماره ۱ (<span style='color:red;'>P1</span>) </p>"
 	+ 'Subject :'
 	+ '<br>'
-	+ " <span style='color:red;'>Micro_P1</span>_Ali_Ahmadi "
+	+ " <span style='color:blue;'>Micro_</span><span style='color:red;'>P1</span>_Ali_Ahmadi "
 	+ '<br>'
 	+ '<br>'
 	+ 'متن  :'
@@ -333,15 +347,21 @@ document.getElementById("mycontent").innerHTML+=
 	+ 'شامل دو فایل zip نشده: '
 	+ '<br>'
 	+"<span style='color:blue;'>"
-	+ 'main_P1_Ali_Ahmadi.txt '
+	+ "main_<span style='color:red;'>P1</span>_Ali_Ahmadi.txt "
 	+ '<br>'
-	+ 'P1_Ali_Ahmadi.mp4 '
+	+ "<span style='color:red;'>P1</span>_Ali_Ahmadi.mp4 "
 	+ "</span>"
 	+ '<br>'
 	+ '<br>'
 	+ 'ویدیو زیر ۶۰ ثانیه با توضیح در حین انجام تست و با حجم زیر ۲۰ مگابایت آماده شود '
 	+ '<br>'
-	+ ' ده درصد از نمره هر پروژه بابت رعایت فرمت ارسال پروژه محاسبه می شود '
+	+"<span style='color:red;'>"
+	+ ' برای پروژه های بعدی، در عنوان و نام گذاری فایل ها از '
+	+ ' P3 , P2 , ... '
+	+ ' استفاده کنید '
+	+ '<br>'
+	+ ' بدون رعایت فرمت ارسال پروژه، ایمیل شما در جستجو دیده نمی شود و نمره ای برای آن محاسبه نمی شود '
+	+ "</span>"
 	+ '<br>'
 	+ '<br>'
 	+ '<hr>';
@@ -434,7 +454,7 @@ End  =20260728.2359;
 	
 	+' پس از extract  کردن فایل zip، پوشه ایجاد شده را با نام مناسب Rename کنید'
 	+' و درمسیر workspace نرم افزار STM32CubeIDE قرار داده'
-	+' و سپس import کنید و از مسیر Src در فایل main برنامه خود را بنویسید. '
+	+' و سپس import کنید. برنامه خود را از مسیر Src در فایل main  بنویسید. '
 	+'  پس از build در پوشه Debug  فایل hex ایجاد می شود  '
 	+'</p> <hr>';}
 
@@ -477,8 +497,8 @@ End  =20260728.2359;
 	+ '</p> <hr>';}
 
 
-Start=20260221.0930;
-End  =20260728.2359;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	"<p style='background-color:powderblue;'> ** &#x2190    </p>"
 	+"<li><a href='https://sisoog.com/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-stm32/' style='text-decoration: none' target='_blank'> سایت مفید برای آموزش میکروکنترلر </a></li>"
@@ -490,8 +510,8 @@ End  =20260728.2359;
 	+ '</p> <hr>';}
 
 
-Start=20260221.0930;
-End  =20260728.2359;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	"<p style='background-color:powderblue;'> 7 &#x2190  AI  </p>"
 	+"استفاده از هوش مصنوعی در یادگیری دروس مفید است، البته اگر باعث  "
@@ -499,13 +519,15 @@ End  =20260728.2359;
 	+" تعطیلی هوش طبیعی  "
 	+"</span>"
 	+"  نشود "
+	+ '<br>'
+	+"توجه داشته باشید لزوما پاسخ های هوش مصنوعی همیشه درست نیست و می تواند گمراه کننده باشد  "
 	+ '</p> <hr>';}
 
 
-Start=20280221.0930;
-End  =20290711.2359;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
-	'6 &#x2190  '
+	"<p style='background-color:powderblue;'> 6 &#x2190 آزمون های آنلاین : </p>"
 	+"در آزمون های آنلاین بهتر است از تلفن همراه برای انجام آزمون استفاده کنید "
 	+ '<br>'
 	+"در مرورگر تلفن همراه حالت  Desktop Site  را غیر فعال کنید "
@@ -515,8 +537,8 @@ End  =20290711.2359;
 
 
 
-Start=20260221.0930;
-End  =20260728.2359;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
@@ -543,8 +565,8 @@ End  =20260728.2359;
 
 
 
-Start=20260221.0930;
-End  =20260728.2359;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) {
 document.getElementById("mycontent").innerHTML +=
 	"<p style='background-color:powderblue;'> 5 &#x2190  نحوه ارسال ایمیل </p>"
@@ -596,8 +618,8 @@ document.getElementById("mycontent").innerHTML +=
 	}
 
 
-Start=20260221.0930;
-End  =20260728.2359;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
@@ -615,8 +637,8 @@ End  =20260728.2359;
 
 
 
-Start=20260221.0930;
-End  =20260728.2359;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
@@ -646,12 +668,12 @@ End  =20260728.2359;
 	}
 
 
-Start=20260221.0930;
-End  =20260728.2359;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
-	"<p style='background-color:powderblue;'> 2 &#x2190 اطلاع رسانی  : </p>"
+	"<p style='background-color:powderblue;'> 2 &#x2190 نحوه اطلاع رسانی  : </p>"
 	+ 'فعالیت‌های درس در این صفحه اطلاع رسانی می شود '
 		+ '<br>'
 	+ 'در زمان قطع اینترنت جهانی، اطلاع رسانی در صفحه درس در سامانه ایلرن انجام می شود :'
@@ -683,8 +705,9 @@ End  =20260728.2359;
 	}
 
 
-Start=20260221.0930;
-End  =20260728.2359;
+
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
