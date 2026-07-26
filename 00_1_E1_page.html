@@ -258,19 +258,6 @@ End  =2028061710.00;
 				+'&nbsp 10:00-1402/07/01'
 		+ '</p> <hr>';}
 
-Start=20260723.1500;
-End  =20260725.2359;
-	if ( now >= Start && now < End ) 
-	{
-	document.getElementById("mycontent").innerHTML+=
-	"<p style='background-color:pink;'> ** &#x2190 اعلام نمرات </p>"
-	+'برای مشاهده نمرات به سامانه گلستان وارد شوید '
-+"&nbsp &#x2190 &nbsp  <a href='http://eduold.uk.ac.ir' style='text-decoration: none' target='_blank'>  سامانه گلستان </a>"
-	+'<br>'
-	+'<br>'
-	+'<hr>';
-	}
-
 
 
 Start=20260718.1840;
@@ -332,8 +319,8 @@ End  =20260718.2000;
 	}
 
 
-Start=20260718.2000;
-End  =20260729.0000;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
@@ -366,8 +353,8 @@ End  =20260718.2000;
 
 
 
-Start=20260221.0930;
-End  =20260729.0000;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	"<p style='background-color:powderblue;'> 14 &#x2190   آزمون های ترمی برگزار شده </p>"
 	+"<li> آزمون 1  &nbsp &nbsp  &#x2190     &nbsp  1405/03/17 </li>"
@@ -378,7 +365,10 @@ End  =20260729.0000;
 	+ '</p> <hr>';}
 
 
-
+Start=Term_start;
+End  =Term_end;
+	if ( now >= Start && now < End ) 
+	{
 document.getElementById("mycontent").innerHTML+=
 	"<p style='background-color:powderblue;'> 13 &#x2190 پروژه عملی </p>"
 	+ 'انجام پروژه عملی اختیاری است '
@@ -387,8 +377,13 @@ document.getElementById("mycontent").innerHTML+=
 		+'<br>'
 	+'  پروژه های مشابه و یکسان نمره ندارد    '
 		+ '<hr>';
+}
 
 
+Start=Term_start;
+End  =Term_end;
+	if ( now >= Start && now < End ) 
+	{
 document.getElementById("mycontent").innerHTML+=
 	"<p style='background-color:powderblue;'> 12 &#x2190  نمونه فرمت ارسال ایمیل پروژه </p>"
 	+ 'Subject :'
@@ -425,6 +420,7 @@ document.getElementById("mycontent").innerHTML+=
 	+ '<br>'
 	+ '<br>'
 	+ '<hr>';
+}
 
 
 
@@ -432,8 +428,8 @@ document.getElementById("mycontent").innerHTML+=
  
 
 
-Start=20260221.0930;
-End  =20260729.0000;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML +=
@@ -454,13 +450,18 @@ End  =20260729.0000;
 
 
 
-Start=20260221.0930;
-End  =20260729.0000;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	"<p style='background-color:powderblue;'> 10 &#x2190  </p>"
 		+"<a href='E1/TestBJT.mp4' style='text-decoration: none' target='_blank'> تشخیص پایه های ترانزیستور با مولتی متر </a>"
 		+ '</p> <hr>';}
 
+
+Start=Term_start;
+End  =Term_end;
+	if ( now >= Start && now < End ) 
+	{
 document.getElementById("mycontent").innerHTML+=
 	"<p style='background-color:powderblue;'> 9 &#x2190 نحوه ارسال ایمیل : </p>"
 	+ 'To :'
@@ -495,10 +496,11 @@ document.getElementById("mycontent").innerHTML+=
 	+ '<br>'
 	+ 'برای پاسخ دادن به ایمیل دریافتی گزینه Reply را انتخاب و متن پاسخ را در ابتدای بخش متن وارد و ارسال کنید '
 	+ '<hr>';
+}
 
 
-Start=20260221.0930;
-End  =20260729.0000;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 		{
 		document.getElementById("mycontent").innerHTML+=
@@ -525,8 +527,8 @@ End  =20260729.0000;
 
 
 
-Start=20260221.0930;
-End  =20260729.0000;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 		{
 		document.getElementById("mycontent").innerHTML+=
@@ -563,8 +565,8 @@ End  =20260729.0000;
 
 
 
-Start=20260221.0930;
-End  =20260729.0000;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 		{
 		document.getElementById("mycontent").innerHTML+=
@@ -599,8 +601,8 @@ End  =20260729.0000;
 
 
 
-Start=20260221.0930;
-End  =20260729.0000;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 		{
 		document.getElementById("mycontent").innerHTML+=
@@ -636,8 +638,8 @@ End  =20260729.0000;
 
 
 
-Start=20260221.0930;
-End  =20260729.0000;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 		{
 		document.getElementById("mycontent").innerHTML+=
@@ -653,8 +655,8 @@ End  =20260729.0000;
 
 
 
-Start=20260221.0930;
-End  =20260729.0000;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 		{
 		document.getElementById("mycontent").innerHTML+=
@@ -672,8 +674,8 @@ End  =20260729.0000;
 		}
 
 
-Start=20260221.0930;
-End  =20260728.2359;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
@@ -709,8 +711,8 @@ End  =20260728.2359;
 	}
 
 
-Start=20260221.0930;
-End  =20260728.2359;
+Start=Term_start;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
