@@ -32,28 +32,47 @@ document.getElementById("displayDateTime").innerHTML+= ' Date : '+ daylist[day] 
 
 
 document.getElementById("welcome").innerHTML+=
-		'اطلاعیه ها و فعالیت های درس الکترونیک 1'
-				+' <br> '
-		+'ترم بهار 1404-1405'
+	'اطلاعیه ها و فعالیت های درس الکترونیک 1'
+		+' <br> '
+ 	+'ترم بهار ' 
+<!-- 	+'ترم پاییز ' -->
+		+'1405-1404'
 				+'<hr style="height:4px;border:none;color:#333;background-color:blue;">';
 
+Term_start=20260221.0930;
+Term_end  =20260727.2359;
+NextTerm_start=20260911.2359;
 
-Start=2027061516.21;
-End  =2028063016.22;
+
+Start=Term_end;
+End  =NextTerm_start;
 	if ( now >= Start && now < End ) 
-		{
-		document.getElementById("mycontent").innerHTML+=
-		'** &#x2190  '
-		+'فعالیت های ترم پاییز ۱۴۰۴-۱۴۰۳'
-				+'به پایان رسیده است.'
-				+ '<br>'
-		+ ' برای مشاهده نمره به سامانه گلستان مراجعه کنید و به توضیحات نوشته شده توجه کنید'
-				+"<br><p style='color:#A40404; font-size=1px;'>"
-		+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+'تاریخ پیام:'
-				+'&nbsp 18:00-1403/11/05'
-		+'<hr>';
-		}
+	{
+	document.getElementById("mycontent").innerHTML+=
+	"<p style='background-color:powderblue;'> ** &#x2190  </p>"
+	+'فعالیت های '
+	+'ترم بهار '
+	+'1405-1404'
+		+'به پایان رسیده است.'
+	+'<br>'
+	+'<br>'
+	+'<hr>';
+	}
+
+
+
+Start=20260723.1500;
+End  =Term_end;
+	if ( now >= Start && now < End ) 
+	{
+	document.getElementById("mycontent").innerHTML+=
+	"<p style='background-color:pink;'> ** &#x2190 اعلام نمرات </p>"
+	+' برای مشاهده نمرات به سامانه گلستان وارد شوید و به توضیحات نوشته شده توجه کنید  '
++"&nbsp &#x2190 &nbsp  <a href='http://eduold.uk.ac.ir' style='text-decoration: none' target='_blank'>  سامانه گلستان </a>"
+	+'<br>'
+	+'<br>'
+	+'<hr>';
+	}
 
 
 
