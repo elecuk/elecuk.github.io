@@ -34,12 +34,30 @@ document.getElementById("displayDateTime").innerHTML+= ' Date : '+ daylist[day] 
 document.getElementById("welcome").innerHTML+=
 	'اطلاعیه ها و فعالیت های درس اصول میکروکنترلر'
 		+'<br>'
-	+'ترم بهار 1405-1404'
+ 	+'ترم بهار ' 
+<!-- 	+'ترم پاییز ' -->
+	+'1405-1404'
 		+'<hr style="height:4px;border:none;color:#333;background-color:blue;">';
 
 Term_start=20260221.0930;
-Term_end  =20260728.2359;
+Term_end  =20260727.2359;
+NextTerm_start=20260911.2359;
 
+
+Start=Term_end;
+End  =NextTerm_start;
+	if ( now >= Start && now < End ) 
+	{
+	document.getElementById("mycontent").innerHTML+=
+	"<p style='background-color:pink;'> ** &#x2190  </p>"
+	+'فعالیت های '
+	+'ترم بهار '
+	+'1405-1404'
+		+'به پایان رسیده است.'
+	+'<br>'
+	+'<br>'
+	+'<hr>';
+	}
 
 
 Start=2023092509.50;
@@ -184,8 +202,8 @@ End  =2029110123.59;
 						+ '</p> <hr>';}
 
 
-Start=2027120509.30;
-End  =2028062523.59;
+Start=2028120509.30;
+End  =2029062523.59;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	'7 &#x2190  '
 	+ ' دانلود پروژه خالی :  '
@@ -196,7 +214,7 @@ End  =2028062523.59;
 	+ '</p> <hr>';}
 
 Start=20260723.1500;
-End  =20260725.2359;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
@@ -211,7 +229,7 @@ End  =20260725.2359;
 
 
 Start=20260723.1500;
-End  =20260725.2359;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
@@ -226,7 +244,7 @@ End  =20260725.2359;
 	}
 
 Start=20260221.0930;
-End  =20260728.2359;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
@@ -240,7 +258,7 @@ End  =20260728.2359;
 	}
 
 Start=20260221.0930;
-End  =20260728.2359;
+End  =Term_end;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	"<p style='background-color:powderblue;'> 15 &#x2190      آزمون های ترمی برگزار شده و &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  پروژه ها  </p>"
 	+"<li> آزمون 1  &nbsp &nbsp  &#x2190     &nbsp  1405/03/16"
@@ -263,7 +281,7 @@ End  =20260728.2359;
 	}
 
 Start=20260221.0930;
-End  =20260728.2359;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
@@ -284,8 +302,11 @@ End  =20260728.2359;
 
 
 
-
-document.getElementById("mycontent").innerHTML+=
+Start=20260221.0930;
+End  =Term_end;
+	if ( now >= Start && now < End ) 
+	{
+	document.getElementById("mycontent").innerHTML+=
 	"<p style='background-color:powderblue;'> 13 &#x2190  نمونه فرمت ارسال ایمیل پروژه نهایی (<span style='color:red;'>P5</span>) </p>"
 	+ '&#9993 &nbsp &nbsp'
 	+ 'Subject :'
@@ -330,7 +351,13 @@ document.getElementById("mycontent").innerHTML+=
 	+ '<br>'
 	+ '<br>'
 	+ '<hr>';
+	}
 
+
+Start=20260221.0930;
+End  =Term_end;
+	if ( now >= Start && now < End ) 
+	{
 document.getElementById("mycontent").innerHTML+=
 	"<p style='background-color:powderblue;'> 12 &#x2190  نمونه فرمت ارسال ایمیل پروژه شماره ۱ (<span style='color:red;'>P1</span>) </p>"
 	+ 'Subject :'
@@ -370,10 +397,11 @@ document.getElementById("mycontent").innerHTML+=
 	+ '<br>'
 	+ '<br>'
 	+ '<hr>';
+	}
 
 
 Start=20260221.0930;
-End  =20260728.2359;
+End  =Term_end;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	"<p style='background-color:powderblue;'> 11 &#x2190  محتوای فایل main برنامه های کلاس : </p>"
 	+"<li> برنامه هشتم - ولت متر و دماسنج دیجیتال:  "
@@ -442,7 +470,7 @@ End  =20260728.2359;
 
 
 Start=20260221.0930;
-End  =20260728.2359;
+End  =Term_end;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
@@ -466,7 +494,7 @@ End  =20260728.2359;
 
 
 Start=20260221.0930;
-End  =20260728.2359;
+End  =Term_end;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	"<p style='background-color:powderblue;'> 9 &#x2190 دانلود نرم افزارهای مورد نیاز : </p>"
 	+"<li><a href='https://sisoog.com/%d8%af%d8%a7%d9%86%d9%84%d9%88%d8%af-%d9%86%d8%b1%d9%85-%d8%a7%d9%81%d8%b2%d8%a7%d8%b1-stm32cubeide/' style='text-decoration: none' target='_blank'>  دانلود نرم‌افزار کامپایلر STM32CubeIDE  </a></li>"
