@@ -26,17 +26,23 @@
   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
   var timehm = today.getHours() + ":" + today.getMinutes() ;
 
-var now= today.getFullYear()*1000000 + (today.getMonth()+1)*10000 + today.getDate()*100 + today.getHours() + (today.getMinutes()/100 );
+var now= today.getFullYear()*10000 + (today.getMonth()+1)*100 + today.getDate()*1 + today.getHours()/100 + (today.getMinutes()/10000 );
 <!--document.getElementById("displayDateTime").innerHTML+= ' Your Current Date : '+ now +  '<br>';-->
 document.getElementById("displayDateTime").innerHTML+= ' Date : '+ daylist[day] +' &nbsp &nbsp ' +date+'  &nbsp &nbsp  '+timehm;
 
 
 document.getElementById("welcome").innerHTML+=
 		'اطلاعیه ها و فعالیت های درس الکترونیک 3'
-				+' <br> '
-		+'ترم بهار  ۱۴۰۴-۱۴۰۳'
-				+'<hr style="height:4px;border:none;color:#333;background-color:blue;">';
+		+'<br>'
+<!-- 	+'ترم بهار ' -->
+ 	+'ترم پاییز ' 
+	+'1406-1405'
+		+'<hr style="height:4px;border:none;color:#333;background-color:blue;">';
 
+Term_start    =20260918.2200;
+Term_end      =20270108.2359;
+Term_end_ext  =20270120.2359;
+NextTerm_start=20270212.2359;
 
 Start=2026020700.00;
 End  =2026030700.00;
@@ -132,106 +138,8 @@ End  =2025060700.00;
 	+"<a href='E3/Exm/e3exm7.png' style='text-decoration: none'> Exam7 grades </a>"
 	+ '</p> <hr>';}
 
-Startex1=2025031615.30;
-Endex1  =2025031617.00;
-	if ( now >= Startex1 && now < Endex1 ) {window.open("bm/index.html","_top");+'<hr>';}
-	else if ( now >= Endex1 )
-	{
-	document.getElementById("mycontent").innerHTML +=
-	'16 &#x2190  '
-	+'امتحان 7'
-		+'-(پایان امتحان )'
-		;}
-	if ( now >= Startex1) 
-	{document.getElementById("mycontent").innerHTML+=	
-	"<br><p style='color:#B40424; font-size=1px;'>"
-	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+'&nbsp 1404/03/13'
-	+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+'&nbsp 15:30-16:10'
-	+'</p> <hr>';
-	}
 
 
-Startex1=2025031615.30;
-Endex1  =2025031617.00;
-	if ( now >= Startex1 && now < Endex1 ) {window.open("bm/index.html","_top");+'<hr>';}
-	else if ( now >= Endex1 )
-	{
-	document.getElementById("mycontent").innerHTML +=
-	'15 &#x2190  '
-	+'امتحان 6'
-		+'-(پایان امتحان )'
-		;}
-	if ( now >= Startex1) 
-	{document.getElementById("mycontent").innerHTML+=	
-	"<br><p style='color:#B40424; font-size=1px;'>"
-	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+'&nbsp 1404/03/11'
-	+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+'&nbsp 15:30-16:10'
-	+'</p> <hr>';
-	}
-
-Startex1=2025031615.30;
-Endex1  =2025031617.00;
-	if ( now >= Startex1 && now < Endex1 ) {window.open("bm/index.html","_top");+'<hr>';}
-	else if ( now >= Endex1 )
-	{
-	document.getElementById("mycontent").innerHTML +=
-	'14 &#x2190  '
-	+'امتحان 5'
-		+'-(پایان امتحان )'
-		;}
-	if ( now >= Startex1) 
-	{document.getElementById("mycontent").innerHTML+=	
-	"<br><p style='color:#B40424; font-size=1px;'>"
-	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+'&nbsp 1404/02/23'
-	+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+'&nbsp 15:40-16:15'
-	+'</p> <hr>';
-	}
-
-Startex1=2025031615.30;
-Endex1  =2025031617.00;
-	if ( now >= Startex1 && now < Endex1 ) {window.open("bm/index.html","_top");+'<hr>';}
-	else if ( now >= Endex1 )
-	{
-	document.getElementById("mycontent").innerHTML +=
-	'13 &#x2190  '
-	+'امتحان 4'
-		+'-(پایان امتحان )'
-		;}
-	if ( now >= Startex1) 
-	{document.getElementById("mycontent").innerHTML+=	
-	"<br><p style='color:#B40424; font-size=1px;'>"
-	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+'&nbsp 1404/02/14'
-	+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+'&nbsp 16:15-17:15'
-	+'</p> <hr>';
-	}
-
-Startex1=2025031615.30;
-Endex1  =2025031617.00;
-	if ( now >= Startex1 && now < Endex1 ) {window.open("bm/index.html","_top");+'<hr>';}
-	else if ( now >= Endex1 )
-	{
-	document.getElementById("mycontent").innerHTML +=
-	'12 &#x2190  '
-	+'امتحان 3'
-		+'-(پایان امتحان )'
-		;}
-	if ( now >= Startex1) 
-	{document.getElementById("mycontent").innerHTML+=	
-	"<br><p style='color:#B40424; font-size=1px;'>"
-	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+'&nbsp 1404/01/31'
-	+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+'&nbsp 16:00-17:00'
-	+'</p> <hr>';
-	}
 
 
 Start=2025042015.40;
@@ -269,27 +177,6 @@ End  =2025062110.30;
 		+ '</p> <hr>';
 		}
 
-
-Startex1=2025031615.30;
-Endex1  =2025031617.00;
-	if ( now >= Startex1 && now < Endex1 ) {window.open("bm/index.html","_top");+'<hr>';}
-	else if ( now >= Endex1 )
-	{
-	document.getElementById("mycontent").innerHTML +=
-	'8 &#x2190  '
-	+'امتحان 2'
-		+'-(پایان امتحان )'
-		;}
-	if ( now >= Startex1) 
-	{document.getElementById("mycontent").innerHTML+=	
-	"<br><p style='color:#B40424; font-size=1px;'>"
-	+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+'&nbsp 1403/12/26'
-	+'<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+'&nbsp 15:30-17:00'
-	+ '<br>'
-	+'</p> <hr>';
-	}
 
 
 Start=2025031421.00;
@@ -464,24 +351,44 @@ End  =2026021609.00;
 
 
 
-document.getElementById("mycontent").innerHTML+=
-		'1 &#x2190  '
-		+ 'با سلام و آرزوی شروع ترمی خوب برای همگی شما '
-	 			+ '<br>'
-		+ 'فعالیت‌های درس در این صفحه اطلاع رسانی می شود '
-	 			+ '<br>'
-		+ ' قبل از هر جلسه درس، اطلاعیه های این صفحه را مشاهده نمایید  '
-	 			+ '<br>'
-		+ ' اطلاعیه های جدیدتر در ابتدای لیست این صفحه اضافه می شوند  '
-	 			+ '<br>'
-		+ 'در هنگام مشاهده این صفحه، درستی و تطابق تاریخ و زمان سیستم خود در بالای این صفحه را با تاریخ و زمان واقعی بررسی کنید '
-				+'  و عدم تطابق را برطرف کنید '
-				+"<br><p style='color:#A40404; font-size=1px;'>"
-		+ '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-		+ 'تاریخ پیام:'
-				+'&nbsp 1403/11/20'
-		+ '<hr>';	
+Start=20260918.2200;
+End  =20260919.1500;
+	if ( now >= Start && now < End ) 
+	{
+	document.getElementById("mycontent").innerHTML+=
+	"<p style='background-color:pink;'> ** &#x2190  کلاس شنبه 06/28  برگزار نمی شود  </p>"
+		+ '<hr>';
+	}
 
+
+Start=Term_start;
+End  =Term_end;
+	if ( now >= Start && now < End ) 
+	{
+	document.getElementById("mycontent").innerHTML+=
+	"<p style='background-color:powderblue;'> 1 &#x2190  شروع ترم  </p>"
+	+ 'با سلام و آرزوی شروع ترمی خوب برای همگی شما '
+	+ '<br>'
+	+ 'فعالیت‌های درس در این صفحه اطلاع رسانی می شود '
+	+ '<br>'
+	+ 'قبل از هر جلسه درس، اطلاعیه های این صفحه را مشاهده نمایید '
+	+ '<br>'
+	+ 'اطلاعیه های جدیدتر در ابتدای لیست این صفحه اضافه می شوند  '
+	+ '<br>'
+	+ 'درستی و تطابق تاریخ و زمان سیستم خود در بالای این صفحه را با تاریخ و زمان واقعی بررسی کنید '
+	+ '<br>'
+	+ 'و حتما  عدم تطابق را برطرف کنید '
+	+ '<br>'
+	+ 'حتما با شماره دانشجویی خودتان وارد این صفحه شوید '
+	+ '<br>'
+	+ 'و در صورت عدم امکان ورود پس از پایان انتخاب واحد، حتما با ایمیل اطلاع دهید '
+	+"<br><p style='color:#A40404; font-size=1px;'>"
+	+ '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+	+'تاریخ پیام:'
+	+'&nbsp 1405/06/27'
+	+ '<hr>';
+	}		
+	
 
   </script>
 
