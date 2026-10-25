@@ -691,13 +691,20 @@ document.getElementById("mycontent").innerHTML +=
 	+ '<hr>';
 	}
 
+Start=Term_start+0;
+End  =Term_end;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+	"<p style='background-color:powderblue;'> 11 &#x2190 شروع پروژه در نرم افزار   : </p>"
+	+"<li><a href='UC/CUBEIDE/index.html' style='text-decoration: none' target='_blank'> نحوه شروع پروژه در نرم افزار </a></li>"
+	+'<hr>';}
+
 
 Start=Term_start+0;
 End  =Term_end_ext;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
-	"<p style='background-color:powderblue;'> 10 &#x2190   ایجاد پروژه در نرم افزار STM32CubeIDE :  </p>"
+	"<p style='background-color:powderblue;'> 10 &#x2190   فایل های ایجاد پروژه در نرم افزار STM32CubeIDE :  </p>"
 	+ 'فایل های ایجاد پروژه : '
 	+" &nbsp  &nbsp  &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp  &nbsp"
 //	+" &nbsp  &nbsp  &nbsp <a href='UC/C_01_empty.zip' target='_blank' style='color:red;'>C Project files</a>"
@@ -721,17 +728,23 @@ End  =Term_end;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	"<p style='background-color:powderblue;'> 9 &#x2190  نرم افزار کامپایلر  : </p>"
 	+"<li><a href='https://sisoog.com/%d8%af%d8%a7%d9%86%d9%84%d9%88%d8%af-%d9%86%d8%b1%d9%85-%d8%a7%d9%81%d8%b2%d8%a7%d8%b1-stm32cubeide/' style='text-decoration: none' target='_blank'>  دانلود نرم‌افزار  STM32CubeIDE  </a></li>"
-	+'<br>'
+//	+"<li><a href='UC/CUBEIDE/index.html' style='text-decoration: none' target='_blank'> نحوه شروع پروژه در نرم افزار </a></li>"
+	+'<hr>';}
 
-	+"<p style='background-color:powderblue;'> 8 &#x2190  نرم افزار پروگرام کردن  میکروکنترلر  </p>"
+Start=Term_start+160;
+End  =Term_end;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+	"<p style='background-color:powderblue;'> 8 &#x2190  نرم افزار پروگرام کردن  میکروکنترلر  </p>"
 	+"<li><a href='https://sisoog.com/download-st-link/' style='text-decoration: none' target='_blank'> رابط نرم افزاری پروگرام کردن میکروکنترلر با پروگرامر  ST-LINK </a></li>"
 	+'<br>'
 	+" روش جایگزین (Bootloader): پروگرام کردن مستقیم میکروکنترلر با Bootloader از طریق USB "
 	+"<a href='UC/Program Bluepill via USB port.zip' target='_blank'>  (دانلود 24MB )  </a>"
-	+'<br>'
-	+'<br>'
+	+'<hr>';}
 
-	+"<p style='background-color:powderblue;'> 7 &#x2190  قطعات مورد نیاز:  </p>"
+Start=Term_start+0;
+End  =Term_end;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+	"<p style='background-color:powderblue;'> 7 &#x2190  قطعات مورد نیاز:  </p>"
 	+ 'Blue Pill board (chip: STM32F103C8T6 or similar GD.. HK.. copies) '
 	+ '<br>'
 	+ 'pin header نری یا مادگی'
