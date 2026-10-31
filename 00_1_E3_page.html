@@ -304,16 +304,56 @@ End  =2026020700.00;
 		+'<hr>';						
 		}
 
+
+Start=Term_start+0;
+End  =Term_end;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+	"<p style='background-color:powderblue;'> ** &#x2190   آزمون های ترمی برگزار شده   </p>"
+	+"<li> آزمون 1  &nbsp &nbsp  &#x2190  &nbsp  1405/07/04"
+	+"</li>"
+	+"<li> آزمون 2  &nbsp        &#x2190  &nbsp  1405/08/09"
+//	+"</li>"
+//	+"<li> آزمون 3  &nbsp &nbsp  &#x2190  &nbsp  1405/03/23"
+//	+"</li>"
+//	+"<li> آزمون 4  &nbsp &nbsp  &#x2190  &nbsp  1405/03/25"
+//	+"</li>"
+//	+"<li> آزمون 5  &nbsp &nbsp  &#x2190  &nbsp  1405/03/30"
+	+"</li>"
+
+	+ '</p> <hr>';
+	}
+
+Start=Term_start+0;
+End  =Term_end;
+	if ( now >= Start && now < End ) 
+	{
+	document.getElementById("mycontent").innerHTML+=
+	"<p style='background-color:powderblue;'> ** &#x2190 قبل از حضور در کلاس   : </p>"
+	+'&#128072'
+	+ ' شارژ باتری تلفن همراه خود را بررسی کنید '
+		+ '<br>'
+	+'&#128072'
+	+ ' اتصال خود به اینترنت را بررسی کنید '
+		+ '<br>'
+	+'&#128072'
+	+ 'امکان ارتباط با سرویس ایمیل خود را بررسی کنید   '
+		+ '<br>'
+	+'&#128072'
+	+ 'کاغذ و مداد به همراه داشته باشید   '
+	+ '<hr>';
+	}
+
+
 Start=Term_start+0;
 End  =Term_end;
 	if ( now >= Start && now < End ) 
 		{
 		document.getElementById("mycontent").innerHTML +=
-	"<p style='background-color:powderblue;'> 6 &#x2190 شبیه سازی نرم افزاری </p>"
+	"<p style='background-color:powderblue;'> 5 &#x2190 شبیه سازی نرم افزاری </p>"
 		+"<a href='E3/Orcad1-E12/index.html' style='text-decoration: none';>   شبیه سازی تقویت کننده ترانزیستوری و محاسبه پهنای باند در نرم افزار ORCAD </a>";
 						}
 	else if ( now >= End )  {document.getElementById("mycontent").innerHTML +=
-		'6 &#x2190  '
+		'5 &#x2190  '
 		+'آشنایی با شبیه سازی نرم افزاری'
 				+'-(پایان مهلت)';}
 	if ( now >= Start) {document.getElementById("mycontent").innerHTML+=	
@@ -325,26 +365,6 @@ End  =Term_end;
 		}
 
 
-Start=Term_start+0;
-End  =Term_end;
-	if ( now >= Start && now < End ) 
-	{
-	document.getElementById("mycontent").innerHTML+=
-	"<p style='background-color:powderblue;'> 5 &#x2190 قبل از حضور در کلاس   : </p>"
-	+'&#128072'
-	+ ' اتصال خود به اینترنت را بررسی کنید '
-		+ '<br>'
-	+'&#128072'
-	+ 'امکان ارتباط با سرویس ایمیل خود را بررسی کنید   '
-		+ '<br>'
-	+'&#128072'
-	+ 'کاغذ و مداد به همراه داشته باشید   '
-	+"<br><p style='color:#A40404; font-size=1px;'>"
-	+ '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-	+ 'تاریخ پیام:'
-		+'&nbsp 1405/07/15'
-	+ '<hr>';
-	}
 
 
 
