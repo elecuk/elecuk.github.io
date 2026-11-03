@@ -547,6 +547,30 @@ End  =Term_end;
 		}
 
 
+Start=Term_start+0;
+End  =Term_end;
+	if ( now >= Start && now < End ) 
+	{
+	document.getElementById("mycontent").innerHTML+=
+	"<p style='background-color:powderblue;'> ** &#x2190 قبل از حضور در کلاس   : </p>"
+	+'&#128072'
+	+ ' اطلاعیه های این صفحه را بررسی کنید '
+		+ '<br>'
+	+'&#128072'
+	+ ' شارژ باتری تلفن همراه خود را بررسی کنید '
+		+ '<br>'
+	+'&#128072'
+	+ ' اتصال خود به اینترنت را بررسی کنید '
+		+ '<br>'
+	+'&#128072'
+	+ 'امکان ارتباط با سرویس ایمیل خود را بررسی کنید   '
+		+ '<br>'
+	+'&#128072'
+	+ 'کاغذ و مداد و ماشین حساب به همراه داشته باشید   '
+	+ '<hr>';
+	}
+
+
 
 
 Start=Term_start+1;
@@ -586,26 +610,7 @@ End  =Term_end;
 	}
 
 
-Start=Term_start+9999;
-End  =Term_end;
-	if ( now >= Start && now < End ) 
-	{
-	document.getElementById("mycontent").innerHTML+=
-	"<p style='background-color:powderblue;'> 5 &#x2190 قبل از حضور در کلاس   : </p>"
-	+'&#128072'
-	+ ' اتصال خود به اینترنت را بررسی کنید '
-		+ '<br>'
-	+'&#128072'
-	+ 'امکان ارتباط با سرویس ایمیل خود را بررسی کنید   '
-		+ '<br>'
-	+'&#128072'
-	+ 'کاغذ و مداد به همراه داشته باشید   '
-	+"<br><p style='color:#A40404; font-size=1px;'>"
-	+ '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
-	+ 'تاریخ پیام:'
-		+'&nbsp 1405/07/15'
-	+ '<hr>';
-	}
+
 
 
 
