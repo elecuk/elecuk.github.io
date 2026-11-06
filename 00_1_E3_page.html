@@ -142,25 +142,6 @@ End  =2025060700.00;
 
 
 
-Start=2025042015.40;
-End  =2025062110.30;
-	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
-	'11 &#x2190  '
-	+"<a href='E3/Nichols.pdf' style='text-decoration: none'>   چارت نیکولز </a>"
-	+ '</p> <hr>';}
-
-
-Start=2025041312.00;
-End  =2025062110.30;
-	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
-		'10 &#x2190  '
-		+"<a href='E3/Charts.pdf' style='text-decoration: none'>   نمودارهای بررسی پایداری سیستم های مرتبه دو </a>"
-		+ '</p> <hr>';}
-
-
-
-
-
 Start=2025031421.00;
 End  =2025061113.30;
 	if ( now >= Start && now < End ) 
@@ -303,6 +284,24 @@ End  =2026020700.00;
 				+'&nbsp 1403/11/28'
 		+'<hr>';						
 		}
+
+
+
+Start=Term_start+99999;
+End  =Term_end;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+	"<p style='background-color:powderblue;'> 7 &#x2190    چارت نیکولز    </p>"
+	+"&nbsp &nbsp &nbsp <a href='E3/Nichols.pdf' style='text-decoration: none'>   Nichols Chart  </a>"
+	+ '</p> <hr>';}
+
+
+Start=20261107.1400;
+End  =Term_end;
+	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
+	"<p style='background-color:powderblue;'> 6 &#x2190    نمودارهای بررسی پایداری سیستم های مرتبه دو    </p>"
+	+"&nbsp &nbsp &nbsp <a href='E3/Charts.pdf' style='text-decoration: none'> Second-Order Systems  </a>"
+	+ '</p> <hr>';}
+
 
 
 Start=Term_start+0;
