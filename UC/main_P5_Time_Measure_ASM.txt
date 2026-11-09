@@ -12,6 +12,7 @@
 
 .section .text
 .global main
+.type main, %function
 main:
 
 Init_PortA_7_segment:
