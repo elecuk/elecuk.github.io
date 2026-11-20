@@ -639,30 +639,30 @@ End  =Term_end_ext;
 //	+'<br>'
 
 
-//	+"<li>برنامه چهارم -  Blink یک ثانیه با وقفه تایمر:"
-//	+" &nbsp  &nbsp "
+	+"<li>برنامه چهارم:  Blink یک ثانیه با وقفه تایمر"
+	+" &nbsp  &nbsp"
 //	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P4_Blink_PC13_1Second_C.txt' target='_blank' style='color:red;'>C Code</a>"
-//	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P4_Blink_PC13_1Second_ASM.txt'target='_blank'>ASM Code</a>"
-//	+"</li>"
+	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P4_Blink_PC13_1Second_ASM.txt'target='_blank'>ASM Code</a>"
+	+"</li>"
 //	+'<br>'
 
-	+"<li> برنامه سوم: Seven Segment چهار رقمی "
-	+" &nbsp  &nbsp  "
+	+"<li> برنامه سوم: Seven Segment چند رقمی "
+	+" &nbsp  &nbsp &nbsp "
 //	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P3_4digit7Seg_C.txt' target='_blank' style='color:red;'>C Code</a>"
 	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P3_4digit7Seg_ASM.txt' target='_blank'>ASM Code</a>"
 	+"</li>"
 //	+'<br>'
 
-	+"<li> برنامه دوم: خواندن و نوشتن پایه ها "
-	+" &nbsp  &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp"
+	+"<li> برنامه دوم: خواندن و نوشتن پایه  "
+	+" &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp"
 //	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P2_pin_C.txt' target='_blank' style='color:red;'>C Code</a>"
 	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P2_pin_ASM_ODR.txt' target='_blank'>ASM Code</a>"
 //	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P2_pin_ASM_BSRR.txt' target='_blank'>ASM Code</a>"
 //	+"</li>"
 //	+'<br>'
 
-	+"<li> برنامه اول: خواندن و نوشتن پورت ها"
-		+" &nbsp  &nbsp  &nbsp &nbsp &nbsp &nbsp "
+	+"<li> برنامه اول: خواندن و نوشتن پورت "
+		+" &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp "
 //	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P1_port_C.txt' target='_blank' style='color:red;'>C Code</a>"
 	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P1_port_ASM.txt' target='_blank'>ASM Code</a>"
 	+"</li>"
@@ -678,14 +678,21 @@ Start=Term_start+0;
 End  =Term_end;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	"<p style='background-color:powderblue;'> ** &#x2190   آزمون های ترمی برگزار شده  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &#x2190    پروژه های درسی  </p>"
-//	+"<li> آزمون 1  &nbsp &nbsp  &#x2190     &nbsp  1405/03/16"
-+" &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp"
+	+"<li>"
+	+" آزمون 1  &nbsp &nbsp  &#x2190     &nbsp  1405/08/25"
+	+" &nbsp &nbsp &nbsp &nbsp "
 	+" &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &#x25B2 پروژه 1 &#x2190 Two hand Safety system"
-	+"&nbsp &nbsp   مهلت  &nbsp  1405/08/23"
+	+"&nbsp &nbsp   مهلت تحویل  &nbsp  1405/08/25"
 	+"</li>"
-//	+"<li> آزمون 2  &nbsp &nbsp  &#x2190     &nbsp  1405/03/18"
-//	+" &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &#x25B2 پروژه 2 &#x2190 (Seven Segment-4095)" 
-//	+"</li>"
+	+"<li>"
+//	+" آزمون 2  &nbsp &nbsp  &#x2190     &nbsp  1405/03/18"
+	+" &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp"
+	+" &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp"
+	+" &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp"
+	+" &nbsp &nbsp &nbsp &nbsp "
+	+" &#x25B2 پروژه 2 &#x2190 (Seven Segment-4095)" 
+	+"&nbsp &nbsp &nbsp  مهلت تحویل  &nbsp  1405/08/30"
+	+"</li>"
 //	+"<li> آزمون 3  &nbsp &nbsp  &#x2190     &nbsp  1405/03/23"
 //	+" &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &#x25B2  پروژه 3 &#x2190 (Time 0.01s)" 
 //	+"</li>"
@@ -709,7 +716,7 @@ End  =Term_end;
 	if ( now >= Start && now < End ) 
 	{
 	document.getElementById("mycontent").innerHTML+=
-	"<p style='background-color:powderblue;'> 13 &#x2190 قبل از حضور در کلاس   : </p>"
+	"<p style='background-color:powderblue;'> ** &#x2190 قبل از حضور در کلاس   : </p>"
 	+'&#128072'
 	+ ' اطلاعیه های این صفحه را بررسی کنید '
 		+ '<br>'
@@ -717,13 +724,13 @@ End  =Term_end;
 	+ 'کاغذ و مداد و ماشین حساب به همراه داشته باشید   '
 		+ '<br>'
 	+'&#128072'
-	+ ' شارژ باتری تلفن همراه خود را بررسی کنید '
+	+ '  باتری تلفن همراه خود را شارژ کنید '
 		+ '<br>'
 	+'&#128072'
-	+ ' اتصال خود به اینترنت را بررسی کنید '
-		+ '<br>'
-	+'&#128072'
-	+ 'امکان ارتباط با سرویس ایمیل خود را بررسی کنید   '
+	+ ' اتصال تلفن همراه خود به اینترنت را بررسی کنید '
+//		+ '<br>'
+//	+'&#128072'
+//	+ 'امکان ارتباط با سرویس ایمیل خود را بررسی کنید   '
 	+ '<hr>';
 	}
 
