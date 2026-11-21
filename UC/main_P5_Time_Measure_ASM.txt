@@ -60,7 +60,7 @@ Enable_Timer2_Int:
 	ORR  R2, #TIM_DIER_UIE
 	STR  R2, [R3]		//Enable Interrupt
 
-	LDR  R3, =NVIC
+	LDR  R3, =NVIC_ISER1
 	MOV  R2, #(1 << TIM2_IRQn) //28
 	STR  R2, [R3]		//Activate TIM2_IRQ
 
