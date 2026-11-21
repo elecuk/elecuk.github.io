@@ -99,8 +99,8 @@ PUSH {LR}
 	LDR  R3, =Yekan
 	LDR  R4, [R3]
 	BL   Lookup_7_Seg_Digits
+	ORR  R2, #BIT7	//point
 	BIC  R2, #Pin11
-	ORR  R2, #Pin7	//point
 	STR  R2, [R3]
 
 	LDR  R3, =Dahgan
