@@ -605,6 +605,17 @@ document.getElementById("mycontent").innerHTML +=
 
 Start=Term_start+0;
 End  =Term_end_ext;
+	if ( now >= Start && now < End ) 
+	{
+	document.getElementById("mycontent").innerHTML+=
+	"<p style='background-color:powderblue;'> ** &#x2190   </p>"
+	+' برای ایجاد پروژه های جدید، پوشه داده شده در اطلاعیه 10 را با اسم جدید در مسیر workspace قرار دهید و مراحل را تکرار کنید '
+	+'<br>'
+	+' به هر تعداد نیاز دارید می توانید پوشه های پروژه ایجاد کنید و برنامه ها را همزمان در نرم افزار داشته باشید  '
+	+'</p> <hr>';}
+
+Start=Term_start+0;
+End  =Term_end_ext;
 	if ( now >= Start && now < End ) {document.getElementById("mycontent").innerHTML +=
 	"<p style='background-color:powderblue;'> ** &#x2190   فایل main برنامه های کلاس </p>"
 
@@ -624,11 +635,11 @@ End  =Term_end_ext;
 //	+"</li>"
 //	+'<br>'
 
-//	+"<li>   برنامه ششم -  Start Stop وقفه خارجی:  "
-//	+" &nbsp  &nbsp  &nbsp &nbsp  &nbsp"
+	+"<li>   برنامه ششم: Start Stop وقفه خارجی  "
+	+" &nbsp  &nbsp  &nbsp &nbsp  "
 //	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P6_Start_Stop_C.txt' target='_blank' style='color:red;'>C Code</a>"
-//	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P6_Start_Stop_ASM.txt' target='_blank'>ASM Code</a>"
-//	+"</li>"
+	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P6_Start_Stop_ASM.txt' target='_blank'>ASM Code</a>"
+	+"</li>"
 //	+'<br>'
 
 	+"<li> برنامه پنجم:  ثانیه شمار چهار رقمی "
@@ -640,7 +651,7 @@ End  =Term_end_ext;
 
 
 	+"<li>برنامه چهارم:  Blink یک ثانیه با وقفه تایمر"
-	+" &nbsp  &nbsp"
+	+" &nbsp  "
 //	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P4_Blink_PC13_1Second_C.txt' target='_blank' style='color:red;'>C Code</a>"
 	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P4_Blink_PC13_1Second_ASM.txt'target='_blank'>ASM Code</a>"
 	+"</li>"
@@ -662,7 +673,7 @@ End  =Term_end_ext;
 //	+'<br>'
 
 	+"<li> برنامه اول: خواندن و نوشتن پورت "
-		+" &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp "
+	+" &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp "
 //	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P1_port_C.txt' target='_blank' style='color:red;'>C Code</a>"
 	+" &nbsp  &nbsp  &nbsp <a href='UC/main_P1_port_ASM.txt' target='_blank'>ASM Code</a>"
 	+"</li>"
@@ -782,7 +793,11 @@ End  =Term_end_ext;
 	+' پس از extract  کردن فایل zip، پوشه ایجاد شده را با نام مناسب Rename کنید'
 	+' و درمسیر workspace نرم افزار STM32CubeIDE قرار داده'
 	+' و سپس import کنید. برنامه خود را از مسیر Src در فایل main  بنویسید. '
-	+'  پس از build در پوشه Debug  فایل hex ایجاد می شود  '
+	+'  پس از build در پوشه Debug  فایل hex ایجاد می شود که برای پروگرام کردن میکروکنترلر مورد نیاز است  '
+	+'<br>'
+	+' برای ایجاد پروژه های جدید، پوشه داده شده را با اسم جدید در مسیر workspace قرار دهید و مراحل را تکرار کنید '
+	+'<br>'
+	+' به هر تعداد نیاز دارید می توانید پوشه های پروژه ایجاد کنید و برنامه ها را همزمان در نرم افزار داشته باشید  '
 	+'</p> <hr>';}
 
 
